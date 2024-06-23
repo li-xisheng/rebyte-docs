@@ -2,18 +2,29 @@
 
 ## What is ReByte?
 
-Rebyte is an AI assistant that helps to boot your team's productivity by helping tedious and repetitive tasks.
+Rebyte is an AI assistant that helps to boot your team's productivity.
+
+Compare to other AI assistants on market, Rebyte has the following focus:
+* A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis.
+* You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**.
+* Model agnostic, you can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
+* Data auto sync, Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
+* You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
 
 
-|                          | Rebyte        | ChatGpt For Team                                           |
-|--------------------------|---------------|------------------------------------------------------------|
-| Super Assistant          | Revia         | ChatGpt                                                    |
-| other assistants         | Assistants    | Gpts                                                       |
-| LLM                      | OpenAI/Gemini/Anthropic/Mistral/Other OS Models | Only OpenAI                                                |
-| Tools Used by Assistants | Any complex workflow, workflow will be run by Rebyte Workflow Runtime | By selecting Code interpreter/Browser/RAG/external API etc |
-| Data Integration         | Notion/Slack/Discord/Twitter... auto sync handled automatically | No Data Integration                                        |
+[//]: # (|                          | Rebyte        | ChatGpt For Team                                           |)
 
+[//]: # (|--------------------------|---------------|------------------------------------------------------------|)
 
+[//]: # (| Super Assistant          | Revia         | ChatGpt                                                    |)
+
+[//]: # (| other assistants         | Assistants    | Gpts                                                       |)
+
+[//]: # (| LLM                      | OpenAI/Gemini/Anthropic/Mistral/Other OS Models | Only OpenAI                                                |)
+
+[//]: # (| Tools Used by Assistants | Any complex workflow, workflow will be run by Rebyte Workflow Runtime | By selecting Code interpreter/Browser/RAG/external API etc |)
+
+[//]: # (| Data Integration         | Notion/Slack/Discord/Twitter... auto sync handled automatically | No Data Integration                                        |)
 
 <figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
