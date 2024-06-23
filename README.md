@@ -1,30 +1,16 @@
-# Welcome to Rebyte
+# One Pager
 
 ## What is ReByte?
 
 Rebyte is an AI assistant that helps to boot your team's productivity.
 
 Compare to other AI assistants on market, Rebyte has the following focus:
+
 * A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis.
 * You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**.
 * Model agnostic, you can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
 * Data auto sync, Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
 * You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
-
-
-[//]: # (|                          | Rebyte        | ChatGpt For Team                                           |)
-
-[//]: # (|--------------------------|---------------|------------------------------------------------------------|)
-
-[//]: # (| Super Assistant          | Revia         | ChatGpt                                                    |)
-
-[//]: # (| other assistants         | Assistants    | Gpts                                                       |)
-
-[//]: # (| LLM                      | OpenAI/Gemini/Anthropic/Mistral/Other OS Models | Only OpenAI                                                |)
-
-[//]: # (| Tools Used by Assistants | Any complex workflow, workflow will be run by Rebyte Workflow Runtime | By selecting Code interpreter/Browser/RAG/external API etc |)
-
-[//]: # (| Data Integration         | Notion/Slack/Discord/Twitter... auto sync handled automatically | No Data Integration                                        |)
 
 <figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
@@ -61,3 +47,27 @@ Rebyte will help to create a unified team knowledge base by integrating data fro
 ### Access control
 
 Data security is a constant concern within enterprises, and this is also true for team assistants. Rebyte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.
+
+
+
+Rebyte contains two things:
+
+* **Revia**: An AI Assistant for your team members. You can think of it as a private Chatgpt with your team's private knowledge and workflow.
+* **Builder Platform**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
+
+## Revia
+
+**Revia** is a universal user interface that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.
+
+Besides Revia, team admin can build other assistants specific to some use cases, for example, a customer support assistant, a sales assistant, a marketing assistant, etc.
+
+The relationship between **Revia** and **Other Assistants** is like the relationship between **ChatGpt** and **Gpts**.
+
+## Builder Platform
+
+Only builders or admin in your team can access the builder platform. Those are main components in the builder platform:
+
+* **Actions**: represent a single unit of work that tool can perform, such as make a LLM call, read a file, or generate a document, run piece of code, call external services etc. Actions can be chained together to form a sequence of actions that the tool will perform.
+* **Tools**: a no-code UI for capturing proprietary workflow, it represents a sequence of actions.
+* **Knowledge** : a data pipeline for aggregating data from various enterprise sources, embedding them, and making them available to tools.
+* **API**: all mentioned above can be accessed via API, so you can integrate Rebyte with your existing systems.
