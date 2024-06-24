@@ -6,11 +6,11 @@ Rebyte is an AI assistant that helps to boot your team's productivity.
 
 Compare to other AI assistants on market, Rebyte has the following focus:
 
-* A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis.
-* You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**.
-* Model agnostic, you can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
-* Data auto sync, Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
-* You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
+* **Unified Interface** A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis. **Revia** is available on all platforms, including web, mobile, and desktop.
+* **Extensible** You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**. For example, you can build a customer support assistant on your customer support data, **Revia** can magically help you to answer customer questions, or even solve customer problems.
+* **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
+* **Automatic Data Sync** Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
+* **Team Collaboration**, You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
 
 <figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
@@ -47,8 +47,6 @@ Rebyte will help to create a unified team knowledge base by integrating data fro
 ### Access control
 
 Data security is a constant concern within enterprises, and this is also true for team assistants. Rebyte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.
-
-
 
 Rebyte contains two things:
 
