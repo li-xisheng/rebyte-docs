@@ -48,13 +48,13 @@
     * [Loop-Until](developers/actions/control-flow/loop-until.md)
     * [Map-Reduce](developers/actions/control-flow/map-reduce.md)
     * [Early-Return](developers/actions/control-flow/early-return.md)
-* [Test Your Tool](developers/test-your-agent/README.md)
-  * [Overview](developers/test-your-agent/overview.md)
-  * [Datasets](developers/test-your-agent/datasets.md)
-  * [Playground](developers/test-your-agent/playground.md)
-  * [Runs](developers/test-your-agent/runs.md)
-* [Deploy Your Tool](developers/deploy-your-tool.md)
-* [Tool API](developers/deploy-your-tool.md)
+* [Test Your Tool](agents/test-your-agent/README.md)
+  * [Overview](agents/test-your-agent/overview.md)
+  * [Datasets](agents/test-your-agent/datasets.md)
+  * [Playground](agents/test-your-agent/playground.md)
+  * [Runs](agents/test-your-agent/runs.md)
+* [Deploy Your Tool](agents/deploy-your-agent.md)
+* [Tool API](assistant/api.md)
 
 ## Knowledge
 
