@@ -1,4 +1,4 @@
-# Iterative Development Process of An Tool
+# Iterative Development Process of A Tool
 
 Language models are naturally unpredictable, even though lots of techniques have been developed to make them more predictable, for example OpenAI has a seed parameter that can be used to control the randomness of the model. This dramatically changes how we ship software. In the past, we would write a piece of code, compile it, and then ship it. Now, we write a software agent, the only we can guarantee that the agent is working as expected is to have this agent run through a list of test datasets, and evaluate the result to see if it is passing some threshold.
 

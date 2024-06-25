@@ -2,7 +2,7 @@
 
 We will show you how to build a weather agent in 10 minutes.
 
-## Step 1: Create an Tool
+## Step 1: Create a Tool
 
 * Navigate to the "My Agents" tab in the sidebar and then click on "Create Tool".
 

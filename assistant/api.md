@@ -1,12 +1,12 @@
 # Tool API
 
-The Tool API allows you to build AI agent within your own applications. It provides a set of APIs to interact with the agent, such as sending messages, uploading files, and creating threads.
+The Tool API allows you to call customized tools from your own applications. It provides a set of APIs to interact with the tool, such as sending messages, uploading files, and creating threads.
 
 ## Overview
 
 A typical integration of the Tool API has the following flow:
 
-1. Create an Tool on rebyte Tool editor by defining its custom actions, such as `Model`, `Data`, `Tools`, `Control Flow`, etc. Pick the model and parameters that you want to use.
+1. Create a Tool on rebyte tool editor by defining its custom actions, such as `Model`, `Data`, `Utilities`, `Control Flow`, etc. Pick the model and parameters that you want to use.
 
 2. Create a Thread when a user starts a conversation.
 
@@ -16,9 +16,9 @@ A typical integration of the Tool API has the following flow:
 
 ## Step by step
 
-1. Create an Tool.
+1. Create a Tool.
 
-Here, we'll just use this ["Chat with GPT3.5 agent"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor) as an example. Remember to test your agent first and make sure it works as expected. Also, click "Deploy" to make it available for the API.
+Here, we'll just use this ["Chat with GPT3.5 tool"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor) as an example. Remember to test your tool first and make sure it works as expected. Also, click "Deploy" to make it available for the API.
 
 2. Create a thread
 
@@ -51,7 +51,7 @@ curl 'https://rebyte.ai/api/sdk/threads' \
 }'
 ```
 
-In the response, you will find the thread id. You can use this thread id to add messages to the thread and run the agent on the thread.
+In the response, you will find the thread id. You can use this thread id to add messages to the thread and run the tool on the thread.
 
 * Example Response 
   
@@ -88,9 +88,9 @@ In the response, you can see the message information.
 }
 ```
 
-4. Run the agent on the thread
+4. Run the tool on the thread
 
-In order to run the agent on the thread, you should get the url from deploying your agent and make a request to this url.
+In order to run the tool on the thread, you should get the url from deploying your tool and make a request to this url.
 
 ```shell
 curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/r \
@@ -114,7 +114,7 @@ curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/
     }'
 ```
 
-* When calling the agent, you should specify the thread id, and you will be able to get all the messages and metadata from the thread.
+* When calling the tool, you should specify the thread id, and you will be able to get all the messages and metadata from the thread.
 
 * You can also use "contentOnly:true" to get only the content of the messages.
 
@@ -175,3 +175,10 @@ In the response, you will get the list of all messages on the thread.
     ]
 }
 ```
+
+### Blocking and Non-blocking calls
+Add 'blocking' parameter to the request body to specify whether the call should be blocking or non-blocking. If 'blocking' is set to true, the call will wait for the response from the tool. If 'blocking' is set to false, the call will return immediately with a run_id, which can be used to check the status of the call later.
+
+### Streaming
+Add 'stream' parameter to the request body to specify whether the call should be streaming or not. If 'stream' is set to true, the call will return a stream of messages from the tool as they are generated. If 'stream' is set to false, the call will return the final response from the tool.
+

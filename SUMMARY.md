@@ -14,7 +14,7 @@
 ## Developers
 
 * [Tool Overview](overview/understanding-rebyte-architecture.md)
-* [Iterative Development Process of An Tool](developers/iterative-development-process-of-an-agent.md)
+* [Iterative Development Process of A Tool](developers/iterative-development-process-of-an-agent.md)
 * [Design Your Tool](developers/design-your-tool.md)
 * [Reference Action Output](developers/reference-action-output.md)
 * [Deploy Your Tool](developers/deploy-your-tool.md)
