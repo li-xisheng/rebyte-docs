@@ -8,6 +8,7 @@ Compare to other AI assistants on market, Rebyte has the following focus:
 
 * **Unified Interface** A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis. **Revia** is available on all platforms, including web, mobile, and desktop.
 * **Extensible** You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**. For example, you can build a customer support assistant on your customer support data, **Revia** can magically help you to answer customer questions, or even solve customer problems.
+* **Multistep Plan and Execute** Rebyte uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. It can also correct itself if the plan is not executed as expected.
 * **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
 * **Automatic Data Sync** Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
 * **Team Collaboration**, You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
@@ -24,36 +25,27 @@ Each team's knowledge base is vastly different, and the AI assistant needs more 
 
 All problems can be boiled down to providing more context to AI assistants, including the context of data and the context of business logic.
 
-In order to address these challenges, we have designed a platform called Rebyte, which focuses on the following key areas:
+Rebyte provides the following features to address these issues, one is a low-code platform for building tools to capture proprietary workflow, and the other is a data integration platform to aggregate data from various sources.
 
-### Universal User Interface
-
-We provide a universal user interface called **Revia** that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.
-
-**Revia** will be available on all platforms, including web, mobile, and desktop.
-
-### Flow Engineering
+### No-Code Platform for Building Tools
 
 Rebyte provides a low-code platform, similar to Langchain, for extending the capabilities of team assistants. As mentioned this [cognitive architecture blog post by langchain](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)), large language model tools can be divided into two categories: those driven by the reasoning capabilities of large language models, such as Chain of Thoughts, and those driven by "flow engineering," where developers design LLM tools that align with the team's workflow. Rebyte provides a complete set of tools to support the development of such customized tools, while minimizing the programming requirements for developers. Our goal is to enable developers to build large language model tools with just an understanding of JSON.
-
-### Plan and Execute
-
-ReByte Assistant uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. For data analysis tasks, assistant can write python code itself, and then execute the code. Assistant is also self reflective and can correct itself if the plan is not executed as expected.
 
 ### Enterprise Data Integration
 
 Rebyte will help to create a unified team knowledge base by integrating data from authorized sources with the team's permission. This comprehensive and integrated knowledge base is crucial for subsequent processing by large language models. Initially, Rebyte will integrate data from sources such as files, GitHub, Notion, web pages, and Twitter, and this list will continue to expand in the future.
 
-### Access control
+[//]: # (Data security is a constant concern within enterprises, and this is also true for team assistants. Rebyte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.)
 
-Data security is a constant concern within enterprises, and this is also true for team assistants. Rebyte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.
 
-Rebyte contains two things:
+## Two Views
 
-* **Revia**: An AI Assistant for your team members. You can think of it as a private Chatgpt with your team's private knowledge and workflow.
-* **Builder Platform**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
+Rebyte contains two views:
 
-## Revia
+* **End User's view**: An AI Assistant for your team members. You can think of it as a private Chatgpt with your team's private knowledge and workflow.
+* **Builder's view**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
+
+### Revia
 
 **Revia** is a universal user interface that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.
 
