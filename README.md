@@ -11,9 +11,15 @@ Compare to other AI assistants on market, Rebyte has the following focus:
 * **Multistep Plan and Execute** Rebyte uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. It can also correct itself if the plan is not executed as expected.
 * **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
 * **Automatic Data Sync** Rebyte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
+* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, Rebyte can also handle structured data, including csv, excel, postgres, mysql, parquet, json, sqlite.
 * **Team Collaboration**, You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
 
-<figure><img src=".gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+![img](http://res.cloudinary.com/dfjwtidnh/image/upload/v1720449540/rebyte/api_uploaded_assets/26c4a4ce-328d-4291-a2c7-88c89428e757.png)
+
+
+
+[//]: # (<figure><img src=".gitbook/assets/image &#40;9&#41;.png" alt=""><figcaption></figcaption></figure>)
 
 ## Rationale behind ReByte
 
