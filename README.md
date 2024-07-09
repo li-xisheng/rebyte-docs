@@ -1,5 +1,3 @@
-# One Pager
-
 ## What is ReByte?
 
 Rebyte is an AI assistant that helps to boot your team's productivity.

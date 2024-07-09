@@ -2,7 +2,7 @@
 
 ## One Minute Overview
 
-* [One Pager](README.md)
+* [What is Rebyte?](README.md)
 
 ## User's Guide
 
@@ -18,7 +18,7 @@
 * [Design Your Tool](developers/design-your-tool.md)
 * [Reference Action Output](developers/reference-action-output.md)
 * [Deploy Your Tool](developers/deploy-your-tool.md)
-* [Actions](developers/actions/README.md)
+* [Actions](developers/design-your-agent)
   * [Input](developers/actions/input.md)
   * [Output](developers/actions/output.md)
   * [Model](developers/actions/model/README.md)
