@@ -1,7 +1,3 @@
-# Introduction to Key Concepts
-
-In the Rebyte system, there are the following key concepts:
-
 ## Revia
 
 We have preset a personalized assistant for every individual and team: Revia. We have fixed it at the top left corner of the page, making it convenient for you to click and use it whenever you want. Revia is a special Assistant that is automatically created when you create an account based on the information you provide. We have configured it with various tools such as web search, knowledge base query, code interpreter, etc.
