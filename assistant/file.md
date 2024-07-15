@@ -78,7 +78,7 @@ Retrieve file by fileId.
 
 **Example Request**
 ```shell
-curl 'https://rebyte.ai/api/sdk/files/{fileId}'' \
+curl 'https://rebyte.ai/api/sdk/files/{fileId}' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
@@ -108,7 +108,7 @@ Retrieve file content by fileId.
 
 **Example Request**
 ```shell
-curl 'https://rebyte.ai/api/sdk/files/{fileId}' \
+curl 'https://rebyte.ai/api/sdk/files/{fileId}/content' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
