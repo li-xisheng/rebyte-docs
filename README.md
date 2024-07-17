@@ -51,16 +51,6 @@ Rebyte contains two main components::
 
 
 
-[//]: # (### Revia)
-
-[//]: # ()
-[//]: # (**Revia** is a universal user interface that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.)
-
-[//]: # ()
-[//]: # (Besides Revia, team admin can build other assistants specific to some use cases, for example, a customer support assistant, a sales assistant, a marketing assistant, etc.)
-
-[//]: # ()
-[//]: # (The relationship between **Revia** and **Other Assistants** is like the relationship between **ChatGpt** and **Gpts**.)
 
 [//]: # ()
 [//]: # (### Builder Platform)
