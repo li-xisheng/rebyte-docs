@@ -4,13 +4,13 @@
 
 > Backend subroutine for Assistant.
 
-In Rebyte, we define agent as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. An agent without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
+In Rebyte, we define Tool as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. An agent without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
 Here are some typical examples of AI tools:
 * Based on user's query, find most relevant information from user's knowledge base, and summarize the result and return summary to user.
 * User describes a database query in natural language, agent will translate the query into SQL and execute the query on user's database to get results, then use LLM to generate a summary of the results and return to user.
 * Help user to do professional translation between two languages, user can describe the translation task in natural language, agent will not only do the translation but also evaluate the translation quality, if the quality is not good enough, agent will iterate the translation process until the quality is good enough. 
 
-### This is a typical agent workflow
+### This is a typical tool workflow
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 

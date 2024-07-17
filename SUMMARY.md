@@ -16,7 +16,7 @@
 
 [//]: # (* [Revia & Assistant]&#40;guide/Revia&Assistant.md&#41;)
 
-## Developers
+## Tool
 
 * [Tool Overview](overview/understanding-rebyte-architecture.md)
 * [Iterative Development Process of A Tool](developers/iterative-development-process-of-an-agent.md)
@@ -61,11 +61,19 @@
 * [Deploy Your Tool](agents/deploy-your-agent.md)
 * [Tool API](assistant/api.md)
 
+## Table
+
+* [Overview](knowledge/overview.md)
+* [Quick Start](knowledge/quick-start.md)
+* [Knowledge Types](knowledge/knowledge-types.md)
+
 ## Knowledge
 
 * [Overview](knowledge/overview.md)
 * [Quick Start](knowledge/quick-start.md)
 * [Knowledge Types](knowledge/knowledge-types.md)
+
+
 
 ## API
 
