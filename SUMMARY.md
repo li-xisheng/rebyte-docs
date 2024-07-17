@@ -1,16 +1,20 @@
 # Table of contents
 
-## One Minute Overview
+[//]: # (## One Minute Overview)
 
 * [What is Rebyte?](README.md)
 
-## User's Guide
+[//]: # (## User's Guide)
 
-* [Overview](guide/overview.md)
-* [User And Team](guide/teams/overview.md)
-* [Use Team Assistant](guide/teams/use-assistant.md)
-* [Build More Assistants](guide/teams/build-assistant.md)
-* [Revia & Assistant](guide/Revia&Assistant.md)
+* [User's Guide](guide/Revia&Assistant.md)
+
+[//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
+
+[//]: # (* [Use Team Assistant]&#40;guide/teams/use-assistant.md&#41;)
+
+[//]: # (* [Build More Assistants]&#40;guide/teams/build-assistant.md&#41;)
+
+[//]: # (* [Revia & Assistant]&#40;guide/Revia&Assistant.md&#41;)
 
 ## Developers
 
