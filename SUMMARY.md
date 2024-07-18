@@ -108,15 +108,18 @@
 
 ## Table
 
-* [Overview](knowledge/overview.md)
-* [Quick Start](knowledge/quick-start.md)
-* [Knowledge Types](knowledge/knowledge-types.md)
+* [Overview](table/overview.md)
+
+[//]: # (* [Quick Start]&#40;knowledge/quick-start.md&#41;)
+[//]: # (* [Knowledge Types]&#40;knowledge/knowledge-types.md&#41;)
 
 ## Knowledge
 
 * [Overview](knowledge/overview.md)
-* [Quick Start](knowledge/quick-start.md)
-* [Knowledge Types](knowledge/knowledge-types.md)
+
+[//]: # (* [Quick Start]&#40;knowledge/quick-start.md&#41;)
+
+[//]: # (* [Knowledge Types]&#40;knowledge/knowledge-types.md&#41;)
 
 
 ## API
