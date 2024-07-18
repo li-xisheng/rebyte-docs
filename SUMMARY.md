@@ -4,7 +4,7 @@
 [//]: # (## User's Guide)
 
 * [What is Rebyte?](README.md)
-* [User's Guide](guide/Revia&Assistant.md)
+* [User's Guide](user-guide.md)
 
 [//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
 
@@ -17,11 +17,11 @@
 [//]: # (# Developer)
 
 ## Developer's Guide
-* [Quick Start](developers/quick-start.md)
-* [Tool](overview/understanding-rebyte-architecture.md)
-* [Table](table/overview.md)
-* [Knowledge](knowledge/overview.md)
-* [API](assistant/overview.md)
+* [Quick Start](quick-start.md)
+* [Tool](tool.md)
+* [Table](table.md)
+* [Knowledge](knowledge.md)
+* [API](api.md)
 
 [//]: # (## Tool)
 
