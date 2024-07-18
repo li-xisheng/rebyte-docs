@@ -16,7 +16,10 @@
 
 [//]: # (* [Revia & Assistant]&#40;guide/Revia&Assistant.md&#41;)
 
-## [Create Realtime sales analysis assistant](guide/teams/realtime-sales-analysis.md)
+# Developer
+
+## Quick Start
+[Create Realtime sales analysis assistant](guide/teams/realtime-sales-analysis.md)
 
 ## Tool
 
