@@ -1,11 +1,9 @@
-# Table of contents
+[//]: # (# Table of contents)
 
 [//]: # (## One Minute Overview)
-
-* [What is Rebyte?](README.md)
-
 [//]: # (## User's Guide)
 
+* [What is Rebyte?](README.md)
 * [User's Guide](guide/Revia&Assistant.md)
 
 [//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
@@ -23,7 +21,8 @@
 
 ## Tool
 
-[//]: # (* [Tool Overview]&#40;overview/understanding-rebyte-architecture.md&#41;)
+
+* [Tool Overview](overview/understanding-rebyte-architecture.md)
 
 [//]: # (* [Iterative Development Process of A Tool]&#40;developers/iterative-development-process-of-an-agent.md&#41;)
 
