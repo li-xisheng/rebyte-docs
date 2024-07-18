@@ -17,7 +17,7 @@
 # Developer
 
 ## Quick Start
-[Create Realtime sales analysis assistant](guide/teams/realtime-sales-analysis.md)
+[Create A Fraud Analysis Assistant](developers/quick-start.md)
 
 ## Tool
 
