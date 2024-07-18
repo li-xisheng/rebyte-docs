@@ -17,10 +17,9 @@
 # Developer
 
 ## Quick Start
-[Create A Fraud Analysis Assistant](developers/quick-start.md)
+[Quick Start](developers/quick-start.md)
 
 ## Tool
-
 
 * [Overview](overview/understanding-rebyte-architecture.md)
 
