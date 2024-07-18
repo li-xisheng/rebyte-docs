@@ -17,7 +17,7 @@
 # Developer
 
 ## Quick Start
-[Quick Start](developers/quick-start.md)
+* [Quick Start](developers/quick-start.md)
 
 ## Tool
 
