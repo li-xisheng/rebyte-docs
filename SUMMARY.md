@@ -22,7 +22,7 @@
 ## Tool
 
 
-* [Tool Overview](overview/understanding-rebyte-architecture.md)
+* [Overview](overview/understanding-rebyte-architecture.md)
 
 [//]: # (* [Iterative Development Process of A Tool]&#40;developers/iterative-development-process-of-an-agent.md&#41;)
 
