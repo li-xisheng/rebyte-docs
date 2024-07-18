@@ -14,14 +14,17 @@
 
 [//]: # (* [Revia & Assistant]&#40;guide/Revia&Assistant.md&#41;)
 
-# Developer
+[//]: # (# Developer)
 
-## Quick Start
+## Developer's Guide
 * [Quick Start](developers/quick-start.md)
+* [Tool](overview/understanding-rebyte-architecture.md)
+* [Table](table/overview.md)
+* [Knowledge](knowledge/overview.md)
+* [API](assistant/overview.md)
 
-## Tool
+[//]: # (## Tool)
 
-* [Overview](overview/understanding-rebyte-architecture.md)
 
 [//]: # (* [Iterative Development Process of A Tool]&#40;developers/iterative-development-process-of-an-agent.md&#41;)
 
@@ -105,29 +108,29 @@
 
 [//]: # (* [Tool API]&#40;assistant/api.md&#41;)
 
-## Table
+[//]: # (## Table)
 
-* [Overview](table/overview.md)
 
 [//]: # (* [Quick Start]&#40;knowledge/quick-start.md&#41;)
 [//]: # (* [Knowledge Types]&#40;knowledge/knowledge-types.md&#41;)
 
-## Knowledge
+[//]: # (## Knowledge)
 
-* [Overview](knowledge/overview.md)
 
 [//]: # (* [Quick Start]&#40;knowledge/quick-start.md&#41;)
 
 [//]: # (* [Knowledge Types]&#40;knowledge/knowledge-types.md&#41;)
 
 
-## API
+[//]: # (## API)
 
-* [Overview](assistant/overview.md)
-* [Tool](assistant/api.md)
-* [Thread](assistant/thread.md)
-* [Message](assistant/message.md)
-* [File](assistant/file.md)
+[//]: # (* [Tool]&#40;assistant/api.md&#41;)
+
+[//]: # (* [Thread]&#40;assistant/thread.md&#41;)
+
+[//]: # (* [Message]&#40;assistant/message.md&#41;)
+
+[//]: # (* [File]&#40;assistant/file.md&#41;)
 
 ## Pricing
 
