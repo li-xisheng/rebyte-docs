@@ -10,7 +10,7 @@ Table is a virtual database that represents a read-only view to your original da
 * **Transient**: Table is transient, which means it's not persisted in rebyte's database, it's only available during the execution of the tool. This is to ensure that your data is secure and private.
 
 
-![img](https://res.cloudinary.com/dfjwtidnh/image/upload/v1721429500/table-overview_dawz0l.png)
+![img](https://res.cloudinary.com/dfjwtidnh/image/upload/v1721433515/table_kwozfl.png)
 
 
 ## Tableset
