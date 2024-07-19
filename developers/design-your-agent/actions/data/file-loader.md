@@ -1,10 +1,10 @@
 # File Loader
 
-The `File Loader` action can load files previously uploaded to Rebyte either via the Rebyte UI or via API.
+The `File Loader` action can load files previously uploaded to ReByte either via the ReByte UI or via API.
 
 A typical use case is you want your agent to process a file uploaded by a user. You can use the `File Loader` action to load the file and extract data from it.
 
-This Action accepts a `file_id` as input and returns the extracted data from the file. 'file_id' is a unique identifier of the file uploaded to Rebyte.
+This Action accepts a `file_id` as input and returns the extracted data from the file. 'file_id' is a unique identifier of the file uploaded to ReByte.
 
 
 We support various data types, including: DOC, DOCX, IMG, EPUB, JPEG, JPG, PNG, XLS, XLSX, PPT, PPTX, MD, TXT, RTF, MD, TXT, RTF, RST, PDF, JSON, HTML and EML.

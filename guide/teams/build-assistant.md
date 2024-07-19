@@ -23,7 +23,7 @@ There're two categories of tools:
 - pros: you can customize the tools to fit your needs
 - cons: you need to spend time building the tools
 
-** Agents made by Rebyte System
+** Agents made by ReByte System
 - pros: you can use the tools immediately without building them, we will keep updating the tools to make them more powerful
 - cons: you may not modify the tools to fit your needs
 

@@ -1,6 +1,6 @@
 # Privacy Policies
 
-At Rebyte AI, we understand the importance of your privacy, and we are committed to protecting it. This Privacy Policy explains how we collect, use, and disclose your personal information when you use our website, products, and services.
+At ReByte AI, we understand the importance of your privacy, and we are committed to protecting it. This Privacy Policy explains how we collect, use, and disclose your personal information when you use our website, products, and services.
 
 We take your privacy seriously and strive to ensure that your personal information is always kept safe and secure. To that end, we have implemented a number of security measures to prevent unauthorized access to your data.
 
@@ -12,7 +12,7 @@ Disclosure of your information We do not sell or rent your personal information 
 
 Security of your information We take reasonable steps to ensure the security of your personal information and prevent unauthorized access, use, or disclosure. However, no data transmission over the internet or electronic storage system can be guaranteed to be 100% secure. We understand that your personal information is precious and we will always strive to keep it safe and secure.
 
-Rebyte AI uses Google Workspace APIs to provide its services. Google Workspace APIs are used to access, modify, and store data in Google Workspace services such as Gmail, Google Drive, and Google Calendar. Rebyte AI only accesses the data necessary to provide its services and does not store any data beyond what is required for the operation of its services. Google Workspace APIs are not used to develop, improve, or train generalized AI and/or ML models.
+ReByte AI uses Google Workspace APIs to provide its services. Google Workspace APIs are used to access, modify, and store data in Google Workspace services such as Gmail, Google Drive, and Google Calendar. ReByte AI only accesses the data necessary to provide its services and does not store any data beyond what is required for the operation of its services. Google Workspace APIs are not used to develop, improve, or train generalized AI and/or ML models.
 
 Changes to this Privacy Policy We may update this Privacy Policy from time to time and will notify you of any changes by posting the new policy on our website. Your continued use of our services after any such modifications will constitute your acknowledgement of the modified Privacy Policy and agreement to abide and be bound by the modified policy. We believe that transparency is key when it comes to privacy, which is why we will always keep you informed of any changes we make to our policies.
 

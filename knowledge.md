@@ -2,9 +2,9 @@
 
 > Handle unstructured data for your assistant.
 
-Rebyte can auto sync your knowledge from various sources, such as Notion, Google Drive, GitHub, etc. For each knowledge, we chunk the document into many chunks, each chunk will be sent to LLM embedding service to get the embedding vector. 
+ReByte can auto sync your knowledge from various sources, such as Notion, Google Drive, GitHub, etc. For each knowledge, we chunk the document into many chunks, each chunk will be sent to LLM embedding service to get the embedding vector. 
 
-In **Rebyte Tool**, you can use the knowledge action to do search over the knowledge base.
+In **ReByte Tool**, you can use the knowledge action to do search over the knowledge base.
 
 ## How does Knowledge Work?
 
@@ -26,7 +26,7 @@ You can attach multiple tags to each document, for example, you can tag a docume
 ### Knowledge Data Connectors
 
 * **File**: we support most of the file types, such as doc, docx, img, epub, jpeg, jpg, png, xls, xlsx, ppt, pptx, md, txt, rtf, rst, pdf, json, html.
-* **Notion**: we support Notion API, you can sync your Notion pages to Rebyte.
-* **Twitter**: we support Twitter API, you can sync specific Twitter accounts to Rebyte.
-* **Web Page**: you can sync web pages to Rebyte.
+* **Notion**: we support Notion API, you can sync your Notion pages to ReByte.
+* **Twitter**: we support Twitter API, you can sync specific Twitter accounts to ReByte.
+* **Web Page**: you can sync web pages to ReByte.
 * More connectors are coming.

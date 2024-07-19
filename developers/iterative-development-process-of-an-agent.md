@@ -4,7 +4,7 @@ Language models are naturally unpredictable, even though lots of techniques have
 
 ## Iterative Development process of an agent
 
-In Rebyte, the first thing to design an agent is to create a test dataset. A test dataset is attached to **INPUT** action of agent, which is always the first action of an agent. In Design Mode, all test cases will be run in parallel to make the whole process faster, also action can be set to 'cache' mode to further speed up the process and save token usage.
+In ReByte, the first thing to design an agent is to create a test dataset. A test dataset is attached to **INPUT** action of agent, which is always the first action of an agent. In Design Mode, all test cases will be run in parallel to make the whole process faster, also action can be set to 'cache' mode to further speed up the process and save token usage.
 
 
 

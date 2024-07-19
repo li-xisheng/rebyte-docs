@@ -1,10 +1,10 @@
-# Welcome to Rebyte
+# Welcome to ReByte
 
 <figure><img src=".gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
 ## What is ReByte?
 
-Rebyte is your team assistant that helps you to create your own AI-powered applications without needing too much coding skills. On ReByte, you can create various types of applications and publish them for your own personal use, or for the team to use.
+ReByte is your team assistant that helps you to create your own AI-powered applications without needing too much coding skills. On ReByte, you can create various types of applications and publish them for your own personal use, or for the team to use.
 
 ReByte is a platform that allows everyone to quickly develop their AI-powered applications without needing too much coding skill. On ReByte, anyone with or without programming experiences, can create various types of applications and publish them for their own personal use, or for the team to use.
 
@@ -16,10 +16,10 @@ This will open the hood of software development to a much larger group of people
 
 **ReByte** is built with one mission: to give everyone the ability to create their own software tools without needing too much coding skills.
 
-In terms of functionality, **Rebyte** has some core components:
+In terms of functionality, **ReByte** has some core components:
 
 * Language Model Tool: A serverless function that can be executed on cloud. Those functions usually use LLMs to perform some tasks, but it's not required.
-* Knowledge: Private data ingestion pipeline that feed data to Rebyte system, later can be used by LLM tools.
+* Knowledge: Private data ingestion pipeline that feed data to ReByte system, later can be used by LLM tools.
 * App Builder: User interface builder that allows developers to wire up LLM tools and knowledge to create their own tools.
 
 Also, **ReByte** is built to solve the following problems in LLM application development:

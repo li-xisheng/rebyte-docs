@@ -100,7 +100,7 @@ On the top right of the action, there are two more things to configure: "Stream 
 
 ### Message Format
 
-Rebyte uses a similar message format as OpenAI. The message format is a JSON object with the following fields:
+ReByte uses a similar message format as OpenAI. The message format is a JSON object with the following fields:
 
 * Role: could be one from 'user', 'system', or 'assistant'.
 * Content: content of this message.

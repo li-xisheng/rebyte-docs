@@ -6,16 +6,16 @@ What you will have:
 * A csv file containing 100k transaction records. For your convenience, we have prepared a sample file for you. You can download it [here](https://storage.googleapis.com/cui-runtime/fraud1.csv), or [google spreadsheet link](https://docs.google.com/spreadsheets/d/1mY57k8zYkhCZo51XEydnplWRSu75KiOAhvolTE4IUpw/edit?gid=1496520613#gid=1496520613). Or you can import to google spreadsheet, Google will automatically convert it to csv format.
 One benefit of using google spreadsheet is that you can edit the data directly, rebyte will automatically sync the data.
 
-### Step 1: Create A Table in Rebyte
+### Step 1: Create A Table in ReByte
 
-This step involves creating a table in Rebyte, you should choose the "csv" format, and upload the csv file, or paste your Google spreadsheet link.
+This step involves creating a table in ReByte, you should choose the "csv" format, and upload the csv file, or paste your Google spreadsheet link.
 
 You can explore the data by clicking the "Explore," and use any SQL query to filter the data.
 
-let's say you finally have a table named "transaction" in Rebyte.
+let's say you finally have a table named "transaction" in ReByte.
 
 ### Step 2: Create A Fraud Analysis Tool
-Create a new tool in Rebyte, and name it "Fraud Analysis". Rebyte has buildin template for data analysis, you can choose the "Data Analysis" template, and then you can modify it to fit your need.
+Create a new tool in ReByte, and name it "Fraud Analysis". ReByte has buildin template for data analysis, you can choose the "Data Analysis" template, and then you can modify it to fit your need.
 
 **IMPORTANT**:
 You should change the tool to point to load schema from the "transaction" table, also run SQL on the same table.

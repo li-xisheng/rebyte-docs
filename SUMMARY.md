@@ -3,7 +3,7 @@
 [//]: # (## One Minute Overview)
 [//]: # (## User's Guide)
 
-* [What is Rebyte?](README.md)
+* [What is ReByte?](README.md)
 * [User's Guide](user-guide.md)
 
 [//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
@@ -136,4 +136,4 @@
 
 * [Pricing](pricing/overview.md)
 
-## Contact the Rebyte team?
+## Contact the ReByte team?

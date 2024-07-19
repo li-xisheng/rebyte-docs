@@ -1,6 +1,6 @@
 # Access Control
 
-Rebyte is built with fine-grained access control. You can control the visibility of your tools, knowledge, assistant and other resources in Rebyte. We believe that this is of vital importance for collaboration and sharing AI applications in enterprise environments.
+ReByte is built with fine-grained access control. You can control the visibility of your tools, knowledge, assistant and other resources in ReByte. We believe that this is of vital importance for collaboration and sharing AI applications in enterprise environments.
 
 ## Rules
 
@@ -10,7 +10,7 @@ There are three types of users regarding access control:
 
 * **Users**: use assistants created by the team.
 
-* **External Users**: Rebyte users who are not part of the team.
+* **External Users**: ReByte users who are not part of the team.
 
 Builders can develop, design, and use the tools, knowledge, and assistants within the team. Users can view and use the assistants created by the team. External users can view and use the tools, knowledge, and apps that are set to External Public.
 

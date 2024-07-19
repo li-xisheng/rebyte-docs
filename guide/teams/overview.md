@@ -6,13 +6,13 @@
 
 ## User
 
-Currently, Rebyte support the following login methods:
+Currently, ReByte support the following login methods:
 
 * Email
 * Google
 * Github
 
-Rebyte uses email as the primary identifier for a user. Notably, GitHub does not provide **verifed email**, so if you log in with GitHub, you will be asked to provide an email address.
+ReByte uses email as the primary identifier for a user. Notably, GitHub does not provide **verifed email**, so if you log in with GitHub, you will be asked to provide an email address.
 
 ## Team
 

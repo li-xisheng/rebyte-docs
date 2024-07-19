@@ -8,11 +8,11 @@
 
 * In production mode, input are passed via agent API.
 
-* Rebyte defines a common data structure to handle messages passed into agent, it's strong recommended to use this format in order to make your agent work with assistant/thread API seamlessly.
+* ReByte defines a common data structure to handle messages passed into agent, it's strong recommended to use this format in order to make your agent work with assistant/thread API seamlessly.
 
 ## Common Message Format
 
-Different LLM has different message format, but Rebyte defines a common message format to handle messages passed into agent, internally we will handle all compatibility issues.
+Different LLM has different message format, but ReByte defines a common message format to handle messages passed into agent, internally we will handle all compatibility issues.
 
 **Text Message**
 ```json

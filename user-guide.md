@@ -1,4 +1,4 @@
-# Rebyte User Guide
+# ReByte User Guide
 
 ## Available Platform
 
@@ -20,7 +20,7 @@ Only builders or admin in your team can configure the team assistant.
 Each assistant, including **Revia**, contains:
 * **Planner**: can plan and execute a sequence of tools to achieve a specific goal.
 * **Code Sandbox**: Handle arbitrary code execution, such as data analysis, data visualization, etc. 
-* **List of Rebyte Tools**: a list of Rebyte Tools that can be used by the assistant. Tool can be built by your team or by other tool builders, or by Rebyte team.
+* **List of ReByte Tools**: a list of ReByte Tools that can be used by the assistant. Tool can be built by your team or by other tool builders, or by ReByte team.
 
 **Planner** and **Code Sandbox** can be optional, in that case, user has to ask specific tool to perform a specific task.
 
@@ -29,15 +29,15 @@ Each assistant, including **Revia**, contains:
 ### Interacts with Revia
 
 * **Directly Ask Questions**: You can ask questions to Revia, such as "What is the sales number of last year?" or "How many employees do we have in the company?".
-* **@specific tool**: A noval way to interact with Rebyte, you can @mention a specific tool to perform a specific task, for example, "@image_generator generate an image of a cat".
+* **@specific tool**: A noval way to interact with ReByte, you can @mention a specific tool to perform a specific task, for example, "@image_generator generate an image of a cat".
 * **/command**: You can use slash commands to invoke other assistants, for example, "/customer_support"
 
 ### Attachment files
-* You can attach files to your message, we support various file types, such as csv, xlsx, pdf, docx, png, jpg, etc. Rebyte will automatically parse the file and extract the content for further processing.
+* You can attach files to your message, we support various file types, such as csv, xlsx, pdf, docx, png, jpg, etc. ReByte will automatically parse the file and extract the content for further processing.
 
 ### Reasoning Steps
-Hallucination is a common issue in AI assistants,Rebyte tries to solve this issue by providing reasoning steps as detail as possible, user can see the reasoning steps of each tool. Builder can also see the actual tool running log to debug if there's any issue.
+Hallucination is a common issue in AI assistants,ReByte tries to solve this issue by providing reasoning steps as detail as possible, user can see the reasoning steps of each tool. Builder can also see the actual tool running log to debug if there's any issue.
 
 ### Code Sandbox
-Rebyte provides a code sandbox for users to run python code, you can use this feature to run some custom code, such as data analysis, data visualization, etc. Each code execution is isolated, so you don't need to worry about the security issue.
+ReByte provides a code sandbox for users to run python code, you can use this feature to run some custom code, such as data analysis, data visualization, etc. Each code execution is isolated, so you don't need to worry about the security issue.
 

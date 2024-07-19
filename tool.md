@@ -2,7 +2,7 @@
 
 > Backend subroutine for Assistant.
 
-In Rebyte, we define Tool as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. A Tool without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
+In ReByte, we define Tool as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. A Tool without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
 Here are some typical examples of AI tools:
 * Based on user's query, find the most relevant information from the user's knowledge base, and summarize the result and return the summary to the user.
 * User describes a database query in natural language, agent will translate the query into SQL and execute the query on user's database to get results, then use LLM to generate a summary of the results and return to user.
@@ -13,14 +13,12 @@ Here are some typical examples of AI tools:
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
    
-## How to build a Tool?
+## Build a Tool?
 
-
-
-
+We have prebuilt templates for common use cases, you can start from those templates, or you can build your own tool from scratch.
 
 ### Action
-* Tool is a piece of sequential actions that can be executed on the LLM serverless runtime. It is the core building block of ReByte, and the main way for end users to create their own tools. Rebyte provides a GUI builder for end users to create/edit their own LLM tools. Rebyte provides a list of pre-built actions for common use cases, also private SDK for _software engineer_ to build their own actions, and seamlessly integrate with the agent builder. Pre-built actions include:
+* Tool is a piece of sequential actions that can be executed on the LLM serverless runtime. It is the core building block of ReByte, and the main way for end users to create their own tools. ReByte provides a GUI builder for end users to create/edit their own LLM tools. ReByte provides a list of pre-built actions for common use cases, also private SDK for _software engineer_ to build their own actions, and seamlessly integrate with the agent builder. Pre-built actions include:
   * LLM Actions
     * Language Model Interface
   * Data Actions
@@ -58,11 +56,100 @@ The best practice is to always use 'latest' in your development environment,
 and use 'live' in your production environment. 
 
 ## Tool Observability
-Rebyte records everything that happens during the execution of a tool,
+ReByte records everything that happens during the execution of a tool,
 including the input data, the output data, the reasoning steps, and the execution log.
 We call this information a **Tool Run**.
 **Tool Run** is crucial for debugging and improving the tool.
 You can access this information in the tool builder UI. 
+
+## Input and Output Format
+
+There are two cases here:
+
+* Build a tool to seamlessly integrate with ReByte's assistant, your tool needs to conform to a specific input/output format. Assistant will show specific UI elements based on the input/output format of the tool, for example, if your tool has a table output, assistant will show the table in a tabular format.
+* Build a tool and access via API, you can define your own input/output format
+
+
+Here is the input/output format for ReByte's assistant:
+
+```javascript
+
+export const AssistantIOSchema: JSONSchemaType<ChatProtocolType> = {
+  type: "object",
+  properties: {
+    role: { type: "string" },
+    content: { type: "string" },
+    parts: {
+      type: "array",
+      items: AttachmentItemSchema,
+      nullable: true,
+    },
+  },
+  required: ["role", "content"],
+}
+
+const AttachmentItemSchema: JSONSchemaType<AttachmentItem> = {
+  type: "object",
+  properties: {
+    type: {
+      type: "string",
+      enum: ["file", "text", "image_url", "link", "table"],
+    },
+    text: { type: "string", nullable: true },
+    file: {
+      type: "object",
+      nullable: true,
+      properties: {
+        id: { type: "string" },
+        name: { type: "string", nullable: true },
+      },
+      required: ["id"],
+    },
+    image_url: {
+      type: "object",
+      nullable: true,
+      properties: {
+        url: { type: "string" },
+        detail: { type: "string", enum: ["low", "high"], nullable: true },
+      },
+      required: ["url"],
+    },
+    link: {
+      type: "object",
+      nullable: true,
+      properties: {
+        title: { type: "string", nullable: true },
+        url: { type: "string" },
+        id: { type: "string", nullable: true },
+      },
+      required: ["url"],
+    },
+    table: {
+      type: "object",
+      nullable: true,
+      properties: {
+        name: { type: "string" },
+        columns: { type: "array", items: { type: "string" } },
+        data: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              value: { type: "array", items: { type: "string" } },
+            },
+            required: ["value"],
+          },
+        },
+      },
+      required: ["name", "columns", "data"],
+    },
+  },
+  required: ["type"],
+}
+
+
+
+```
 
 [//]: # (## Knowledge - capture private data)
 
@@ -70,7 +157,7 @@ You can access this information in the tool builder UI.
 [//]: # (> Ingredient for your Assistant.)
 
 [//]: # ()
-[//]: # (* Knowledge is private data that is stored in rebyte managed vector database. Rebyte currently provides following connectors for end users to import their knowledge:)
+[//]: # (* Knowledge is private data that is stored in rebyte managed vector database. ReByte currently provides following connectors for end users to import their knowledge:)
 
 [//]: # (  * Local file, supported file types are:)
 
