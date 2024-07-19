@@ -3,7 +3,7 @@
 Background: You are a data scientist in a financial company, and you are responsible for building a fraud analysis assistant to help your team identify potential fraud cases. The assistant should be able to analyze transaction data and identify suspicious patterns.
 
 What you will have:
-* A csv file containing 100k transaction records. For your convenience, we have prepared a sample file for you. You can download it [here](https://storage.googleapis.com/cui-runtime/fraud1.csv). Or you can import to google spreadsheet, Google will automatically convert it to csv format.
+* A csv file containing 100k transaction records. For your convenience, we have prepared a sample file for you. You can download it [here](https://storage.googleapis.com/cui-runtime/fraud1.csv), or [google spreadsheet link](https://docs.google.com/spreadsheets/d/1mY57k8zYkhCZo51XEydnplWRSu75KiOAhvolTE4IUpw/edit?gid=1496520613#gid=1496520613). Or you can import to google spreadsheet, Google will automatically convert it to csv format.
 One benefit of using google spreadsheet is that you can edit the data directly, rebyte will automatically sync the data.
 
 ### Step 1: Create A Table in Rebyte
