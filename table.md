@@ -9,6 +9,10 @@ Table is a virtual database that represents a read-only view to your original da
 * **Partial View**: you can select a subset of columns and rows from your original data source to create a table. For example, you can hide sensitive columns, or filter out rows that are not relevant to your assistant. **This means you never need to alter your original data source**.
 * **Transient**: Table is transient, which means it's not persisted in rebyte's database, it's only available during the execution of the tool. This is to ensure that your data is secure and private.
 
+
+![img](https://res.cloudinary.com/dfjwtidnh/image/upload/v1721429500/table-overview_dawz0l.png)
+
+
 ## Tableset
 Tableset is a collection of tables, tableset is the unit of access control, which means tables in the same tableset share the same access control in terms of who can access the table.
 
