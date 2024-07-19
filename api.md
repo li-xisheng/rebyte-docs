@@ -378,8 +378,6 @@ The modified thread object matching the specified ID.
     }
 }
 ```
-
-
 ---
 
 # File API

@@ -13,15 +13,20 @@ Table is a virtual database that represents a read-only view to your original da
 Tableset is a collection of tables, tableset is the unit of access control, which means tables in the same tableset share the same access control in terms of who can access the table.
 
 ## Table Lifecycle
-1. **Build Table**: two things need to be specified when building a table:
-    * **Data Source**: the original data source, such as a csv file, a database table, etc.
-    * **View**: how to map the original data source to the table, such as selecting columns, filtering rows, etc.
-2. You can build a **tool** to enable a natural language query to table. Here are three steps:
-    * **Load table action**: Load the table data into memory, and output a complete table schema. 
-    * **LLM action**: combine the table schema with the natural language query to generate an SQL query. You can use any LLM. In the future, we will provide a specialized model for just outputting SQL queries. 
-    * **Query table action**: search the table with the generated SQL query, and output the result.
+
+### Build Time
+Two things need to be specified when building a table:
+
+* **Define Data Source**: the original data source, such as a csv file, a database table, etc.
+* **Define Table View**: how to map the original data source to the table, such as selecting columns, filtering rows, etc.
+
+### Query Time
+You can build a **tool** to enable a natural language query to table. Here are three steps:
+* **Load table action**: Load the table data into memory, and output a complete table schema. 
+* **SQL Generation By LLM**: combine the table schema with the natural language query to generate an SQL query. You can use any LLM. In the future, we will provide a specialized model for just outputting SQL queries. 
+* **Query table action**: search the table with the generated SQL query, and output the result.
    
-## Reference To Original Data Source
+## Refer To the Original Data Source
 When creating a table, you need to provide an SQL query to specify which part of the original data source you want to use to build the table. 
 
 The most common use case is just to include all columns and rows from the original data source, in this case, The SQL query is just 
