@@ -5,12 +5,12 @@
 
 Compared to other AI assistants on the market, ReByte has the following focus:
 
-* **Unified Interface** A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis. **Revia** is available on all platforms, including web, mobile, and desktop.
-* **Extensible** You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**. For example, you can build a customer support assistant on your customer support data, **Revia** can magically help you to answer customer questions, or even solve customer problems.
+* **Instant Use**: An out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis, as well as for your company specific use cases, such as handing your team's structure and unstructured data. Available on all platforms, including desktop and mobile.
+* **Extensible** Every company is different. You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into ReByte. For example, you can build a customer support assistant on your customer support data, ReByte can help you to answer customer questions, or even solve customer problems.
+* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, ReByte can also handle structured data, including csv, Excel, postgres, mysql, parquet, JSON, sqlite. Combine our structured data support, you can build a RAG system with super high precision compared to traditional vector search engine.
 * **Multistep Plan and Execute** ReByte uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. It can also correct itself if the plan is not executed as expected.
 * **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
 * **Automatic Data Sync** ReByte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
-* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, ReByte can also handle structured data, including csv, Excel, postgres, mysql, parquet, JSON, sqlite.
 * **Team Collaboration**, You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
 
 
@@ -34,7 +34,7 @@ ReByte provides the following features to address these issues, one is a low-cod
 
 ### No-Code Platform for Building Tools
 
-ReByte provides a low-code platform, similar to Langchain, for extending the capabilities of team assistants. As mentioned in this [cognitive architecture blog post by langchain](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)), large language model tools can be divided into two categories: those driven by the reasoning capabilities of large language models, such as Chain of Thoughts, and those driven by "flow engineering," where developers design LLM tools that align with the team's workflow. ReByte provides a complete set of tools to support the development of such customized tools, while minimizing the programming requirements for developers. Our goal is to enable developers to build large language model tools with just an understanding of JSON.
+ReByte provides a low-code platform for customized tool build, similar to Langchain, for extending the capabilities of team assistants. As mentioned in this [cognitive architecture blog post by langchain](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)), large language model tools can be divided into two categories: those driven by the reasoning capabilities of large language models, such as Chain of Thoughts, and those driven by "flow engineering," where developers design LLM tools that align with the team's workflow. ReByte provides a complete set of tools to support the development of such customized tools, while minimizing the programming requirements for developers. Our goal is to enable developers to build large language model tools with just an understanding of JSON.
 
 ### Enterprise Data Integration
 
@@ -45,10 +45,10 @@ ReByte will help to create a unified team knowledge base by integrating data fro
 
 ## Two Views
 
-ReByte contains two main components::
+ReByte contains two main parts:
 
 * **End User's view**: An AI Assistant for your team members. You can think of it as a private ChatGPT with access to your team's private knowledge and workflow.
-* **Builder's view**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
+* **Builder's view**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to your team member.
 
 
 
