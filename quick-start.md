@@ -15,7 +15,11 @@ You can explore the data by clicking the "Explore," and use any SQL query to fil
 let's say you finally have a table named "transaction" in ReByte.
 
 ### Step 2: Create A Fraud Analysis Tool
-Create a new tool in ReByte, and name it "Fraud Analysis". ReByte has buildin template for data analysis, you can choose the "Data Analysis" template, and then you can modify it to fit your need.
+Create a new tool in ReByte, and name it "Fraud Analysis."
+ReByte has prebuilt template for data analysis,
+you can choose the "Data Analysis" template, and then you can modify it to fit your need.
+**Remember** to change the table to the "transaction" table you created in step 1 in both the "load table" and "query table" actions.
+
 
 **IMPORTANT**:
 You should change the tool to point to load schema from the "transaction" table, also run SQL on the same table.
