@@ -4,6 +4,9 @@
 [//]: # (## User's Guide)
 
 * [What is ReByte?](README.md)
+
+
+## User
 * [User's Guide](user-guide.md)
 
 [//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
@@ -16,7 +19,7 @@
 
 [//]: # (# Developer)
 
-## Developer's Guide
+## Developer
 * [Quick Start](quick-start.md)
 * [Tool](tool.md)
 * [Table](table.md)
