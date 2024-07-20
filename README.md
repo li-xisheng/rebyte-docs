@@ -1,15 +1,16 @@
 ## What is ReByte?
 
-ReByte is an AI assistant that helps to boot your team's productivity.
 
-Compare to other AI assistants on market, ReByte has the following focus:
+> ReByte is an AI assistant for every member of your team. 
+
+Compared to other AI assistants on the market, ReByte has the following focus:
 
 * **Unified Interface** A super assistant called **Revia**, it's an out of box AI assistant for most general use cases, such as base LLM, search engine integration, image understanding, RAG integration, process common file types, advance data analysis. **Revia** is available on all platforms, including web, mobile, and desktop.
 * **Extensible** You can customize your own tool or assistant to fit your proprietary workflow, and seamlessly integrate them into **Revia**. For example, you can build a customer support assistant on your customer support data, **Revia** can magically help you to answer customer questions, or even solve customer problems.
 * **Multistep Plan and Execute** ReByte uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. It can also correct itself if the plan is not executed as expected.
 * **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
 * **Automatic Data Sync** ReByte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
-* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, ReByte can also handle structured data, including csv, excel, postgres, mysql, parquet, json, sqlite.
+* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, ReByte can also handle structured data, including csv, Excel, postgres, mysql, parquet, JSON, sqlite.
 * **Team Collaboration**, You can definitely use rebyte for your personal uses, but rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/agent/assistant, also enforce access control.
 
 
@@ -37,7 +38,7 @@ ReByte provides a low-code platform, similar to Langchain, for extending the cap
 
 ### Enterprise Data Integration
 
-ReByte will help to create a unified team knowledge base by integrating data from authorized sources with the team's permission. This comprehensive and integrated knowledge base is crucial for subsequent processing by large language models. Initially, ReByte will integrate data from sources such as files, GitHub, Notion, web pages, and Twitter, and this list will continue to expand in the future.
+ReByte will help to create a unified team knowledge base by integrating data from authorized sources with the team's permission. This comprehensive and integrated knowledge base is crucial for later processing by large language models. Initially, ReByte will integrate data from sources such as files, GitHub, Notion, web pages, and Twitter, and this list will continue to expand in the future.
 
 [//]: # (Data security is a constant concern within enterprises, and this is also true for team assistants. ReByte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.)
 
@@ -46,7 +47,7 @@ ReByte will help to create a unified team knowledge base by integrating data fro
 
 ReByte contains two main components::
 
-* **End User's view**: An AI Assistant for your team members. You can think of it as a private Chatgpt with access to your team's private knowledge and workflow.
+* **End User's view**: An AI Assistant for your team members. You can think of it as a private ChatGPT with access to your team's private knowledge and workflow.
 * **Builder's view**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to **Revia**.
 
 
