@@ -29,8 +29,9 @@
 * [Knowledge](knowledge.md)
 * [API](api.md)
 
-## Admin
-* [Manage Your Company's Assistants](api.md)
+[//]: # (## Admin)
+
+[//]: # (* [Manage Your Company's Assistants]&#40;api.md&#41;)
 
 [//]: # (## Tool)
 
@@ -141,8 +142,9 @@
 
 [//]: # (* [File]&#40;assistant/file.md&#41;)
 
-## Pricing
+[//]: # (## Pricing)
 
-* [Pricing](pricing/overview.md)
+[//]: # ()
+[//]: # (* [Pricing]&#40;pricing/overview.md&#41;)
 
-## Contact the ReByte team?
+[//]: # (## Contact the ReByte team?)
