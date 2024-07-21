@@ -3,6 +3,7 @@
 [//]: # (## One Minute Overview)
 [//]: # (## User's Guide)
 
+
 * [What is ReByte?](README.md)
 
 
@@ -148,3 +149,6 @@
 [//]: # (* [Pricing]&#40;pricing/overview.md&#41;)
 
 [//]: # (## Contact the ReByte team?)
+
+## Talk To Founder
+[Email](mailto:founder@rebyte.ai)
