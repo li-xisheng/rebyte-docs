@@ -9,6 +9,10 @@
 ## User
 * [User's Guide](user-guide.md)
 
+### Examples
+* [Analyze SP500 Companies](sp500.md)
+* [Analyze Fraud Transactions](fraud.md)
+
 [//]: # (* [User And Team]&#40;guide/teams/overview.md&#41;)
 
 [//]: # (* [Use Team Assistant]&#40;guide/teams/use-assistant.md&#41;)
@@ -20,11 +24,13 @@
 [//]: # (# Developer)
 
 ## Developer
-* [Quick Start](quick-start.md)
 * [Tool](tool.md)
 * [Table](table.md)
 * [Knowledge](knowledge.md)
 * [API](api.md)
+
+## Admin
+* [Manage Your Company's Assistants](api.md)
 
 [//]: # (## Tool)
 
