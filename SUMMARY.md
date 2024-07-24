@@ -151,4 +151,5 @@
 [//]: # (## Contact the ReByte team?)
 
 ## Talk to Founder
-founder@rebyte.ai
+
+* [contacts](contacts.md)
