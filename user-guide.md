@@ -14,7 +14,10 @@ The relationship between **Revia** and **Other Assistants** is like the relation
 
 In terms of functionality, **Revia** is no different from other assistants, the only difference is that **Revia** is always shown on the top of the assistant list, and it's available for all team members.
 
-## Configure Team Assistant
+## For Team Builder and Admin
+
+
+### Configure Team Assistant
 Only builders or admin in your team can configure the team assistant. 
 
 Each assistant, including **Revia**, contains:
@@ -24,7 +27,8 @@ Each assistant, including **Revia**, contains:
 
 **Planner** and **Code Sandbox** can be optional. In that case, user has to ask specific tool to perform a specific task.
 
-## Use Team Assistant
+
+## For Team Member
 
 ### Interacts with Revia
 
@@ -42,8 +46,6 @@ user can see the reasoning steps of each tool.
 Builder can also see the actual tool running log to debug if there's any issue.
 
 ### Code Sandbox
-ReByte provides a code sandbox for users to run python code.
-You can use this feature to run some custom code, such as data analysis,
-data visualization, etc. Each code execution is isolated,
-so you don't need to worry about the security issue.
+ReByte planner iteratively writes/executes code in the code sandbox to achieve the goal.
+This is super useful to do things like data analysis, numerical computation, etc. Code execution environment is isolated for each user iteration.
 
