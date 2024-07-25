@@ -29,6 +29,7 @@
 * [Table](table.md)
 * [Knowledge](knowledge.md)
 * [API](api.md)
+* [Planner](planner.md)
 
 [//]: # (## Admin)
 
