@@ -2,6 +2,18 @@
 
 > Backend subroutine for Assistant.
 
+### Why do we need that?
+
+Tool is a way to capture prior knowledge and experience, and make it reusable by assistant. 
+
+let's consider an example, the agent is asked to read a manual and follow the instructions to process the data. We exactly know how to do that as follows:
+1. Read the manual
+2. Parse the manual
+3. Follow the instructions
+4. Process the data
+
+We don't need any LLM planning capability to do that, we just need a sequence of actions to be executed. This is where the tool comes in, a tool is a sequence of actions that can be executed sequentially or in parallel, actions can be anything from reading a file, making an HTTP request, to executing an SQL query, make LLM call, etc.
+
 In ReByte, we define Tool as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. A Tool without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
 Here are some typical examples of AI tools:
 * Based on user's query, find the most relevant information from the user's knowledge base, and summarize the result and return the summary to the user.
