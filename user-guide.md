@@ -49,3 +49,10 @@ Builder can also see the actual tool running log to debug if there's any issue.
 ReByte planner iteratively writes/executes code in the code sandbox to achieve the goal.
 This is super useful to do things like data analysis, numerical computation, etc. Code execution environment is isolated for each user iteration.
 
+## Hallucination
+Hallucination is a common issue in AI assistants. In our system, we try to solve these issues in the following ways:
+
+* **Automate small steps**: We're **NOT** planning to do giant multiple steps reasoning, we do small steps planning at one time, and achieve the final goal iteratively under the guidance of the user.
+* **Reasoning Steps**: We show the reasoning steps on Assistant UI, so user can see how the assistant comes up with the answer. 
+* **Tool Run logs**: Builder can see the actual tool running log to debug if there's any issue. Tool run contains the input data, the output data, and every step that the tool takes to achieve the goal.
+* **Show original data**: We show the original data that the tool uses to generate the answer, so user can see if the data is correct. This is particularly useful for structured data. We will show exact data coming from user's database, so user knows if LLM provides the correct answer based on the data.
