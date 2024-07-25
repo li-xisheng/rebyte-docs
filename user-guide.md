@@ -10,9 +10,9 @@
 
 Besides Revia, team admin can build other assistants specific to some use cases, for example, a customer support assistant, a sales assistant, a marketing assistant, etc.
 
-The relationship between **Revia** and **Other Assistants** is like the relationship between **Team ChatGPT** and **Team Specific Gpts**.
+The relationship between **Super Assistant** and **Other Assistants** is like the relationship between **Team ChatGPT** and **Team Specific Gpts**.
 
-In terms of functionality, **Revia** is no different from other assistants, the only difference is that **Revia** is always shown on the top of the assistant list, and it's available for all team members.
+In terms of functionality, **Super Assistant** is no different from other assistants, the only difference is that **Super Assistant** is always shown on the top of the assistant list, and it's available for all team members.
 
 ## For Team Builder and Admin
 
