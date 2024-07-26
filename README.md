@@ -20,6 +20,20 @@ Besides, ReByte has the following features:
 ![img](http://res.cloudinary.com/dfjwtidnh/image/upload/v1720449540/rebyte/api_uploaded_assets/26c4a4ce-328d-4291-a2c7-88c89428e757.png)
 
 
+## Typical Use Cases
+
+We expect ReByte can be useful in the following use cases:
+
+* **Data Exploration** let any team member can explore the data with maximum flexibility, while team admin has great control over the data access.
+
+Think about you have multiple sales data across Google, excel, local file csv, database etc. You want to find out which might be the best sales channel for your company, **Rebyte Table** let you combine your data in super flexible ways, and do the exploration.
+
+* **Company knowledge base** You have a lot of knowledge scattered across different sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft, etc. You want to build a unified knowledge base for your team, **Rebyte Knowledge** let you sync data from those sources, and build your own knowledge base.
+
+You can ask things like "What's the company policy for remote work?" or "How many PTOS do I have left?"
+
+* **Automate repetitive tasks** You have a lot of repetitive tasks, such as data cleaning, data transformation, data analysis, data visualization, those workflow are proprietary to your team, you want to automate those tasks, **Rebyte Tool** let you build your own tools to automate those tasks, every team member can use those tools just like using a normal AI assistant.
+
 
 [//]: # (<figure><img src=".gitbook/assets/image &#40;9&#41;.png" alt=""><figcaption></figcaption></figure>)
 
