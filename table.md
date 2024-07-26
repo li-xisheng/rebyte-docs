@@ -8,6 +8,8 @@ Table is a virtual database that represents a read-only view to your original da
 * **Read-only**: Table is a read-only view to your original data source, which means rebyte never writes to your original data source.
 * **Partial View**: you can select a subset of columns and rows from your original data source to create a table. For example, you can hide sensitive columns, or filter out rows that are not relevant to your assistant. **This means you never need to alter your original data source**.
 * **Transient**: Table is transient, which means it's not persisted in rebyte's database, it's only available during the execution of the tool. This is to ensure that your data is secure and private.
+* **Shareable Database**: Think about data owner create a virtual database with proper access control, and share it with other team members, everyone cann then run the query independently on the shared database.
+
 
 
 ![img](https://res.cloudinary.com/dfjwtidnh/image/upload/v1721433515/table_kwozfl.png)

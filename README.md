@@ -1,6 +1,5 @@
 ## What is ReByte?
 
-
 > ReByte is an AI assistant for every member of your team. 
 
 ReByte has two primary goals:
@@ -24,7 +23,7 @@ Besides, ReByte has the following features:
 
 We expect ReByte can be useful in the following use cases:
 
-* **Data Exploration** let any team member can explore the data with maximum flexibility, while team admin has great control over the data access.
+* **Data Exploration** Data owner can create a virtual database with proper access control, and share it with other team members, everyone can then run the query independently on the shared database. 
 
 Think about you have multiple sales data across Google, excel, local file csv, database etc. You want to find out which might be the best sales channel for your company, **Rebyte Table** let you combine your data in super flexible ways, and do the exploration.
 
