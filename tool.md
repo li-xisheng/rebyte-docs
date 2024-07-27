@@ -20,9 +20,9 @@ Here are some typical examples of AI tools:
 * User describes a database query in natural language, agent will translate the query into SQL and execute the query on user's database to get results, then use LLM to generate a summary of the results and return to user.
 * Help user to do professional translation between two languages, user can describe the translation task in natural language, agent will not only do the translation but also evaluate the translation quality, if the quality is not good enough, agent will iterate the translation process until the quality is good enough. 
 
-### This is a typical tool workflow
+[//]: # (### This is a typical tool workflow)
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+[//]: # (<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>)
 
    
 ## Build a Tool?
@@ -58,23 +58,9 @@ LLM is naturally unpredictable, it's hard to predict what LLM will do in a speci
 4. Loop previous steps until you are satisfied with the result.
 5. Deploy your tool to production. This is the process of making your tool available to end users.
 
-## Tool Version
-Every Deployment of a tool triggers a new version, starting from 1.
-There are two special version strings:
-'latest' always points to the newest version of the tool.
-'Live': You can manually promote a version to live, this is the version that end users will use.
 
-The best practice is to always use 'latest' in your development environment,
-and use 'live' in your production environment. 
-
-## Tool Observability
-ReByte records everything that happens during the execution of a tool,
-including the input data, the output data, the reasoning steps, and the execution log.
-We call this information a **Tool Run**.
-**Tool Run** is crucial for debugging and improving the tool.
-You can access this information in the tool builder UI. 
-
-## Input and Output Format
+## Action Chain
+### Input and Output
 
 There are two cases here:
 
@@ -163,6 +149,29 @@ const AttachmentItemSchema: JSONSchemaType<AttachmentItem> = {
 
 ```
 
+### Reference Previous Action Output
+
+Action runs in a sequence, the output of the previous action is just a normal JSON object, can be used as input for the next action. 
+There are two ways to reference the previous action output:
+* In JavaScript code, use
+```javascript
+env.state['action_name']
+```
+to reference the output of the previous action, named 'action_name'.
+
+* In Jinja template, use
+```jinja2
+{{ action_name }}
+```
+to reference the output of the previous action named 'action_name'.
+
+Action can output:
+* String
+* Array
+* Object
+
+[//]: # (### Runtime Config)
+
 [//]: # (## Knowledge - capture private data)
 
 [//]: # ()
@@ -184,3 +193,21 @@ const AttachmentItemSchema: JSONSchemaType<AttachmentItem> = {
 [//]: # (  * More connectors are coming soon)
 
 [//]: # (* Knowledge can be used in LLM Agents to do semantic search, or to do data augmentation. A great example is to use knowledge to do semantic search on a user's private knowledge base, and use the search result to do data augmentation for a language model, aka **Retrieval Augmented Generation**.)
+
+
+## Tool Version
+Every Deployment of a tool triggers a new version, starting from 1.
+There are two special version strings:
+'latest' always points to the newest version of the tool.
+'Live': You can manually promote a version to live, this is the version that end users will use.
+
+The best practice is to always use 'latest' in your development environment,
+and use 'live' in your production environment.
+
+
+## Tool Observability
+ReByte records everything that happens during the execution of a tool,
+including the input data, the output data, the reasoning steps, and the execution log.
+We call this information a **Tool Run**.
+**Tool Run** is crucial for debugging and improving the tool.
+You can access this information in the tool builder UI. 
