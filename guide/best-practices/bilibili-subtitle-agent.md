@@ -1,9 +1,8 @@
-# Bilibili subtitle agent
+# Bilibili 字幕助手
 
-Help you get bilibili subtitles and summarize the content.
+帮助您获取 bilibili 字幕并总结内容。
 
-
-### Setup the testing data in `Datasets`
+### 在 `Datasets` 中设置测试数据
 
 ```json
 [
@@ -14,17 +13,16 @@ Help you get bilibili subtitles and summarize the content.
 ]
 ```
 
-
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```js
 _fun = (env) => {
   // use `env.state.Action_NAME` to refer output from previous Actions.
   return env.state.INPUT.messages.slice(-1)[0].content
-} 
+}
 ```
 
-### Use LLM to process user's input
+### 使用 LLM 处理用户的输入
 
 ```javascript
 _fun = (env) => {
@@ -33,7 +31,7 @@ _fun = (env) => {
 }
 ```
 
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```javascript
 _fun = (env) => {
@@ -42,13 +40,13 @@ _fun = (env) => {
 }
 ```
 
-### Use `Http Request Maker` and request for CID
+### 使用 `Http Request Maker` 请求 CID
 
 ```javascript
 api.bilibili.com/x/player/pagelist?bvid={{BV}}
 ```
 
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```javascript
 _fun = (env) => {
@@ -57,13 +55,13 @@ _fun = (env) => {
 }
 ```
 
-### Use `Http Request Maker` and request for the url for subtitles
+### 使用 `Http Request Maker` 请求字幕的 URL
 
 ```javascript
 api.bilibili.com/x/player/v2?bvid={{BV}}&cid={{CID}}
 ```
 
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```javascript
 _fun = (env) => {
@@ -77,17 +75,16 @@ _fun = (env) => {
   const url = env.state.GET_URL.body.data.subtitle.subtitles[0].subtitle_url
   const result = url.replace(/\/\//g, "");
   return result
-  
 }
 ```
 
-### Use `Http Request Maker` and request for the subtitles
+### 使用 `Http Request Maker` 请求字幕
 
 ```javascript
 {{GET_CC_URL}}
 ```
 
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```javascript
 _fun = (env) => {
@@ -100,7 +97,8 @@ _fun = (env) => {
 }
 ```
 
-### Send subtitles to the LLM to summarize
+### 将字幕发送到 LLM 进行总结
+
 ```json
 {% if GET_URL.body.data.subtitle.subtitles[0].subtitle_url == "" %}
 please reply to me with the phrase: "I apologize for being unable to retrieve content from the URL you provided. Please verify the correctness of the web address"
@@ -116,7 +114,7 @@ Please provide a summary of the above passage and respond to me in Chinese.
 {% endif %}
 ```
 
-### Extract content from `Code Action`
+### 从 `Code Action` 中提取内容
 
 ```javascript
 _fun = (env) => {
@@ -129,4 +127,4 @@ _fun = (env) => {
 }
 ```
 
-### Output the final results
+### 输出最终结果

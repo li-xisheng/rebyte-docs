@@ -1,12 +1,9 @@
-# Collaboration
+# 协作
 
-To avoid incosistency, ReByte has provided features that allow you to work with your teams on building tools.
+为了避免不一致性，ReByte 提供了与团队协作构建工具的功能。
 
-* If **two or more people** are on the same agent's page, we will automatically "lock" the page, which means no one can edit this agent.
+* 如果 **两人或更多人** 在同一个代理页面上，我们将自动“锁定”该页面，这意味着没有人可以编辑该代理。
 
-* To unlock, click the "lock" icon hovering at the bottom.
+* 要解锁，请点击底部悬停的“锁定”图标。
 
 <figure><img src="../images/collaboration.png" alt=""></figure>
-
-
-

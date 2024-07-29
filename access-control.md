@@ -1,11 +1,11 @@
-## Roles
+## 角色
 
-### Admin
-can do everything
+### 管理员
+可以执行所有操作
 
-### Builder
-almost everything, except for team member management
+### 构建者
+几乎可以执行所有操作，除了团队成员管理
 
-### User
-* can interact with the assistants configured by the team admin or builder
-* can see 
+### 用户
+* 可以与团队管理员或构建者配置的助手进行交互
+* 可以查看

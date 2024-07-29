@@ -1,19 +1,16 @@
-## Planning
+## 规划
 
-Planning is the process of thinking about the activities required to achieve a desired goal. If you ask the assistant to perform a task, the assistant will create a plan to achieve the goal. The plan is a sequence of tools that will be executed to achieve the goal.
+规划是思考实现预期目标所需活动的过程。如果您要求助手执行任务，助手将创建一个计划来实现目标。该计划是一系列将被执行的工具，以实现目标。
 
-Planning is intrinsically hard. People always cite the inability to do a good planning as a big pain point for agent reliability. In our system, we're not solving a multiple steps planning problem, at lease not for now. We're targeting to do small steps planning at one time, and achieve the final goal iteratively under the guidance of the user. 
+规划本质上是困难的。人们总是提到无法进行良好规划是代理可靠性的一个大痛点。在我们的系统中，我们不是在解决多步骤的规划问题，至少现在不是。我们目标是在一次规划时做小步骤规划，并在用户的指导下迭代实现最终目标。
 
-We've tried different planning strategies, in our v3 planner, we use function calls to represent the planning steps. Planner is always a **Tool** in our system, you can find the source code here:
+我们尝试了不同的规划策略，在我们的 v3 规划器中，我们使用函数调用来表示规划步骤。规划器在我们的系统中始终是一个**工具**，您可以在这里找到源代码：
 
 https://rebyte.ai/p/a8056c9a7bac76e20087/callable/e89617c3477fa850b05e/editor/design
 
+在生产环境中，规划器使用 gpt-4o，但我们正在努力切换到其他模型。
 
-In Production, planner uses gpt-4o, but we're working on switching to other models.
+### 下一步
 
-
-### Next Steps
-
-* Allowing you to provide domain-specific knowledge to the planner, so that the planner can make better decisions.
-* Allow you complete control over the planner, so you can write your own planner.
-
+* 允许您向规划器提供领域特定的知识，以便规划器可以做出更好的决策。
+* 允许您完全控制规划器，因此您可以编写自己的规划器。

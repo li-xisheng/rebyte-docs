@@ -1,95 +1,89 @@
-# Language Model Completion
+# 语言模型完成
 
-We provide `Language Model Completion` action to let the language model complete your prompt.
+我们提供 `Language Model Completion` 动作，让语言模型完成您的提示。
 
-## Usage
+## 用法
 
-* Add a `Language Model Completion` action to your agent.
-* Configure the action with specifications and parameters.
+* 向您的代理添加一个 `Language Model Completion` 动作。
+* 使用规范和参数配置该动作。
 
-### Specification
+### 规范
 
 <figure><img src="../../../../images/completion.png" alt=""><figcaption></figcaption></figure>
 
-**Prompt**
+**提示**
 
-* This is the prompt that will be sent to the model.
-* The model will complete your prompt and respond with the completed content.
+* 这是将发送到模型的提示。
+* 模型将完成您的提示并以完成的内容进行响应。
 
-### Configuration
+### 配置
 
-The configuration is the same as [Language Model Chat](language-model-chat.md).
+配置与 [语言模型对话](language-model-chat.md) 相同。
 
-You can choose the model you want to use by clicking the model's name, the default model is "gpt-3.5-turbo-1106".
+您可以通过点击模型名称选择要使用的模型，默认模型是 "gpt-3.5-turbo-1106"。
 
 <figure><img src="../../../../images/chat-models.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-Click this button in the bottom right corner of the `Language Model Completion` action to open the configuration panel.
+点击 `Language Model Completion` 动作右下角的此按钮以打开配置面板。
 
 <figure><img src="../../../../images/chat-config-button.jpg" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-There are five settings in the configuration panel, as shown below.
+配置面板中有五个设置，如下所示。
 
 <figure><img src="../../../../images/chat-config-2.png" alt=""><figcaption></figcaption></figure>
 
-**Temperature**
+**温度**
 
-* "Temperature" controls the randomness of the model's output.
-* The higher the model temperature, the more random the output is.
+* “温度”控制模型输出的随机性。
+* 模型温度越高，输出越随机。
 
-**Maximum Output Tokens**
+**最大输出令牌**
 
-* "Maximum Output tokens" specifies the maximum number of tokens to generate.
-* Can use up to 40,000 tokens(the limit for models vary), including prompt and model returned content.
+* “最大输出令牌”指定要生成的最大令牌数。
+* 可以使用最多 40,000 个令牌（模型的限制各不相同），包括提示和模型返回的内容。
 
-**JSON Response**
+**JSON 响应**
 
-* "JSON Response" button enable JSON mode, which guarantees the messages the model generate are in JSON format.
-* NOTE: This feature is a beta feature and only supported by OpenAI's "gpt-4-1106-preview" model now.
-* NOTE: When you use this feature, make sure the word "JSON" is in the context. Otherwise, the OpenAI's API will throw an error.
+* "JSON Response" 按钮启用 JSON 模式，确保模型生成的消息为 JSON 格式。
+* 注意：此功能是测试功能，目前仅支持 OpenAI 的 "gpt-4-1106-preview" 模型。
+* 注意：使用此功能时，请确保上下文中包含“JSON”一词。否则，OpenAI 的 API 会抛出错误。
 
-**Seed**
+**种子**
 
-* The "Seeds" is a parameter that can be specified when using the `Language Model Completion` and `Language Model Completion` actions.
-* It helps to ensure consistent outputs by making the system sample deterministically, resulting in the same result for repeated requests with the same seed and parameters.
-* NOTE: This feature is a beta feature and only supported by OpenAI's model.
+* “种子”是在使用 `Language Model Completion` 和 `Language Model Completion` 动作时可以指定的参数。
+* 它通过使系统确定性地采样，确保一致的输出，从而在使用相同种子和参数进行重复请求时产生相同的结果。
+* 注意：此功能是测试功能，目前仅支持 OpenAI 的模型。
 
-**Stop Words**
+**停止词**
 
-* Stop words are used to make the model stop at a desired point, such as the end of a sentence or a list.
+* 停止词用于使模型在预期点停止，例如句子或列表的结尾。
 
-On the top right of the action, there are two more things to configure: "Stream Mode" and "Cache Mode".
+在动作的右上角，还有两个可以配置的选项：“流模式”和“缓存模式”。
 
 <figure><img src="../../../../images/stream-and-cache.jpg" alt=""><figcaption></figcaption></figure>
 
-**Stream**
+**流**
 
-* This option allows you to receive partial chat responses as they are being generated, rather than waiting for the entire completion to be finished before receiving a response.
-* By setting stream mode, you can start processing or displaying the beginning of the chat before the full response is received.
+* 此选项允许您在生成部分聊天响应时接收它们，而不是等待整个完成后才接收响应。
+* 通过设置流模式，您可以在收到完整响应之前开始处理或显示聊天的开头。
 
-**Cache**
+**缓存**
 
-* Caching involves storing frequently accessed data to improve response times without making repeated calls to a model.
-* If you use the cache mode, the model will cache the response and return the cached response when the same request is made again. This will make your agent run faster.
+* 缓存涉及存储频繁访问的数据，以提高响应时间，而无需重复调用模型。
+* 如果使用缓存模式，模型将缓存响应，并在再次发出相同请求时返回缓存的响应。这将使您的代理运行更快。
 
-### Message Format
+### 消息格式
 
-ReByte uses a similar message format as OpenAI. The message format is a JSON object with the following fields:
+ReByte 使用类似于 OpenAI 的消息格式。消息格式是一个包含以下字段的 JSON 对象：
 
-* Role: could be one from 'user', 'system', or 'assistant'.
-* Content: content of this message.
-* Name(optional): name of role.
-* Context(optional): context of this message.
+* 角色：可以是 'user'、'system' 或 'assistant' 中的一个。
+* 内容：此消息的内容。
+* 名称（可选）：角色名称。
+* 上下文（可选）：此消息的上下文。
 
-&#x20;
+**消息格式示例**
 
-**Message Format Examples**
-
-1.Prompt Example
+1. 提示示例
 
 ```xml
 Your role is that of a text editor. 
@@ -113,6 +107,6 @@ please reply to me with the phrase: "I apologize for being unable to retrieve co
 {{CODE_1.content}}
 ```
 
-## Example Tool
+## 示例工具
 
-* [Language Model Completion](https://rebyte.ai/p/21b2295005587a5375d8/callable/719d2f31bf9fe977f699/editor)
+* [语言模型完成](https://rebyte.ai/p/21b2295005587a5375d8/callable/719d2f31bf9fe977f699/editor)

@@ -1,43 +1,40 @@
-# File Loader
+# 文件加载器
 
-The `File Loader` action can load files previously uploaded to ReByte either via the ReByte UI or via API.
+`文件加载器` 动作可以加载先前通过 ReByte UI 或 API 上传到 ReByte 的文件。
 
-A typical use case is you want your agent to process a file uploaded by a user. You can use the `File Loader` action to load the file and extract data from it.
+一个典型的用例是您希望您的代理处理用户上传的文件。您可以使用 `文件加载器` 动作来加载文件并从中提取数据。
 
-This Action accepts a `file_id` as input and returns the extracted data from the file. 'file_id' is a unique identifier of the file uploaded to ReByte.
+此动作接受 `file_id` 作为输入，并返回从文件中提取的数据。`file_id` 是上传到 ReByte 的文件的唯一标识符。
 
+我们支持多种数据类型，包括：DOC、DOCX、IMG、EPUB、JPEG、JPG、PNG、XLS、XLSX、PPT、PPTX、MD、TXT、RTF、MD、TXT、RTF、RST、PDF、JSON、HTML 和 EML。
 
-We support various data types, including: DOC, DOCX, IMG, EPUB, JPEG, JPG, PNG, XLS, XLSX, PPT, PPTX, MD, TXT, RTF, MD, TXT, RTF, RST, PDF, JSON, HTML and EML.
+## 用法
 
-## Usage
+* 将 `文件加载器` 动作添加到您的代理中，并选择要上传到代理的文件。
 
-* Add a `File Loader` action to your agent and select the file you want to upload to your agent.
+* 指定此文件的 `file_id`，并在需要引用此文件时使用此唯一的 `file_id`。
 
-* Specify the `file_id` of this file and use this unique `file_id` whenever you want to refer to this file.
+* 如果您将代理连接到应用程序，应用程序用户可以在应用程序中上传文件，`file_id` 将传递给代理。
 
-* If you connect your agent to an app, app users can upload files in the app, and the `file_id` will be passed to the agent.
+* 此动作的输出为 JSON 格式，包含从文件中提取的数据。
 
-* The output of this action is in JSON format, containing extracted data from the file. 
+<!-- **配置**
 
-<!-- **Config**
+* **文件 ID:** 文件的 UUID，可以是固定的也可以引用变量。
 
-* **File ID:** UUID of the file, can be fixed or reference to a variable.
+**输出**
 
-**Output**
+* 从文件中提取的结构化数据的 JSON 数组
+* 根据文件类型，结构化数据可能不同。例如，对于 PDF 文件，结构化数据是页面列表，每个页面是段落列表，每个段落是行列表，每行是单词列表。对于 JSON 文件，结构化数据是 JSON 对象本身。 -->
 
-* JSON Array of structure data extracted from the file
-* Depends on file type, structure data can be different. For example, for a PDF file, the structure data is a list of pages, each page is a list of paragraphs, each paragraph is a list of lines, each line is a list of words. For a JSON file, the structure data is the JSON object itself. --> 
+<!-- **示例**
 
+* [文件加载器](https://rebyte.ai/p/21b2295005587a5375d8/agent/bb48d1c1658b5a08917a) -->
 
+<!-- **错误处理**
 
-<!-- **Example** -->
+* 如果文件 ID 无效，或文件不受支持，动作将返回一个空数组。 -->
 
-<!-- * [File Loader](https://rebyte.ai/p/21b2295005587a5375d8/agent/bb48d1c1658b5a08917a) -->
+## 示例工具
 
-<!-- **Error Handing**
-
-* If the file id is invalid, or the file is not supported, the action will return an empty array. -->
-
-## Example Tool
-
-* [File Loader](https://rebyte.ai/p/21b2295005587a5375d8/callable/bb48d1c1658b5a08917a/editor)
+* [文件加载器](https://rebyte.ai/p/21b2295005587a5375d8/callable/bb48d1c1658b5a08917a/editor)

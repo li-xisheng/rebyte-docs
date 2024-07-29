@@ -1,22 +1,21 @@
-# Code Interpreter
+# 代码解释器
 
-We provide `Code Interpreter` action to solve your task by generating code and executing it.
+我们提供 `代码解释器` 动作，通过生成代码并执行它来解决您的任务。
 
-## Usage
+## 用法
 
-* Add a `Code Interpreter` action to your agent. 
+* 将 `代码解释器` 动作添加到您的代理中。
 
 <figure><img src="../../../../images/ci-1.png"></figure>
 
-* Fill in the "Code for Messages" as the input the "Code Interpreter" action. 
+* 在“消息代码”中填写作为输入的“代码解释器”动作。
 
 <figure><img src="../../../../images/ci-2.png"></figure>
   
-* Set the "Max Rounds of Code Interation" to limit the number of messages from the code interpreter.
+* 设置“代码迭代最大轮次”以限制代码解释器消息的数量。
 
-## Output
+## 输出
 
-The output of this action is as follows:
+此动作的输出如下：
 
 <figure><img src="../../../../images/ci-3.png"></figure>
-

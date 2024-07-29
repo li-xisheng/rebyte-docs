@@ -1,54 +1,54 @@
-# Building an Investor Type Quiz App
+# 构建一个投资者类型测验应用
 
-This comprehensive guide will take you through the steps of creating an investor type quiz app using ReByte's tools, in conjunction with the Typeform API. Typeform's API allows for the creation of user-friendly forms and surveys, making it an ideal choice for engaging with users in a clear and effective manner.
+本综合指南将引导您使用 ReByte 的工具和 Typeform API 创建一个投资者类型测验应用。Typeform 的 API 允许创建用户友好的表单和调查，是与用户进行清晰有效互动的理想选择。
 
-This is the final result of the app:
+这是应用的最终结果：
 
 ![app](https://res.cloudinary.com/dfjwtidnh/image/upload/v1710077600/investor-0_uqamir.png)
 
-## Prerequisites
+## 先决条件
 
-* A [Typeform account](https://www.typeform.com/), along with a thorough understanding of the [Typeform API documentation](https://www.typeform.com/developers/).
-* Basic familiarity with ReByte's agent and app, as well as some programming knowledge.
+* 一个 [Typeform 账户](https://www.typeform.com/)，以及对 [Typeform API 文档](https://www.typeform.com/developers/)的透彻理解。
+* 基本熟悉 ReByte 的代理和应用程序，以及一些编程知识。
 
-## How to Build
+## 如何构建
 
-The app operates on a straightforward logic. It begins by collecting basic information from the user, then generates a form using the Typeform API to ask more detailed questions. After the user completes and submits the form, their responses are analyzed to determine their investor type.
+应用程序基于简单的逻辑操作。它首先收集用户的基本信息，然后使用 Typeform API 生成一个表单以询问更详细的问题。用户完成并提交表单后，将分析他们的回答以确定他们的投资者类型。
 
-### Steps
+### 步骤
 
-1. **Gather information from the user's input:** 
+1. **从用户输入中收集信息：** 
 
-   Utilize ReByte's `model-chat` action to extract information based on the user's initial input.
+   使用 ReByte 的 `model-chat` 动作根据用户的初始输入提取信息。
 
    ![gather info](https://res.cloudinary.com/dfjwtidnh/image/upload/v1710077600/intestor-1_vj3kej.png)
 
-2. **Create a form using the Typeform API:**
+2. **使用 Typeform API 创建表单：**
    
-   Implement pre-written code to select appropriate questions for the form. A call to the Typeform API via the "" action then generates a form URL.
+   实现预编写的代码来选择表单的合适问题。通过 "" 动作调用 Typeform API，然后生成一个表单 URL。
 
 ![code](https://res.cloudinary.com/dfjwtidnh/image/upload/v1710077600/investor-2_sun44v.png)
 
-3. **Collect the user's response:**
+3. **收集用户的回答：**
 
-   Once the user submits the completed form, retrieve the results through the "http" action.
+   一旦用户提交完成的表单，通过 "http" 动作检索结果。
 
 ![get results](https://res.cloudinary.com/dfjwtidnh/image/upload/v1710077600/investor-3_k9ejp9.png)
 
-4. **Analyze the user's input:**
+4. **分析用户的输入：**
 
-   Use a subsequent model chat action to process the user's responses and identify their investor type.
+   使用随后的 model chat 动作处理用户的回答并确定他们的投资者类型。
 
    ![analyze](https://res.cloudinary.com/dfjwtidnh/image/upload/v1710077600/investor-4_puom38.png)
 
-### Conclusion
+### 结论
 
-This project demonstrates the power of integrating APIs like Typeform with ReByte's technology to create interactive, user-focused applications. The investor type quiz app not only engages users in a dynamic way but also provides valuable insights into their investment preferences, assisting them in making informed decisions. The steps outlined in this guide offer a framework that can be adapted to various applications, showcasing the flexibility and potential of these tools in the field of app development.
+该项目展示了将 Typeform 等 API 与 ReByte 技术集成的强大功能，以创建互动的用户关注的应用程序。投资者类型测验应用不仅以动态的方式吸引用户，还提供了对其投资偏好的宝贵见解，帮助他们做出明智的决定。本指南中概述的步骤提供了一个框架，可以适应各种应用，展示了这些工具在应用开发领域的灵活性和潜力。
 
-## Demos
+## 演示
 
-To see the app and tools in action, explore the following links:
+要查看应用和工具的实际操作，请访问以下链接：
 
-[Investor Type Quiz Tool](https://rebyte.ai/p/21b2295005587a5375d8/callable/ffdc7bd0d262b62cbd03/editor)
+[投资者类型测验工具](https://rebyte.ai/p/21b2295005587a5375d8/callable/ffdc7bd0d262b62cbd03/editor)
 
-[Investor Type Quiz App](https://rebyte.ai/copilot/0167ad764f8be5e1bd41/session/6afc350466)
+[投资者类型测验应用](https://rebyte.ai/copilot/0167ad764f8be5e1bd41/session/6afc350466)

@@ -1,43 +1,42 @@
-## Create a Fraud Analysis Assistant
+## 创建一个欺诈分析助手
 
-Background: You are a data scientist in a financial company, and you are responsible for building a fraud analysis assistant to help your team identify potential fraud cases. The assistant should be able to analyze transaction data and identify suspicious patterns.
+背景：您是一家金融公司的数据科学家，负责构建一个欺诈分析助手，以帮助您的团队识别潜在的欺诈案例。助手应该能够分析交易数据并识别可疑模式。
 
-What you will have:
-* A csv file containing 100k transaction records. For your convenience, we have prepared a sample file for you. You can download it [here](https://storage.googleapis.com/cui-runtime/fraud1.csv), or [google spreadsheet link](https://docs.google.com/spreadsheets/d/1mY57k8zYkhCZo51XEydnplWRSu75KiOAhvolTE4IUpw/edit?gid=1496520613#gid=1496520613). Or you can import to google spreadsheet, Google will automatically convert it to csv format.
-One benefit of using google spreadsheet is that you can edit the data directly, rebyte will automatically sync the data.
+您将拥有：
+* 一个包含 10 万条交易记录的 csv 文件。为了您的方便，我们为您准备了一个示例文件。您可以在[这里](https://storage.googleapis.com/cui-runtime/fraud1.csv)下载，或使用[Google 电子表格链接](https://docs.google.com/spreadsheets/d/1mY57k8zYkhCZo51XEydnplWRSu75KiOAhvolTE4IUpw/edit?gid=1496520613#gid=1496520613)。或者，您可以将其导入到 Google 电子表格，Google 会自动将其转换为 csv 格式。
+使用 Google 电子表格的一个好处是，您可以直接编辑数据，ReByte 将自动同步数据。
 
-### Step 1: Create A Table in ReByte
+### 第一步：在 ReByte 中创建一个表
 
-This step involves creating a table in ReByte, you should choose the "csv" format, and upload the csv file, or paste your Google spreadsheet link.
+这一步涉及在 ReByte 中创建一个表，您应该选择“csv”格式，并上传 csv 文件，或粘贴您的 Google 电子表格链接。
 
-You can explore the data by clicking the "Explore," and use any SQL query to filter the data.
+您可以通过点击“Explore”来探索数据，并使用任何 SQL 查询来过滤数据。
 
-let's say you finally have a table named "transaction" in ReByte.
+假设您最终在 ReByte 中创建了一个名为“transaction”的表。
 
-### Step 2: Create A Fraud Analysis Tool
-Create a new tool in ReByte, and name it "Fraud Analysis."
-ReByte has prebuilt template for data analysis,
-you can choose the "Data Analysis" template, and then you can modify it to fit your need.
-**Remember** to change the table to the "transaction" table you created in step 1 in both the "load table" and "query table" actions.
+### 第二步：创建一个欺诈分析工具
 
+在 ReByte 中创建一个新工具，并命名为“Fraud Analysis”。
+ReByte 具有预构建的数据分析模板，
+您可以选择“Data Analysis”模板，然后根据需要进行修改。
+**请记住**在“load table”和“query table”操作中将表更改为您在第一步中创建的“transaction”表。
 
-**IMPORTANT**:
-You should change the tool to point to load schema from the "transaction" table, also run SQL on the same table.
-You probably want to change input dataset to reflect what you want to analyze.
+**重要提示**：
+您应该更改工具以从“transaction”表加载架构，并在同一表上运行 SQL。
+您可能需要更改输入数据集以反映您要分析的内容。
 
+### 第三步：将“Fraud Analysis”工具添加到您的助手
 
-### Step 3: Add 'Fraud Analysis' Tool to Your Assistant
-Now you can add the "Fraud Analysis" tool to your team's assistant. 
+现在您可以将“Fraud Analysis”工具添加到您的团队助手中。
 
-Another way you can do is create a new assistant, specifically for fraud analysis, and add the "Fraud Analysis" tool to this assistant.
+另一种方法是创建一个新的助手，专门用于欺诈分析，并将“Fraud Analysis”工具添加到该助手中。
 
+派对时间！您已经成功构建了一个欺诈分析助手。
 
-Party time! You have successfully built a fraud analysis assistant.
+现在您的团队成员可以使用它了。
 
-Now it's ready to use by your team members. 
+尝试用以下问题查询助手：
 
-Try querying the assistant with questions like:
+* **显示金额最高的前 10 笔交易**
 
-* **Show me the top 10 transactions with the highest amount**
-
-* **How many transactions are there in total? How many are fraudulent?**
+* **总共有多少笔交易？有多少是欺诈性的？**

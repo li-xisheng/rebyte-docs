@@ -1,58 +1,56 @@
-# ReByte User Guide
+# ReByte 用户指南
 
-## Available Platform
+## 可用平台
 
-[Desktop](https://rebyte.ai) | [Mobile]("https://apps.apple.com/app/rebyte-your-team-assistant/id6466730972")
+[桌面端](https://rebyte.ai) | [移动端]("https://apps.apple.com/app/rebyte-your-team-assistant/id6466730972")
 
-## Unified Assistant Interface For Your Team
+## 统一的团队助手界面
 
-**Revia** is our codename for universal user interface that can be used by all team members to interact with the AI assistant. This interface is designed to handle various types of tasks, such as data retrieval, question and answer, document generation, and data analysis, and more advanced tasks such as interactive chart and table, form filling and more.
+**Revia** 是我们通用用户界面的代号，所有团队成员都可以使用该界面与 AI 助手互动。此界面设计用于处理各种任务，例如数据检索、问答、文档生成和数据分析，以及更高级的任务，如交互式图表和表格、表单填写等。
 
-Besides Revia, team admin can build other assistants specific to some use cases, for example, a customer support assistant, a sales assistant, a marketing assistant, etc.
+除了 Revia，团队管理员还可以构建其他针对某些用例的助手，例如客户支持助手、销售助手、市场营销助手等。
 
-The relationship between **Super Assistant** and **Other Assistants** is like the relationship between **Team ChatGPT** and **Team Specific Gpts**.
+**超级助手** 和 **其他助手** 之间的关系就像 **团队 ChatGPT** 和 **特定团队的 GPT** 之间的关系。
 
-In terms of functionality, **Super Assistant** is no different from other assistants, the only difference is that **Super Assistant** is always shown on the top of the assistant list, and it's available for all team members.
+在功能方面，**超级助手** 与其他助手没有区别，唯一的区别是 **超级助手** 始终显示在助手列表的顶部，并且对所有团队成员可用。
 
-## For Team Builder and Admin
+## 对于团队构建者和管理员
 
+### 配置团队助手
+只有团队中的构建者或管理员可以配置团队助手。
 
-### Configure Team Assistant
-Only builders or admin in your team can configure the team assistant. 
+每个助手，包括 **Revia**，都包含：
+* **规划器**：可以规划并执行一系列工具以实现特定目标。
+* **代码沙箱**：处理任意代码执行，例如数据分析、数据可视化等。
+* **ReByte 工具列表**：可以由助手使用的 ReByte 工具列表。工具可以由您的团队、其他工具构建者或 ReByte 团队构建。
 
-Each assistant, including **Revia**, contains:
-* **Planner**: can plan and execute a sequence of tools to achieve a specific goal.
-* **Code Sandbox**: Handle arbitrary code execution, such as data analysis, data visualization, etc. 
-* **List of ReByte Tools**: a list of ReByte Tools that can be used by the assistant. Tool can be built by your team or by other tool builders, or by ReByte team.
+**规划器** 和 **代码沙箱** 是可选的。在这种情况下，用户必须请求特定工具来执行特定任务。
 
-**Planner** and **Code Sandbox** can be optional. In that case, user has to ask specific tool to perform a specific task.
+## 对于团队成员
 
+### 与 Revia 互动
 
-## For Team Member
+* **直接提问**：您可以向 Revia 提问，例如“去年的销售额是多少？”或“我们公司有多少员工？”。
+* **@特定工具**：一种新颖的 ReByte 互动方式，您可以 @提及特定工具以执行特定任务，例如“@image_generator 生成一只猫的图像。”。
+* **/命令**：您可以使用斜杠命令调用其他助手，例如“/customer_support”。
 
-### Interacts with Revia
+### 附件文件
+* 您可以将文件附加到消息中，我们支持各种文件类型，例如 csv、xlsx、PDF、docx、png、jpg 等。ReByte 将自动解析文件并提取内容以进行进一步处理。
 
-* **Directly Ask Questions**: You can ask questions to Revia, such as "What is the sales number of last year?" or "How many employees do we have in the company?"
-* **@specific tool**: A noval way to interact with ReByte, you can @mention a specific tool to perform a specific task, for example, "@image_generator generates an image of a cat."
-* **/command**: You can use slash commands to invoke other assistants, for example, "/customer_support"
+### 推理步骤
+幻觉是 AI 助手的常见问题，
+ReByte 通过提供尽可能详细的推理步骤来解决这个问题，
+用户可以看到每个工具的推理步骤。
+构建者还可以查看实际的工具运行日志，以便在出现问题时进行调试。
 
-### Attachment files
-* You can attach files to your message, we support various file types, such as csv, xlsx, PDF, docx, png, jpg, etc. ReByte will automatically parse the file and extract the content for further processing.
+### 代码沙箱
+ReByte 规划器在代码沙箱中迭代地编写/执行代码以实现目标。
+这对于执行数据分析、数值计算等任务非常有用。代码执行环境在每次用户迭代时都是隔离的。
 
-### Reasoning Steps
-Hallucination is a common issue in AI assistants,
-ReByte tries to solve this issue by providing reasoning steps as detail as possible,
-user can see the reasoning steps of each tool.
-Builder can also see the actual tool running log to debug if there's any issue.
+## 幻觉
+幻觉是 AI 助手中的常见问题。在我们的系统中，我们尝试通过以下方式解决这些问题：
 
-### Code Sandbox
-ReByte planner iteratively writes/executes code in the code sandbox to achieve the goal.
-This is super useful to do things like data analysis, numerical computation, etc. Code execution environment is isolated for each user iteration.
-
-## Hallucination
-Hallucination is a common issue in AI assistants. In our system, we try to solve these issues in the following ways:
-
-* **Automate small steps**: We're **NOT** planning to do giant multiple steps reasoning, we do small steps planning at one time, and achieve the final goal iteratively under the guidance of the user.
-* **Reasoning Steps**: We show the reasoning steps on Assistant UI, so user can see how the assistant comes up with the answer. 
-* **Tool Run logs**: Builder can see the actual tool running log to debug if there's any issue. Tool run contains the input data, the output data, and every step that the tool takes to achieve the goal.
-* **Show original data**: We show the original data that the tool uses to generate the answer, so user can see if the data is correct. This is particularly useful for structured data. We will show exact data coming from user's database, so user knows if LLM provides the correct answer based on the data.
+* **自动化小步骤**：我们**不**计划进行巨大的多步骤推理，我们一次进行小步骤的规划，并在用户的指导下迭代地实现最终目标。
+* **推理步骤**：我们在助手界面上显示推理步骤，因此用户可以看到助手如何得出答案。
+* **工具运行日志**：构建者可以查看实际的工具运行日志，以便在出现问题时进行调试。工具运行日志包含输入数据、输出数据以及工具为实现目标所采取的每一步。
+* **显示原始数据**：我们显示工具用于生成答案的原始数据，以便用户可以查看数据是否正确。这对于结构化数据特别有用。我们将显示来自用户数据库的确切数据，以便用户知道 LLM 是否根据数据提供了正确的答案。

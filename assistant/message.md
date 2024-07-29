@@ -1,24 +1,22 @@
-# Message
+# 消息
 
-## Insert Message
+## 插入消息
 
 `POST https://rebyte.ai/api/sdk/threads/{threadId}/messages`
 
-Create a new message in a thread.
+在线程中创建一条新消息。
 
-**Path parameters**
-* thread_id(required): A string with the ID of the thread to create a message for.
+**路径参数**
+* thread_id（必需）：一个字符串，表示要为其创建消息的线程 ID。
 
-**Request body**
-* role(required): A string, containing the role of the entity that is creating the message. Currently only user is supported.
-* content(required):A string with the content of the message.
-* file_ids: A list of File IDs that the message should use. There can be a maximum of 10 files attached to a message. Useful for tools like retrieval and code_interpreter that can access and use files.
-* metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
+**请求正文**
+* role（必需）：一个字符串，包含创建消息的实体的角色。目前仅支持用户。
+* content（必需）：一个包含消息内容的字符串。
+* file_ids：消息应使用的文件 ID 列表。每条消息最多可以附加 10 个文件。对于检索和代码解释器等工具非常有用，可以访问和使用文件。
+* metadata：附加到对象的一组 16 个键值对。这对于以结构化格式存储有关对象的附加信息非常有用。键最长可为 64 个字符，值最长可为 512 个字符。
 
-
-**Example Request**
+**示例请求**
 ```shell
-
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $REBYTE_KEY" \
@@ -28,12 +26,11 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
     }'
 ```
 
-**Return**
+**返回**
 
-A message object.
+一个消息对象。
 
-
-**Example**
+**示例**
 ```json
 {
     "id": "W_DPv1bwUQ50PC52f44Uo",
@@ -47,38 +44,37 @@ A message object.
 }
 ```
 
-## List Messages
+## 列出消息
 
 `GET https://rebyte.ai/api/sdk/threads/{threadId}/messages`
 
-Get list of messages in a thread.
+获取线程中的消息列表。
 
-**Path parameters**
-* thread_id(required): A string with the ID of the thread to create a message for.
+**路径参数**
+* thread_id（必需）：一个字符串，表示要为其创建消息的线程 ID。
 
-**Query parameters**
+**查询参数**
 
-* limit: An integer, defaults to 20.A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 20.
+* limit：一个整数，默认为 20。要返回的对象数量限制。限制范围为 1 到 100，默认值为 20。
 
-* order: A string, defaults to desc. Sort order by the created_at timestamp of the objects. asc for ascending order and desc for descending order.
+* order：一个字符串，默认为 desc。按对象的 created_at 时间戳排序。asc 表示升序，desc 表示降序。
 
-* after: A string, with a cursor for use in pagination. after is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include after=obj_foo in order to fetch the next page of the list.
+* after：一个字符串，用于分页的游标。after 是一个对象 ID，定义您在列表中的位置。例如，如果您进行列表请求并接收到 100 个对象，以 obj_foo 结束，您可以在后续调用中包含 after=obj_foo 以获取列表的下一页。
 
-* before: A string, with a cursor for use in pagination. before is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include before=obj_foo in order to fetch the previous page of the list.
+* before：一个字符串，用于分页的游标。before 是一个对象 ID，定义您在列表中的位置。例如，如果您进行列表请求并接收到 100 个对象，以 obj_foo 结束，您可以在后续调用中包含 before=obj_foo 以获取列表的上一页。
 
-**Example Request**
+**示例请求**
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages'     \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-**Return**
+**返回**
 
-Returns a lit of messages.
+返回消息列表。
 
-
-**Example**
+**示例**
 ```json
 {
     "list": [
@@ -96,30 +92,30 @@ Returns a lit of messages.
 }
 ```
 
-## Get message
+## 获取消息
 
 `GET https://rebyte.ai/api/sdk/threads/{threadId}/messages/{messageId}`
 
-Get a message by id.
+按 ID 获取消息。
 
-**Path parameters**
+**路径参数**
 
-* thread_id(required): A string, with the ID of the thread to which this message belongs.
+* thread_id（必需）：一个字符串，表示此消息所属的线程 ID。
 
-* message_id(required): A string, with the ID of the message to retrieve.
+* message_id（必需）：一个字符串，表示要检索的消息的 ID。
 
-**Example Request**
+**示例请求**
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages/{message_id}' \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $REBYTE_KEY" 
 ```
 
-**Return**
+**返回**
 
-Returns a message object.
+返回一个消息对象。
 
-**Example**
+**示例**
 ```json
 {
     "id": "W_DPv1bwUQ50PC52f44Uo",
@@ -133,25 +129,23 @@ Returns a message object.
 }
 ```
 
-## Update message 
+## 更新消息 
 
 `POST https://rebyte.ai/api/sdk/threads/{threadId}/messages/{messageId}`
 
-Update a message by id.
+按 ID 更新消息。
 
+**路径参数**
 
-**Path parameters**
+* thread_id（必需）：一个字符串，表示此消息所属的线程 ID。
 
-* thread_id(required): A string, with the ID of the thread to which this message belongs.
+* message_id（必需）：一个字符串，表示要检索的消息的 ID。
 
-* message_id(required): A string, with the ID of the message to retrieve.
+**请求正文**
 
+* metadata：一个映射。附加到对象的一组 16 个键值对。这对于以结构化格式存储有关对象的附加信息非常有用。键最长可为 64 个字符，值最长可为 512 个字符。
 
-**Request body**
-
-* metadata: A map. Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
-
-**Example Request**
+**示例请求**
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages/{message_id}' \
   -H 'Content-Type: application/json' \
@@ -165,11 +159,11 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages/{message_id}' \
 }'
 ```
 
-**Return**
+**返回**
 
-Returns the modified message object.
+返回修改后的消息对象。
 
-**Example**
+**示例**
 ```json
 {
     "id": "W_DPv1bwUQ50PC52f44Uo",
@@ -181,5 +175,4 @@ Returns the modified message object.
         "user": "czy4"
     }
 }
-``` 
-
+```

@@ -1,58 +1,57 @@
-# Quick Start
+# 快速开始
 
-We will show to how to build an app using the customized UI.
+我们将展示如何使用自定义 UI 构建一个应用程序。
 
-## Step 1: Create an App
+## 第一步：创建一个应用
 
-* Navigate to the "My Apps" tab in the sidebar and then click on "Create App" on the top right.
+* 导航到侧边栏中的“我的应用”标签，然后点击右上角的“创建应用”。
 
-* Choose "App With Customized UI".
+* 选择“带有自定义 UI 的应用”。
 
-* Use the tools on the bottom of this page to draw a basic draft of your app interface.
+* 使用本页底部的工具绘制应用界面的基本草图。
 
-* Click "Make It An App" on the bottom right.
+* 点击右下角的“将其制作为应用”。
 
 <figure><img src="../../images/cui-welcome.png"></figure>
 
-* Fill in the text prompt describing what you want your app to do.
+* 填写描述您希望应用执行的功能的文本提示。
 
-* You can then click "Draw it" or "Make It An App".
+* 然后可以点击“绘制它”或“将其制作为应用”。
 
+## 第二步：设计您的应用
 
-## Step 2: Design you App
+如果您想对应用进行一些更改，可以通过两种方式更改应用：
 
-If you want to make some changes to your app, you can change your app in two ways:
-
-* Image prompt: Draw the changes you want to make on the canvas.
+* 图像提示：在画布上绘制您想进行的更改。
 
 <figure><img src="../../images/image-prompt.png"/></figure>
 
-* Text prompt: Click the "Make It An App" and input the text prompt describing the changes you want to make.
+* 文本提示：点击“将其制作为应用”并输入描述您想进行的更改的文本提示。
 
 <figure><img src="../../images/text-prompt.png"></figure>
 
-Click "Make It An App" again and we will make changes for you based on your prompt and create a new version of your app.
+再次点击“将其制作为应用”，我们将根据您的提示进行更改并创建应用的新版本。
 
-* NOTE: This may not give you the desired results on just one try. We recommend you to try and improve one thing at a time and create more versions until you get the best results.
+* 注意：这可能不会在一次尝试中就给您带来理想的结果。我们建议您一次尝试改进一个功能，并创建更多版本，直到获得最佳结果。
 
-## Step 3: Connect your App with Tool
+## 第三步：将应用连接到工具
 
-* Click the "Connect to Tool" on the top right and choose the agent you want to connect with.
+* 点击右上角的“连接到工具”，然后选择您想要连接的代理。
 
-* NOTE: You must be familiar with the agent's function. Make sure the agent is suitable for your app, otherwise it will not connect successfully.
+* 注意：您必须熟悉代理的功能。确保代理适合您的应用，否则将无法成功连接。
 
 <figure><img src="../../images/connect.png"></figure>
 
-* Use the prompts to describe how you want to use the agent in your app. 
+* 使用提示描述您希望如何在应用中使用代理。
 
 <figure><img src="../../images/connect-describe.png"></figure>
 
-* Click "Make It An App" and we will automatically connect your app with the chosen agent.
+* 点击“将其制作为应用”，我们将自动将您的应用与所选代理连接。
 
-## Tips
+## 提示
 
-* To get better results, try describing your functions/changes you'd like to make one at a time and in details.
+* 为了获得更好的结果，请尝试一次描述您希望进行的功能/更改，并详细说明。
 
-* Make good use of the drawing tools to tell us the changes you want to make to the current app.
+* 充分利用绘图工具告诉我们您希望对当前应用进行的更改。
 
-* Each time you click "Make It An App", we will generate a new version of your app. If you find the results unsatifactory, simply go back to previous versions and start from there again.
+* 每次点击“将其制作为应用”，我们都会生成应用的新版本。如果您对结果不满意，只需返回到以前的版本并重新开始。

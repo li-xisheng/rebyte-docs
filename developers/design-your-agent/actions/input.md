@@ -1,20 +1,21 @@
-# Input
+# 输入
 
-* The `Input Action` is used to send input information to the Tool. Other actions are based on the input information to perform the right operation.
+* `输入动作` 用于将输入信息发送到工具。其他动作基于输入信息执行相应的操作。
 
-* The first action in the Tool must be an `Input Action`, you can not delete it or copy it.
+* 工具中的第一个动作必须是 `输入动作`，您不能删除或复制它。
 
-* In Design mode, you can specify a dataset as INPUT, each data in this dataset(each row) will be considered as a separate input to agent, and all inputs will be run in parallel. Each data row will receive a separate thread id.
+* 在设计模式中，您可以指定一个数据集作为输入，每个数据中的每一行将被视为代理的单独输入，所有输入将并行运行。每行数据将收到一个单独的线程 ID。
 
-* In production mode, input are passed via agent API.
+* 在生产模式中，输入通过代理 API 传递。
 
-* ReByte defines a common data structure to handle messages passed into agent, it's strong recommended to use this format in order to make your agent work with assistant/thread API seamlessly.
+* ReByte 定义了一种通用的数据结构来处理传递到代理中的消息，强烈建议使用此格式，以便使您的代理能够与助手/线程 API 无缝配合。
 
-## Common Message Format
+## 通用消息格式
 
-Different LLM has different message format, but ReByte defines a common message format to handle messages passed into agent, internally we will handle all compatibility issues.
+不同的 LLM 具有不同的消息格式，但 ReByte 定义了一种通用的消息格式来处理传递到代理中的消息，我们将在内部处理所有兼容性问题。
 
-**Text Message**
+**文本消息**
+
 ```json
 {
   "role": "role of this message, for example user, assistant",
@@ -22,7 +23,8 @@ Different LLM has different message format, but ReByte defines a common message 
 }
 ```
 
-**Message with Image URL**
+**带图片 URL 的消息**
+
 ```json
 {
   "role": "user",
@@ -38,7 +40,8 @@ Different LLM has different message format, but ReByte defines a common message 
 }
 ```
 
-**Message with Image Data**
+**带图片数据的消息**
+
 ```json
 {
   "role": "user",
@@ -55,9 +58,8 @@ Different LLM has different message format, but ReByte defines a common message 
 }
 ```
 
+**带文件的消息**
 
-
-**Message with file**
 ```json
 {
   "role": "role of this message, for example user, assistant",
@@ -74,7 +76,7 @@ Different LLM has different message format, but ReByte defines a common message 
 }
 ```
 
-**Multiple Messages**
+**多条消息**
 
 ```json
 {
@@ -82,35 +84,33 @@ Different LLM has different message format, but ReByte defines a common message 
     {
       "role": "",
       "content": "",
-      "parts": [
-      ]
+      "parts": []
     },
     {
       "role": "",
       "content": "",
-      "parts": [
-      ]
+      "parts": []
     }
   ]
 }
 ```
 
-**IMPORTANT**
-Only messages conform to this format will be saved to thread automatically, other messages will be ignored
+**重要提示**
+只有符合此格式的消息才会自动保存到线程，其他消息将被忽略。
 
-## Usage
+## 用法
 
-You can use the input by using the `{{INPUT.message}}` variable in the instructions or `env.state.INPUT.messages` in the code editor.
+您可以在指令中使用 `{{INPUT.message}}` 变量或在代码编辑器中使用 `env.state.INPUT.messages` 变量来使用输入。
 
 <figure><img src="../../../images/input-action.png"></figure>
 
-## Data Format
+## 数据格式
 
-* When used in agent page, the input is extracted from the predefined datasets.
+* 在代理页面中使用时，输入是从预定义的数据集中提取的。
 
-* When connected to Apps, the input is from the app user's input and conversation history. By default, We will put the last 10 messages to the agent.
+* 连接到应用程序时，输入来自应用程序用户的输入和对话历史。默认情况下，我们会将最后 10 条消息发送到代理。
 
-* The input data format is as follows:
+* 输入数据格式如下：
 
     ```json
     {
@@ -124,26 +124,3 @@ You can use the input by using the `{{INPUT.message}}` variable in the instructi
         }]
     }
     ```
-
-<!-- ### Parameters
-
-- Input type
-    - Select from predefined Datasets
-    - When connecting to Chat, the latest 10 history dialogues will be sent to the Tool as input information by default, formatted as follows
-    
-    ```json
-    {
-    "Messages":[
-    {
-        "role": "user",
-        "content": "The content."
-    },
-    {
-        "role": "assistant",
-        "content": "The content."
-    }
-    ]
-    }
-    ```
-    - output
-        - Output the correct data -->

@@ -1,16 +1,14 @@
-There are two pricing models for ReByte:
+有两种 ReByte 定价模式：
 
-## Use ReByte as your team assistant
+## 作为团队助手使用 ReByte
 
-We charge based on the number of team members. The price is $10 per member per month. Your team members can access all the features of ReByte, including creating tools, knowledge, and assistants, and all LLM models provided by ReByte without worrying about the total usage.
+我们根据团队成员的数量收费。价格为每位成员每月 $10。您的团队成员可以访问 ReByte 的所有功能，包括创建工具、知识和助手，以及 ReByte 提供的所有 LLM 模型，而无需担心总使用量。
 
-In this model, your team can use API to access all the tools and knowledge created by your team, but subject to fair usage policy.
+在这种模式下，您的团队可以使用 API 访问团队创建的所有工具和知识，但需遵守公平使用政策。
 
+## 使用 ReByte 为您的客户构建助手
 
-## Use ReByte to build assistant for your customers
+如果您想为客户构建助手，我们根据操作的使用量收费，不同类型的操作有不同的价格。以下是不同类型操作的价格：
 
-If you want to build an assistant for your customers, we charge based on the usage of actions, different type of actions have different price. Here is the price for different type of actions:
-
-* **LLM Actions**: actual token cost + $1 per 1000 action calls
-* **Other Actions**: $1 per 1000 action calls
-
+* **LLM 操作**：实际的 token 成本 + 每 1000 次操作调用 $1
+* **其他操作**：每 1000 次操作调用 $1

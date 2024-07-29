@@ -1,78 +1,76 @@
-# Overview
+# 概述
 
-## What is ReByte?
+## 什么是 ReByte？
 
-ReByte is an AI-powered platform leveraging GPT4, Claude, Gemini, and Mistral to enhance team collaboration and productivity. Utilize AI assistants to gain deeper insights into any subject, streamline work processes, and boost overall efficiency. Whether you need assistance with company-related inquiries, drafting documents, or simplifying complex tasks, ReByte's AI assistants have you covered. Create personalized assistants or collaborate with your team on shared assistants tailored to your specific needs.
-
+ReByte 是一个利用 GPT4、Claude、Gemini 和 Mistral 来增强团队协作和生产力的 AI 驱动平台。利用 AI 助手深入了解任何主题，简化工作流程，提高整体效率。无论您需要有关公司相关问题的帮助、撰写文档还是简化复杂任务，ReByte 的 AI 助手都能满足您的需求。创建个性化助手或与团队合作，共享定制助手，以满足您的具体需求。
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-## General concepts
+## 一般概念
 
-### Assistants
+### 助手
 
-ReByte assistants are AI-powered tools that can do planning, reasoning, and execution. They can help with a wide range of tasks, from answering questions to creating documents specific to company's data. Assistants can leverage customized tools built by your team to provide more tailored responses.
+ReByte 助手是 AI 驱动的工具，可以进行规划、推理和执行。它们可以帮助完成各种任务，从回答问题到创建公司数据的特定文档。助手可以利用您团队构建的定制工具，提供更贴合需求的响应。
 
-Here are some typical tasks that assistants can help with:
+以下是助手可以帮助完成的一些典型任务：
 
-* Answering questions about your company, for example, financial data or company policies.
-* Drafting documents, such as memos or reports, based on your company's data as well as public information.
-* Providing insights into customer behavior or market trends, extract data from your company's data sources, and plot graphs or tables based on the data.
-* Professional Translation, translate document to target language with multiple rounds of proofreading and editing.
+* 回答有关公司问题，例如财务数据或公司政策。
+* 根据公司数据以及公共信息撰写文档，如备忘录或报告。
+* 提供客户行为或市场趋势的见解，从公司数据源中提取数据，并根据数据绘制图表或表格。
+* 专业翻译，经过多轮校对和编辑，将文档翻译成目标语言。
 
-If you are familiar with the concept of chatgpt, ReByte assistants are similar to GPTs but with more focus on team productivity and collaboration.
+如果您熟悉 chatgpt 的概念，ReByte 助手类似于 GPT，但更侧重于团队生产力和协作。
 
-### Agents
+### 代理
 
-Agents are building blocks for assistants. They can be customized to perform specific tasks, such as data retrieval, document generation, or data analysis, main idea behind agent is to capture proprietary knowledge and automate repetitive tasks within your organization.
+代理是助手的构建块。它们可以定制执行特定任务，例如数据检索、文档生成或数据分析，代理的主要理念是捕获专有知识并自动化组织内的重复任务。
 
-Here are some example tools:
+以下是一些示例工具：
 
-* Answering questions about your company's financial data from a predefined xlsx file
-* Analyzing market trends from some Twitter accounts
-* Call internal APIs to retrieve data from your company's database
+* 从预定义的 xlsx 文件中回答有关公司财务数据的问题
+* 分析一些 Twitter 帐户的市场趋势
+* 调用内部 API 从公司数据库中检索数据
 
-You can think of tools as a way to encapsulate your company's knowledge and processes into reusable components that can be used by your assistants. Tool concept is similar to the concept of "skills" or "tools" in other AI assistant platforms, or flow engineering.
+您可以将工具视为将公司知识和流程封装成可重用组件的一种方式，这些组件可以由您的助手使用。工具概念类似于其他 AI 助手平台中的“技能”或“工具”概念，或流程工程。
 
-### Actions
+### 动作
 
-Action is a building block of an agent. Action is a single unit of work that an agent can perform, such as make a LLM call, read a file, or generate a document, run piece of code, etc. Actions can be chained together to form a sequence of actions that the agent will perform.
+动作是代理的构建块。动作是代理可以执行的单个工作单元，例如进行 LLM 调用、读取文件或生成文档、运行代码片段等。动作可以链接在一起形成代理将执行的一系列动作。
 
-Here are builtin actions that ReByte supports:
+以下是 ReByte 支持的内置动作：
 
-* Call LLM
-* Internet Search
-* Load History messages
-* Load Dataset
-* Knowledge Search over vector database
-* Parse file to structured data
-* Run JS code
-* Loop until
-* If-else
-* Map-Reduce for parallel processing
+* 调用 LLM
+* 互联网搜索
+* 加载历史消息
+* 加载数据集
+* 在向量数据库上进行知识搜索
+* 将文件解析为结构化数据
+* 运行 JS 代码
+* 循环直到
+* 如果-否则
+* 并行处理的 Map-Reduce
 
-With extension API, you can create your own actions to perform custom tasks that are specific to your organization.
+通过扩展 API，您可以创建自己的动作来执行特定于组织的自定义任务。
 
-### Knowledge
+### 知识
 
-Knowledge is the data that your tools and assistants can access. It can be your company's data, such as Notion pages, Google Drive files, or local files, as well as public data sources like Wikipedia or news websites. Knowledge is the foundation for your tools and assistants to provide accurate and relevant information.
+知识是您的工具和助手可以访问的数据。它可以是公司的数据，例如 Notion 页面、Google Drive 文件或本地文件，也可以是公共数据源，如 Wikipedia 或新闻网站。知识是工具和助手提供准确和相关信息的基础。
 
-Currently, ReByte supports the following data sources:
+目前，ReByte 支持以下数据源：
 
-* Local files
-* Web pages
+* 本地文件
+* 网页
 * Discord
 * Twitter
 * Notion
 * Google Drive
 * GitHub
 
-ReByte use LLM embeddings to convert data into a format that can be used by tools and assistants. Currently, ReByte supports the two following embedding providers:
+ReByte 使用 LLM 嵌入将数据转换为工具和助手可以使用的格式。目前，ReByte 支持以下两种嵌入提供商：
 
-* OpenAI embeddings
-* Voyager embeddings
+* OpenAI 嵌入
+* Voyager 嵌入
 
-### Team
+### 团队
 
-The team is a group of users who collaborate on ReByte. Each team has its own space where members can create and share assistants, tools, and knowledge. Team members can have different roles, such as admin, builder, or user, with varying permissions to manage and access the workspace.
-
+团队是协作使用 ReByte 的用户组。每个团队都有自己的空间，成员可以在其中创建和共享助手、工具和知识。团队成员可以有不同的角色，例如管理员、构建者或用户，具有管理和访问工作区的不同权限。

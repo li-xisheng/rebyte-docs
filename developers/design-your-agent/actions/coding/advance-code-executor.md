@@ -1,20 +1,19 @@
-# Advance Code Executor
+# 高级代码执行器
 
-We provide `Advance Code Executor` action to run your code in a sandbox.
+我们提供 `高级代码执行器` 动作来在沙箱中运行您的代码。
 
-## Usage
+## 用法
 
-* Add a `Advance Code Executor` action to your agent. 
+* 将 `高级代码执行器` 动作添加到您的代理中。
 
 <figure><img src="../../../../images/deno-1.png"></figure>
 
-* Fill in the "Deno Code" with the code you want to run. You can input some code or refer to the output of other actions.
+* 在“Deno 代码”中填写您要运行的代码。您可以输入一些代码或引用其他动作的输出。
   
-* **NOTE:** Must be JavaScript or TypeScript code
+* **注意:** 必须是 JavaScript 或 TypeScript 代码
 
 <figure><img src="../../../../images/deno-2.png"></figure>
 
-## Output
+## 输出
 
-The output of this action is the code execution result shown above.
-
+此动作的输出是上方显示的代码执行结果。

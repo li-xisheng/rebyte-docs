@@ -1,8 +1,8 @@
-# Search engine agent
+# 搜索引擎代理
 
-Summarize web page contents for you.
+帮助您总结网页内容。
 
-### Setup the testing data in `Datasets`
+### 在 `Datasets` 中设置测试数据
 
 ```json
 [
@@ -11,7 +11,7 @@ Summarize web page contents for you.
     "content": "Who won the last UEFA Champions League?"
   },
   {
-    "role": "assitant",
+    "role": "assistant",
     "content": "The last winner of the UEFA Champions League was Manchester City in the 2022-23 season. This was their first title in the competition. Real Madrid holds the record for the most victories in the Champions League, having won it 14 times [0][1]."
   },
   {
@@ -21,8 +21,7 @@ Summarize web page contents for you.
 ]
 ```
 
-
-### Use `Code Action` to get the last message
+### 使用 `Code Action` 获取最后一条消息
 
 ```javascript
 _fun = (env) => {
@@ -31,16 +30,16 @@ _fun = (env) => {
 }
 ```
 
-### Use `Code Action` to get the chat history
+### 使用 `Code Action` 获取聊天记录
 
 ```javascript
 _fun = (env) => {
   // use `env.state.Action_NAME` to refer output from previous Actions.
- return env.state.INPUT.messages.slice(0, env.state.INPUT.messages.length - 1).map((m) => m.content).join("\n")
+  return env.state.INPUT.messages.slice(0, env.state.INPUT.messages.length - 1).map((m) => m.content).join("\n")
 }
 ```
 
-### Use `Code Action` to extract content
+### 使用 `Code Action` 提取内容
 
 ```txt
 {# Your prompt here, for example: 'Answer those question based on the following content.' #}
@@ -51,15 +50,16 @@ This is the conversation history: {{HISTORY}}
 Add necessary contexts to the question with the help of conversation history. If the contexts are irrelevant don't change the question. Give the question here:
 ```
 
-### Use `Google_search` to search for related contents
+### 使用 `Google_search` 搜索相关内容
+
 ```javascript
 {{REFINED_QUESTION.completion.text}}
 ```
 
-### Use `Code Action` to extract content
+### 使用 `Code Action` 提取内容
 
 ```javascript
-// Extracts title, snipet and link from the google search's organic results.
+// Extracts title, snippet and link from the google search's organic results.
 // capped at 3
 _fun = (env) => {
   if (!env.state.GOOGLE_SEARCH.organic_results) {
@@ -77,18 +77,20 @@ _fun = (env) => {
 }
 ```
 
-### Map the results for parallel processing
+### 映射结果以进行并行处理
 
 ```javascript
 SEARCH_EXTRACT
 ```
 
-### Use `WEB_CRAWL` to scan the page 
+### 使用 `WEB_CRAWL` 扫描页面
+
 ```javascript
 {{SEARCH_RESULT_LOOP.link}}
 ```
 
-### Use `Code Action` to extract content
+### 使用 `Code Action` 提取内容
+
 ```javascript
 // for each link, crawl its content and capped at 2000 bytes
 _fun = (env) => {
@@ -98,7 +100,8 @@ _fun = (env) => {
 } 
 ```
 
-### Use LLM to analyze the contents
+### 使用 LLM 分析内容
+
 ```json
 {# Your prompt here, for example: 'Answer those question based on the following content.' #}
 {# Begin your prompt below: #}
@@ -118,7 +121,8 @@ Extracted summarized content:
 """
 ```
 
-### Use `Code Action`` to extract content
+### 使用 `Code Action` 提取内容
+
 ```javascript
 _fun = (env) => {
   return {
@@ -128,7 +132,8 @@ _fun = (env) => {
 }
 ```
 
-Use `Code Action` to extract content and make prompt
+### 使用 `Code Action` 提取内容并生成提示
+
 ```javascript
 const _example = (example) => {
   // prompt = `QUESTION: ${example.question}\n`;
@@ -162,12 +167,14 @@ _fun = (env) => {
 }
 ```
 
-### Send the prompt to LLM
-```json
-{{FINAL_PROMPT.prompt}}
-```
-### Extract `OUTPUT_STREAM` as output
+### 将提示发送到 LLM
+
 ```json
 {{FINAL_PROMPT.prompt}}
 ```
 
+### 提取 `OUTPUT_STREAM` 作为输出
+
+```json
+{{FINAL_PROMPT.prompt}}
+```

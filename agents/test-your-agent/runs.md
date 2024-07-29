@@ -1,15 +1,9 @@
-# Runs
+# 运行记录
 
-Here we display all of your running records.
+在这里显示您的所有运行记录。
 
 <figure><img src="../../images/runs.png" alt=""></figure>
 
-You can filter them by "Status" and "Last Update".
+您可以按“状态”和“最后更新”进行筛选。
 
-Click on the "Run ID" to see the detailed information of you run.
-
-
-
-
-
-
+点击“Run ID”查看运行的详细信息。

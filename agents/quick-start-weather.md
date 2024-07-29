@@ -1,72 +1,71 @@
-# Quick Start
+# 快速入门
 
-We will show you how to build a weather agent in 10 minutes.
+我们将向您展示如何在 10 分钟内构建一个天气代理。
 
-## Step 1: Create a Tool
+## 步骤 1：创建工具
 
-* Navigate to the "My Agents" tab in the sidebar and then click on "Create Tool".
+* 导航到侧边栏中的“我的代理”标签，然后点击“创建工具”。
 
-* Describe what you want to do with this agent and choose the right template for your agent. 
+* 描述您希望使用该代理执行的操作，并为您的代理选择正确的模板。
 
 <figure><img src="../images/weather-1.png" alt=""></figure>
 
-* Click the "Generate Tool Template" button and we will generate a basic template for you to build from. 
+* 点击“生成工具模板”按钮，我们将为您生成一个基本模板以供构建。
 
 <figure><img src="../images/weather-2.png" alt=""></figure>
 
-* You can change the name, description and visibility of the agent and add tags for more information. Or you can simply regenerate the template if you don't like the current one.
+* 您可以更改代理的名称、描述和可见性，并添加标签以获取更多信息。如果您不喜欢当前模板，也可以重新生成模板。
 
-* Click the "Create Tool" and you will have your own agent in just a few seconds.
+* 点击“创建工具”，几秒钟内您将拥有自己的代理。
 
-## Step 2: Design Your Tool
+## 步骤 2：设计您的工具
 
-* In the auto-generated template, we have already created some actions for you. 
+* 在自动生成的模板中，我们已经为您创建了一些操作。
 
 <figure><img src="../images/weather-3.png" alt=""></figure>
 
-* The process of building the agent:
-  * To get the location from the user's input, so we need a `Language Model Chat` action. 
-  * To search for the weather, this can be done using the `You.com` search engine action. 
-  * To analyze the results, we should use another `Language Model Chat` to analyze the search results from the You.com search and generate a prompt to draw the picture.
-  * To draw the picture, we use `Stable Diffusion` action and return a base64 picture.
+* 构建代理的过程：
+  * 从用户输入中获取位置，因此我们需要一个 `Language Model Chat` 操作。
+  * 搜索天气，这可以通过 `You.com` 搜索引擎操作完成。
+  * 分析结果，我们应使用另一个 `Language Model Chat` 来分析来自 You.com 搜索的结果并生成绘制图片的提示。
+  * 绘制图片，我们使用 `Stable Diffusion` 操作并返回一个 base64 图片。
 
 <figure><img src="../images/weather-4.png" alt=""></figure>
 
-* Write the instructions more the model in the editor, describing what you want the model to do.
+* 在编辑器中为模型编写指令，描述您希望模型执行的操作。
 
 <figure><img src="../images/10.png" alt=""></figure>
 
-## Step 3: Test Your Tool
+## 步骤 3：测试您的工具
 
-* Click the "Datasets" tab on the top, then click "Create Datasets". 
+* 点击顶部的“数据集”标签，然后点击“创建数据集”。
 
-* Fill in the name and description of your dataset.
+* 填写数据集的名称和描述。
 
-* Since this is a chatbot, the testing dataset will be in the form of a (list of) json object representing a conversation.
+* 由于这是一个聊天机器人，测试数据集将以表示对话的（列表）json 对象形式出现。
 
 <figure><img src="../images/11.png" alt=""></figure>
 
-* After you've created the dataset, go back to the "Design" panel and choose the new dataset as the input.
+* 创建数据集后，返回“设计”面板并选择新数据集作为输入。
 
 <figure><img src="../images/11-1.png" alt=""></figure>
 
-* Click "Run Testcases" to test your agent with the dataset.
+* 点击“运行测试用例”以使用数据集测试您的代理。
 
-* The results will be shown below each action. See if the output is what you want. If not, change the settings of your agent and try again.
+* 结果将显示在每个操作下方。查看输出是否符合您的预期。如果没有，请更改代理的设置并再次尝试。
 
 <figure><img src="../images/13.png" alt=""></figure>
 
-## Step 4: Deploy the Tool
+## 步骤 4：部署工具
 
-* Click "Deploy Tool" on the top right, then click "Deploy A New Version". 
+* 点击右上角的“部署工具”，然后点击“部署新版本”。
 
-* You can use your agent on your ReByte app or integrate it into your own app using the code we provide.
+* 您可以在您的 ReByte 应用中使用您的代理，也可以使用我们提供的代码将其集成到您自己的应用中。
 
 <figure><img src="../images/12.png" alt=""></figure>
 
-🎉 **Congratulations, you have created your first agent!**
+🎉 **恭喜您，您已创建了您的第一个代理！**
 
-View all your tools in the "My Agents" tab. You can also clone, save, or delete your tools here.
+在“我的代理”标签中查看您的所有工具。您还可以在这里克隆、保存或删除您的工具。
 
 <figure><img src="../images/14.png" alt=""></figure>
-

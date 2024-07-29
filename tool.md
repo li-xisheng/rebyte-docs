@@ -1,74 +1,74 @@
-## What is a Tool?
+## 什么是工具？
 
-> Backend subroutine for Assistant.
+> 助手的后端子程序。
 
-### Why do we need that?
+### 为什么我们需要它？
 
-Tool is a way to capture prior knowledge and experience, and make it reusable by assistant. 
+工具是一种捕获先验知识和经验并使其可由助手重复使用的方法。
 
-let's consider an example, the agent is asked to read a manual and follow the instructions to process the data. We exactly know how to do that as follows:
-1. Read the manual
-2. Parse the manual
-3. Follow the instructions
-4. Process the data
+让我们考虑一个示例，代理被要求阅读手册并按照说明处理数据。我们确切地知道如何执行以下操作：
+1. 阅读手册
+2. 解析手册
+3. 按照说明进行操作
+4. 处理数据
 
-We don't need any LLM planning capability to do that, we just need a sequence of actions to be executed. This is where the tool comes in, a tool is a sequence of actions that can be executed sequentially or in parallel, actions can be anything from reading a file, making an HTTP request, to executing an SQL query, make LLM call, etc.
+我们不需要任何 LLM 规划能力来执行此操作，我们只需要按顺序执行一系列动作即可。这就是工具的作用，工具是一系列可以按顺序或并行执行的动作，动作可以是从读取文件、发出 HTTP 请求到执行 SQL 查询、调用 LLM 等任何操作。
 
-In ReByte, we define Tool as a serverless API that can be executed on cloud, usually tools will leverage AI models to perform some tasks to achieve its intelligence, but this is not required. A Tool without any AI model is just like a normal serverless API, but we will focus on AI tools in this document.
-Here are some typical examples of AI tools:
-* Based on user's query, find the most relevant information from the user's knowledge base, and summarize the result and return the summary to the user.
-* User describes a database query in natural language, agent will translate the query into SQL and execute the query on user's database to get results, then use LLM to generate a summary of the results and return to user.
-* Help user to do professional translation between two languages, user can describe the translation task in natural language, agent will not only do the translation but also evaluate the translation quality, if the quality is not good enough, agent will iterate the translation process until the quality is good enough. 
+在 ReByte 中，我们将工具定义为可以在云端执行的无服务器 API，通常工具将利用 AI 模型来执行某些任务以实现其智能，但这不是必需的。没有任何 AI 模型的工具就像普通的无服务器 API，但我们将在本文档中重点介绍 AI 工具。
+以下是一些典型的 AI 工具示例：
+* 根据用户的查询，从用户的知识库中找到最相关的信息，总结结果并返回给用户。
+* 用户用自然语言描述数据库查询，代理将查询翻译为 SQL 并在用户的数据库上执行查询以获取结果，然后使用 LLM 生成结果摘要并返回给用户。
+* 帮助用户在两种语言之间进行专业翻译，用户可以用自然语言描述翻译任务，代理不仅会进行翻译，还会评估翻译质量，如果质量不够好，代理将迭代翻译过程直到质量足够好。
 
-[//]: # (### This is a typical tool workflow)
+[//]: # (### 这是一个典型的工具工作流程)
 
 [//]: # (<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>)
 
-   
-## Build a Tool?
 
-We have prebuilt templates for common use cases, you can start from those templates, or you can build your own tool from scratch.
+## 如何构建工具？
 
-### Action
-* Tool is a piece of sequential actions that can be executed on the LLM serverless runtime. It is the core building block of ReByte, and the main way for end users to create their own tools. ReByte provides a GUI builder for end users to create/edit their own LLM tools. ReByte provides a list of pre-built actions for common use cases, also private SDK for _software engineer_ to build their own actions, and seamlessly integrate with the agent builder. Pre-built actions include:
-  * LLM Actions
-    * Language Model Interface
-  * Data Actions
-    * Dataset Loader, load pre defined datasets for later processing
-    * File Loader, extract/transform/load user's provided files
-    * Table Query, translate user's natural language query into SQL and execute the query on user's database
-    * Semantic Search, search for similar content over user's knowledge base
-  * Tools Actions
-    * Search Engine, search for information on Google/Bing
-    * Web Crawler, crawl web pages and extract information
-    * Http Request Maker, make any http request to any public/private API
-  * Control flow Actions
-    * Loop Until, run actions until a condition is met
-    * Parallel, execute multiple actions in parallel
-    * Vanilla Javascript, execute any vanilla javascript code, useful for doing pure data transformation
+我们为常见用例预构建了模板，您可以从这些模板开始，也可以从头开始构建自己的工具。
 
-### Dataset
-* Dataset is a collection of JSON data that actions can use, the most important dataset is the tool input test dataset, which is the data that used to run the tool everything you run tool from tool builder UI, think about input dataset as the test case for your tool, it should cover all possible scenarios that your tool will face in production. 
+### 动作
+* 工具是一段可以在 LLM 无服务器运行时执行的连续动作。它是 ReByte 的核心构建块，也是终端用户创建自己工具的主要方式。ReByte 提供了一个 GUI 构建器，供终端用户创建/编辑自己的 LLM 工具。ReByte 提供了一系列针对常见用例的预构建动作，以及供 _软件工程师_ 构建自己的动作并与代理构建器无缝集成的私有 SDK。预构建动作包括：
+  * LLM 动作
+    * 语言模型接口
+  * 数据动作
+    * 数据集加载器，加载预定义的数据集以供后续处理
+    * 文件加载器，提取/转换/加载用户提供的文件
+    * 表查询，将用户的自然语言查询翻译为 SQL 并在用户的数据库上执行查询
+    * 语义搜索，在用户的知识库中搜索相似内容
+  * 工具动作
+    * 搜索引擎，在 Google/Bing 上搜索信息
+    * 网页爬虫，抓取网页并提取信息
+    * HTTP 请求生成器，向任何公共/私有 API 发出任何 HTTP 请求
+  * 控制流动作
+    * 循环直到，运行动作直到满足条件
+    * 并行，执行多个并行动作
+    * 纯 JavaScript，执行任何纯 JavaScript 代码，用于进行纯数据转换
 
-### Lifecycle of a Tool
-LLM is naturally unpredictable, it's hard to predict what LLM will do in a specific scenario. The typical lifecycle of a tool is:
-1. Define test dataset, this is the data that you will use to test your tool, it should cover all possible scenarios that your tool will face in production.
-2. Design your tool. This is the process of creating a sequence of actions that LLM will execute.
-3. Run to test your tool, this is the process of running your tool with the test dataset, and see if the result is as expected.
-4. Loop previous steps until you are satisfied with the result.
-5. Deploy your tool to production. This is the process of making your tool available to end users.
+### 数据集
+* 数据集是一组动作可以使用的 JSON 数据，最重要的数据集是工具输入测试数据集，这是每次从工具构建器 UI 运行工具时使用的数据，将输入数据集视为工具的测试用例，它应涵盖工具在生产中将面临的所有可能场景。
 
-
-## Action Chain
-### Input and Output
-
-There are two cases here:
-
-* Build a tool to seamlessly integrate with ReByte's assistant, your tool needs to conform to a specific input/output format. Assistant will show specific UI elements based on the input/output format of the tool, for example, if your tool has a table output, assistant will show the table in a tabular format.
-* Build a tool and access via API, you can define your own input/output format
+### 工具的生命周期
+LLM 天生是不可预测的，很难预测 LLM 在特定场景中会做什么。工具的典型生命周期如下：
+1. 定义测试数据集，这是您将用于测试工具的数据，它应涵盖工具在生产中将面临的所有可能场景。
+2. 设计你的工具。这是创建 LLM 将执行的动作序列的过程。
+3. 运行测试你的工具，这是用测试数据集运行工具的过程，看看结果是否符合预期。
+4. 循环前面的步骤，直到您对结果满意为止。
+5. 将您的工具部署到生产中。这是使工具可供终端用户使用的过程。
 
 
-Here is the input/output format for ReByte's assistant:
+## 动作链
+### 输入和输出
+
+这里有两种情况：
+
+* 构建一个与 ReByte 的助手无缝集成的工具，您的工具需要符合特定的输入/输出格式。助手将根据工具的输入/输出格式显示特定的 UI 元素，例如，如果您的工具有表输出，助手将以表格格式显示表。
+* 构建一个工具并通过 API 访问，您可以定义自己的输入/输出格式。
+
+
+以下是 ReByte 助手的输入/输出格式：
 
 ```javascript
 
@@ -149,38 +149,38 @@ const AttachmentItemSchema: JSONSchemaType<AttachmentItem> = {
 
 ```
 
-### Reference Previous Action Output
+### 参考先前动作输出
 
-Action runs in a sequence, the output of the previous action is just a normal JSON object, can be used as input for the next action. 
-There are two ways to reference the previous action output:
-* In JavaScript code, use
+动作按顺序运行，先前动作的输出只是一个普通的 JSON 对象，可以用作下一个动作的输入。
+有两种引用先前动作输出的方法：
+* 在 JavaScript 代码中，使用
 ```javascript
 env.state['action_name']
 ```
-to reference the output of the previous action, named 'action_name'.
+来引用名为 'action_name' 的先前动作的输出。
 
-* In Jinja template, use
+* 在 Jinja 模板中，使用
 ```jinja2
 {{ action_name }}
 ```
-to reference the output of the previous action named 'action_name'.
+来引用名为 'action_name' 的先前动作的输出。
 
-Action can output:
-* String
-* Array
-* Object
+动作可以输出：
+* 字符串
+* 数组
+* 对象
 
-[//]: # (### Runtime Config)
+[//]: # (### 运行时配置)
 
-[//]: # (## Knowledge - capture private data)
-
-[//]: # ()
-[//]: # (> Ingredient for your Assistant.)
+[//]: # (## 知识 - 捕获私有数据)
 
 [//]: # ()
-[//]: # (* Knowledge is private data that is stored in rebyte managed vector database. ReByte currently provides following connectors for end users to import their knowledge:)
+[//]: # (> 你的助手的成分。)
 
-[//]: # (  * Local file, supported file types are:)
+[//]: # ()
+[//]: # (* 知识是存储在 ReByte 管理的向量数据库中的私有数据。ReByte 目前为终端用户提供以下连接器以导入他们的知识：)
+
+[//]: # (  * 本地文件，支持的文件类型有：)
 
 [//]: # (    * "doc", "docx", "img", "epub", "jpeg", "jpg", "png", "xls", "xlsx", "ppt", "pptx", "md", "txt", "rtf", "rst", "pdf", "json", "html")
 
@@ -190,24 +190,24 @@ Action can output:
 
 [//]: # (  * GitHub)
 
-[//]: # (  * More connectors are coming soon)
+[//]: # (  * 更多连接器即将推出)
 
-[//]: # (* Knowledge can be used in LLM Agents to do semantic search, or to do data augmentation. A great example is to use knowledge to do semantic search on a user's private knowledge base, and use the search result to do data augmentation for a language model, aka **Retrieval Augmented Generation**.)
-
-
-## Tool Version
-Every Deployment of a tool triggers a new version, starting from 1.
-There are two special version strings:
-'latest' always points to the newest version of the tool.
-'Live': You can manually promote a version to live, this is the version that end users will use.
-
-The best practice is to always use 'latest' in your development environment,
-and use 'live' in your production environment.
+[//]: # (* 知识可以在 LLM 代理中用于进行语义搜索，或进行数据增强。一个很好的例子是使用知识在用户的私有知识库中进行语义搜索，并使用搜索结果对语言模型进行数据增强，即 **检索增强生成**。)
 
 
-## Tool Observability
-ReByte records everything that happens during the execution of a tool,
-including the input data, the output data, the reasoning steps, and the execution log.
-We call this information a **Tool Run**.
-**Tool Run** is crucial for debugging and improving the tool.
-You can access this information in the tool builder UI. 
+## 工具版本
+每次工具部署都会触发一个新版本，从 1 开始。
+有两个特殊的版本字符串：
+'latest' 始终指向最新版本的工具。
+'Live'：您可以手动将一个版本提升为 live，这是终端用户将使用的版本。
+
+最佳实践是在开发环境中始终使用 'latest'，
+在生产环境中使用 'live'。
+
+
+## 工具可观测性
+ReByte 记录了工具执行过程中发生的一切，
+包括输入数据、输出数据、推理步骤和执行日志。
+我们称这些信息为 **工具运行**。
+**工具运行** 对调试和改进工具至关重要。
+您可以在工具构建器 UI 中访问这些信息。

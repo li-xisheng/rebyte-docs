@@ -1,99 +1,96 @@
-## What is ReByte?
+## 什么是 ReByte?
 
-> ReByte is an AI assistant for every member of your team.  
+> ReByte 是您团队每个成员的 AI 助手。
 
-ReByte has two primary goals:
+ReByte 有两个主要目标：
 
-* **Instant Use**: There are lots of fancy AI technologies every week, even every day, some of them focus on developers, some of them just try to demonstrate the power of AI, most of them are lack of end user usability. ReByte tries to provide an AI assistant that can be instantly used by every member of your team, with very minimal setup.
-* **Customization** There's no one-size-fits-all AI assistant for all companies. We are developing full-stack AI platform that quickly learn to increase productivity by automating time-consuming and monotonous workflows. For instance, we allow you to quickly analyze a csv file with millions of rows in a super flexible way.
+* **即时使用**：每周甚至每天都有很多炫目的 AI 技术，其中一些专注于开发人员，一些只是尝试展示 AI 的力量，但大多数都缺乏终端用户的可用性。ReByte 试图提供一个 AI 助手，可以由您团队的每个成员即时使用，并且设置非常简单。
+* **定制化**：没有适用于所有公司的通用 AI 助手。我们正在开发全栈 AI 平台，可以快速学习，通过自动化耗时和单调的工作流程来提高生产力。例如，我们允许您以超级灵活的方式快速分析包含数百万行的 csv 文件。
 
-Besides, ReByte has the following features:
+此外，ReByte 还具有以下特点：
 
-* **Handle both unstructured and structured data** Most of the AI assistants can only handle unstructured data by using vector search engine, ReByte can also handle structured data, including csv, Excel, postgres, mysql, parquet, JSON, sqlite. Combine our structured data support, you can build a RAG system with super high precision compared to traditional vector search engine.
-* **Multistep Plan and Execute** ReByte uses a plan and execute model to interact with tools. It first creates a plan, run the plan step by step, and then execute the plan. It can also correct itself if the plan is not executed as expected.
-* **Model Agnostic** You can use any large language model, such as OpenAI, Gemini, Anthropic, Mistral, or any other OS models, even your private model.
-* **Enterprise Data Sync** ReByte can auto sync data from various sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft and more, those data can be used to build your own knowledge base.
-* **Team Collaboration**, You can definitely use rebyte for your personal uses. However, rebyte is designed for enterprise use, you can create a team, invite your colleagues to join the team, and collaborate on the same knowledge/table/tool/assistant, also enforce access control.
-
+* **处理非结构化和结构化数据** 大多数 AI 助手只能使用向量搜索引擎处理非结构化数据，而 ReByte 也可以处理结构化数据，包括 csv、Excel、postgres、mysql、parquet、JSON、sqlite。结合我们的结构化数据支持，您可以构建一个与传统向量搜索引擎相比具有超高精度的 RAG 系统。
+* **多步计划和执行** ReByte 使用计划和执行模型与工具交互。它首先创建一个计划，逐步运行计划，然后执行计划。如果计划未按预期执行，它也可以自行纠正。
+* **模型无关** 您可以使用任何大型语言模型，例如 OpenAI、Gemini、Anthropic、Mistral 或任何其他 OS 模型，甚至是您的私有模型。
+* **企业数据同步** ReByte 可以自动同步来自各种来源的数据，例如 Notion、Slack、Discord、Twitter、Google、Microsoft 等，这些数据可用于构建您自己的知识库。
+* **团队协作** 您当然可以将 ReByte 用于个人用途。然而，ReByte 是为企业用途设计的，您可以创建一个团队，邀请同事加入团队，并在相同的知识/表格/工具/助手上进行协作，同时强制执行访问控制。
 
 ![img](http://res.cloudinary.com/dfjwtidnh/image/upload/v1720449540/rebyte/api_uploaded_assets/26c4a4ce-328d-4291-a2c7-88c89428e757.png)
 
+## 典型用例
 
-## Typical Use Cases
+我们期望 ReByte 在以下用例中有用：
 
-We expect ReByte can be useful in the following use cases:
+* **数据探索** 数据所有者可以创建一个具有适当访问控制的虚拟数据库，并与其他团队成员共享，所有人都可以在共享数据库上独立运行查询。
 
-* **Data Exploration** Data owner can create a virtual database with proper access control, and share it with other team members, everyone can then run the query independently on the shared database. 
+想象一下，您有多个销售数据，分布在 Google、Excel、本地文件 csv、数据库等。您想找出哪个可能是公司最好的销售渠道，**Rebyte 表格** 让您以超级灵活的方式组合您的数据，并进行探索。
 
-Think about you have multiple sales data across Google, excel, local file csv, database etc. You want to find out which might be the best sales channel for your company, **Rebyte Table** let you combine your data in super flexible ways, and do the exploration.
+* **公司知识库** 您有很多分散在不同来源的知识，例如 Notion、Slack、Discord、Twitter、Google、Microsoft 等。您想为您的团队构建一个统一的知识库，**Rebyte 知识** 让您从这些来源同步数据，并构建自己的知识库。
 
-* **Company knowledge base** You have a lot of knowledge scattered across different sources, such as Notion, Slack, Discord, Twitter, Google, Microsoft, etc. You want to build a unified knowledge base for your team, **Rebyte Knowledge** let you sync data from those sources, and build your own knowledge base.
+您可以问诸如“公司对远程工作的政策是什么？”或“我还有多少 PTO？”之类的问题。
 
-You can ask things like "What's the company policy for remote work?" or "How many PTOS do I have left?"
-
-* **Automate repetitive tasks** You have a lot of repetitive tasks, such as data cleaning, data transformation, data analysis, data visualization, those workflow are proprietary to your team, you want to automate those tasks, **Rebyte Tool** let you build your own tools to automate those tasks, every team member can use those tools just like using a normal AI assistant.
-
+* **自动化重复任务** 您有很多重复的任务，例如数据清理、数据转换、数据分析、数据可视化，这些工作流程是您的团队专有的，您希望自动化这些任务，**Rebyte 工具** 让您构建自己的工具来自动化这些任务，每个团队成员都可以像使用普通 AI 助手一样使用这些工具。
 
 [//]: # (<figure><img src=".gitbook/assets/image &#40;9&#41;.png" alt=""><figcaption></figcaption></figure>)
 
-[//]: # (## Rationale behind ReByte)
+[//]: # (## ReByte 背后的理念)
 
 [//]: # ()
-[//]: # (There are already many AI assistants on the market, many of which are made by very good companies. However, we believe that the team AI assistant will be significantly different from these AI assistants in the following ways:)
+[//]: # (市场上已经有很多 AI 助手，其中许多由非常优秀的公司制作。然而，我们认为团队 AI 助手将与这些 AI 助手在以下方面有显著不同：)
 
 [//]: # ()
-[//]: # (Providing customized processes that can be seamlessly integrated into team's assistant. Each team has its own unique business processes.)
+[//]: # (提供可以无缝集成到团队助手中的定制化流程。每个团队都有自己独特的业务流程。)
 
 [//]: # ()
-[//]: # (Each team's knowledge base is vastly different, and the AI assistant needs more context to better serve each team member.)
+[//]: # (每个团队的知识库差异很大，AI 助手需要更多的上下文来更好地服务每个团队成员。)
 
 [//]: # ()
-[//]: # (All problems can be boiled down to providing more context to AI assistants, including the context of data and the context of business logic.)
+[//]: # (所有问题都可以归结为为 AI 助手提供更多的上下文，包括数据的上下文和业务逻辑的上下文。)
 
 [//]: # ()
-[//]: # (ReByte provides the following features to address these issues, one is a low-code platform for building tools to capture proprietary workflow, and the other is a data integration platform to aggregate data from various sources.)
+[//]: # (ReByte 提供了以下功能来解决这些问题，一个是用于捕获专有工作流程的低代码平台，另一个是用于聚合来自各种来源的数据的数据集成平台。)
 
 [//]: # ()
-[//]: # (### No-Code Platform for Building Tools)
+[//]: # (### 无代码平台构建工具)
 
 [//]: # ()
-[//]: # (ReByte provides a low-code platform for customized tool build, similar to Langchain, for extending the capabilities of team assistants. As mentioned in this [cognitive architecture blog post by langchain]&#40;https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/&#41;&#41;, large language model tools can be divided into two categories: those driven by the reasoning capabilities of large language models, such as Chain of Thoughts, and those driven by "flow engineering," where developers design LLM tools that align with the team's workflow. ReByte provides a complete set of tools to support the development of such customized tools, while minimizing the programming requirements for developers. Our goal is to enable developers to build large language model tools with just an understanding of JSON.)
+[//]: # (ReByte 提供了一个低代码平台，用于构建自定义工具，类似于 Langchain，用于扩展团队助手的能力。正如这篇[langchain 的认知架构博客文章](https://blog.langchain.dev/openais-bet-on-a-cognitive-architecture/)中提到的，大型语言模型工具可以分为两类：一类是由大型语言模型的推理能力驱动的工具，例如思维链，另一类是由“流程工程”驱动的工具，开发人员设计符合团队工作流程的 LLM 工具。ReByte 提供了一整套工具来支持这些自定义工具的开发，同时尽量减少开发人员的编程要求。我们的目标是使开发人员只需了解 JSON 就能构建大型语言模型工具。)
 
 [//]: # ()
-[//]: # (### Enterprise Data Integration)
+[//]: # (### 企业数据集成)
 
 [//]: # ()
-[//]: # (ReByte will help to create a unified team knowledge base by integrating data from authorized sources with the team's permission. This comprehensive and integrated knowledge base is crucial for later processing by large language models. Initially, ReByte will integrate data from sources such as files, GitHub, Notion, web pages, and Twitter, and this list will continue to expand in the future.)
+[//]: # (ReByte 将通过在团队许可下集成来自授权来源的数据来帮助创建统一的团队知识库。这个全面和综合的知识库对于大型语言模型的后续处理至关重要。最初，ReByte 将集成来自文件、GitHub、Notion、网页和 Twitter 等来源的数据，并且这个列表将在未来不断扩大。)
 
 [//]: # ()
-[//]: # ([//]: # &#40;Data security is a constant concern within enterprises, and this is also true for team assistants. ReByte has designed a role-based access control system that aims to provide enterprise IT personnel with the utmost flexibility in controlling which data can be accessed by whom.&#41;)
+[//]: # ([//]: # &#40;数据安全是企业内的一个持续关注点，这对于团队助手也同样如此。ReByte 设计了一个基于角色的访问控制系统，旨在为企业 IT 人员提供最大的灵活性，以控制哪些数据可以被谁访问。&#41;)
 [//]: # ()
 [//]: # ()
-[//]: # (## Two Views)
+[//]: # (## 两种视图)
 
 [//]: # ()
-[//]: # (ReByte contains two main parts:)
+[//]: # (ReByte 包含两个主要部分：)
 
 [//]: # ()
-[//]: # (* **End User's view**: An AI Assistant for your team members. You can think of it as a private ChatGPT with access to your team's private knowledge and workflow.)
+[//]: # (* **终端用户视图**：您的团队成员的 AI 助手。您可以将其视为具有访问您团队私有知识和工作流程的私人 ChatGPT。)
 
-[//]: # (* **Builder's view**: Builder in your team can capture your team's proprietary knowledge and workflow, and make them available to your team member.)
+[//]: # (* **构建者视图**：您的团队中的构建者可以捕获团队的专有知识和工作流程，并使其可供团队成员使用。)
 
 [//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # ([//]: # &#40;&#41;)
-[//]: # ([//]: # &#40;### Builder Platform&#41;)
+[//]: # ([//]: # &#40;### 构建者平台&#41;)
 [//]: # ()
 [//]: # ([//]: # &#40;&#41;)
-[//]: # ([//]: # &#40;Only builders or admin in your team can access the builder platform. Those are main components in the builder platform:&#41;)
+[//]: # ([//]: # &#40;只有您的团队中的构建者或管理员可以访问构建者平台。这些是构建者平台中的主要组件：&#41;)
 [//]: # ()
 [//]: # ([//]: # &#40;&#41;)
-[//]: # ([//]: # &#40;* **Actions**: represent a single unit of work that tool can perform, such as make a LLM call, read a file, or generate a document, run piece of code, call external services etc. Actions can be chained together to form a sequence of actions that the tool will perform.&#41;)
+[//]: # ([//]: # &#40;* **动作**：表示工具可以执行的单个工作单元，例如进行 LLM 调用、读取文件或生成文档、运行代码片段、调用外部服务等。动作可以链接在一起形成工具将执行的一系列动作。&#41;)
 [//]: # ()
-[//]: # ([//]: # &#40;* **Tools**: a no-code UI for capturing proprietary workflow, it represents a sequence of actions.&#41;)
+[//]: # ([//]: # &#40;* **工具**：用于捕获专有工作流程的无代码 UI，它表示一系列动作。&#41;)
 [//]: # ()
-[//]: # ([//]: # &#40;* **Knowledge** : a data pipeline for aggregating data from various enterprise sources, embedding them, and making them available to tools.&#41;)
+[//]: # ([//]: # &#40;* **知识**：用于聚合来自各种企业来源的数据、嵌入它们并使其可用于工具的数据管道。&#41;)
 [//]: # ()
-[//]: # ([//]: # &#40;* **API**: all mentioned above can be accessed via API, so you can integrate ReByte with your existing systems.&#41;)
+[//]: # ([//]: # &#40;* **API**：以上所有内容都可以通过 API 访问，因此您可以将 ReByte 与现有系统集成。&#41;)

@@ -1,54 +1,50 @@
-# Language Model Chat
+# 语言模型对话
 
-## Usage
+## 用法
 
-We provide the `Language Model Chat` action to easily chat with the large language model and create complex uses.
+我们提供 `Language Model Chat` 动作以便轻松与大型语言模型聊天并创建复杂的用途。
 
-To use this action you just need to write your specifications and configure the model, and the large language model will generate the response.
+要使用此动作，您只需编写您的规范并配置模型，大型语言模型将生成响应。
 
-### Specification
+### 规范
 
 <figure><img src="../../../../images/chat-spec.png" alt=""><figcaption></figcaption></figure>
 
-**Instruction**
+**指令**
 
-* This is the message that will be sent to the model.
-* Write your prompt here and tell the large language model what to do.
-* Supports [Tera](https://keats.github.io/tera/docs/) format. For example, you can use `{{INPUT.messages[0].content}}` to get the content of the agent's input first message.
+* 这是将发送到模型的消息。
+* 在这里编写您的提示，告诉大型语言模型该做什么。
+* 支持 [Tera](https://keats.github.io/tera/docs/) 格式。例如，您可以使用 `{{INPUT.messages[0].content}}` 获取代理输入的第一条消息的内容。
 
-**Messages**
+**消息**
 
-* This is the messages that will be sent to the LLM.
-* You can refer to the output of other actions here using Javascript or Tera format.
-* Messages can be a list of strings or list of objects. If it's a list of objects, make sure each object has a `role` field as well as a `content` field.:
-  * The `role` field specifies the role of the message, allowed roles are `user`, `assistant` and `system`.
-  * The `content` contains the message to be sent to the model.
-* Uses **Javascript** format, for example, you can use `env.state.INPUT.messages` to get the agent's input.
-* **NOTE:** Make sure to return an array.
-* **NOTE:** If you want the model chat to have context, you should use a `Thread message loader` action to record and load the history messages. For more about this action, see [here](../tools/thread-message-loader.md).
+* 这些是将发送到 LLM 的消息。
+* 您可以在此处使用 Javascript 或 Tera 格式引用其他动作的输出。
+* 消息可以是字符串列表或对象列表。如果它是对象列表，请确保每个对象都有一个 `role` 字段以及一个 `content` 字段：
+  * `role` 字段指定消息的角色，允许的角色是 `user`、`assistant` 和 `system`。
+  * `content` 包含将发送到模型的消息。
+* 使用 **Javascript** 格式，例如，您可以使用 `env.state.INPUT.messages` 获取代理输入。
+* **注意**：请确保返回一个数组。
+* **注意**：如果您希望模型对话具有上下文，您应该使用 `Thread message loader` 动作来记录和加载历史消息。有关此动作的更多信息，请参见[此处](../tools/thread-message-loader.md)。
 
-**Functions**
+**函数**
 
-* Function calling allows you to connect large language models to external tools by describing functions in an API call, enabling the model to intelligently generate JSON objects containing arguments for calling one or multiple functions.
-* This capability provides a way to obtain structured data from the model, enabling tasks such as creating assistants that interact with external APIs and converting natural language into API calls.
-* Uses **Javascript** format.
-* [Here](function-calling.md) is a detailed example on how to use "Functions".
+* 函数调用允许您通过描述 API 调用中的函数将大型语言模型连接到外部工具，从而使模型能够智能地生成包含调用一个或多个函数的参数的 JSON 对象。
+* 这种能力提供了一种从模型获取结构化数据的方法，使得可以创建与外部 API 交互的助手，并将自然语言转换为 API 调用。
+* 使用 **Javascript** 格式。
+* [此处](function-calling.md) 是一个详细的使用“函数”的示例。
 
-### Configuration
+### 配置
 
-You can choose the model you want to use by clicking the model's name, the default model is "gpt-3.5-turbo-1106".
+您可以通过点击模型名称选择要使用的模型，默认模型是 "gpt-3.5-turbo-1106"。
 
 <figure><img src="../../../../images/chat-models.png" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-Click this button in the bottom right corner of the `Language Model Chat` action to open the configuration panel.
+点击 `Language Model Chat` 动作右下角的此按钮以打开配置面板。
 
 <figure><img src="../../../../images/chat-config-button.jpg" alt=""><figcaption></figcaption></figure>
 
-&#x20;
-
-There are five settings in the configuration panel, as shown below.
+配置面板中有五个设置，如下所示。
 
 <div align="center">
 
@@ -56,71 +52,67 @@ There are five settings in the configuration panel, as shown below.
 
 </div>
 
-**Temperature**
+**温度**
 
-* "Temperature" controls the randomness of the model's output.
-* The higher the model temperature, the more random the output is.
+* “温度”控制模型输出的随机性。
+* 模型温度越高，输出越随机。
 
-**Maximum Output Tokens**
+**最大输出令牌**
 
-* "Maximum Output tokens" specifies the maximum number of tokens to generate.
-* Can use up to 40,000 tokens(the limit for models vary), including prompt and model returned content.
+* “最大输出令牌”指定要生成的最大令牌数。
+* 可以使用最多 40,000 个令牌（模型的限制各不相同），包括提示和模型返回的内容。
 
-**JSON Response**
+**JSON 响应**
 
-* "JSON Response" button enable JSON mode, which guarantees the messages the model generate are in JSON format.
-* NOTE: This feature is a beta feature and only supported by OpenAI's "gpt-4-1106-preview" model now.
-* NOTE: When you use this feature, make sure the word "JSON" is in the context. Otherwise, the OpenAI's API will throw an error.
+* "JSON Response" 按钮启用 JSON 模式，确保模型生成的消息为 JSON 格式。
+* 注意：此功能是测试功能，目前仅支持 OpenAI 的 "gpt-4-1106-preview" 模型。
+* 注意：使用此功能时，请确保上下文中包含“JSON”一词。否则，OpenAI 的 API 会抛出错误。
 
-**Seed**
+**种子**
 
-* The "Seeds" is a parameter that can be specified when using the `Language Model Chat` and `Language Model Completion` actions.
-* It helps to ensure consistent outputs by making the system sample deterministically, resulting in the same result for repeated requests with the same seed and parameters.
-* NOTE: This feature is a beta feature and may not be supported by all models.
+* “种子”是在使用 `Language Model Chat` 和 `Language Model Completion` 动作时可以指定的参数。
+* 它通过使系统确定性地采样，确保一致的输出，从而在使用相同种子和参数进行重复请求时产生相同的结果。
+* 注意：此功能是测试功能，可能并非所有模型都支持。
 
-**Stop Words**
+**停止词**
 
-* Stop words are used to make the model stop at a desired point, such as the end of a sentence or a list.
+* 停止词用于使模型在预期点停止，例如句子或列表的结尾。
 
-&#x20;
-
-On the top right of the action, there are two more things to configure: "Stream Mode" and "Cache Mode".
+在动作的右上角，还有两个可以配置的选项：“流模式”和“缓存模式”。
 
 <figure><img src="../../../../images/stream-and-cache.jpg" alt=""><figcaption></figcaption></figure>
 
-**Stream**
+**流**
 
-* This option allows you to receive partial chat responses as they are being generated, rather than waiting for the entire completion to be finished before receiving a response.
-* By setting stream mode, you can start processing or displaying the beginning of the chat before the full response is received.
+* 此选项允许您在生成部分聊天响应时接收它们，而不是等待整个完成后才接收响应。
+* 通过设置流模式，您可以在收到完整响应之前开始处理或显示聊天的开头。
 
-**Cache**
+**缓存**
 
-* Caching involves storing frequently accessed data to improve response times without making repeated calls to a model.
-* If you use the cache mode, the model will cache the response and return the cached response when the same request is made again. This will make your agent run faster.
+* 缓存涉及存储频繁访问的数据，以提高响应时间，而无需重复调用模型。
+* 如果使用缓存模式，模型将缓存响应，并在再次发出相同请求时返回缓存的响应。这将使您的代理运行更快。
 
-### Message Format
+### 消息格式
 
-ReByte uses a similar message format as OpenAI. The message format is a JSON object with the following fields:
+ReByte 使用类似于 OpenAI 的消息格式。消息格式是一个包含以下字段的 JSON 对象：
 
-* Role: could be one from 'user', 'system', or 'assistant'.
-* Content: content of this message.
-* Name(optional): name of role.
-* Context(optional): context of this message.
+* 角色：可以是 'user'、'system' 或 'assistant' 中的一个。
+* 内容：此消息的内容。
+* 名称（可选）：角色名称。
+* 上下文（可选）：此消息的上下文。
 
-&#x20;
+**消息格式示例**
 
-**Message Format Examples**
-
-1.Simple message
+1. 简单消息
 
 ```json
 {
     "content": "Hello, how are you?",
-    "role": "user"
-    "name": "meowoof"
+    "role": "user",
+    "name": "meowoof",
     "context": {
         "files": [
-    {
+            {
                 "uuid": "f3610fef-f490-4675-81fe-df04735f5058",
                 "name": "file1.pdf"
             },
@@ -128,11 +120,12 @@ ReByte uses a similar message format as OpenAI. The message format is a JSON obj
                 "name": "f3610fef-f490-4675-81fe-df04735f5059",
                 "content": "file2.txt"
             }   
+        ]
     }
 }
 ```
 
-2.List of messages
+2. 消息列表
 
 ```json
 [
@@ -142,22 +135,22 @@ ReByte uses a similar message format as OpenAI. The message format is a JSON obj
     },
     {
         "content": "Hello, how are you?",
-        "role": "user"
+        "role": "user",
         "name": "meowoof"
     },
     {
         "content": "I am fine, thank you.",
-        "role": "assistant"
+        "role": "assistant",
         "name": "rebyte"
     },
     {
         "content": "what's your plan today?",
-        "role": "user"
+        "role": "user",
         "name": "meowoof"
     }
 ]
 ```
 
-## Example Tool
+## 示例工具
 
 * [Language Model Chat](https://rebyte.ai/p/21b2295005587a5375d8/callable/719d2f31bf9fe977f699/editor)

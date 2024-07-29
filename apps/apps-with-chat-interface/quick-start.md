@@ -1,27 +1,27 @@
-# Quick Start
+# 快速入门
 
-We will show you how to build an app with chat interface.
+我们将向您展示如何构建一个带有聊天界面的应用程序。
 
-## Step 1: Create an App
+## 步骤 1：创建应用程序
 
-* Navigate to the "My Apps" tab in the sidebar and then click "Create App" on the top right. Choose "App With Chat Interface".
+* 导航到侧边栏中的“我的应用程序”标签，然后点击右上角的“创建应用程序”。选择“带有聊天界面的应用程序”。
 
 <figure><img src="../../images/createapp.png" alt=""></figure>
 
-* Fill in the information about the app.
+* 填写有关应用程序的信息。
 
 <figure><img src="../../images/buildapp-2.png" alt=""></figure>
 
-* Select the agent you want to base your app on, remember to select the version of your agent. 
+* 选择您要基于的代理，请记住选择您的代理版本。
 
 <figure><img src="../../images/buildapp.png" alt=""></figure>
 
-* Click "Create App with Chat UI" and that's it!
+* 点击“创建带有聊天界面的应用程序”，就完成了！
 
-## Step 2: Use your App
+## 步骤 2：使用您的应用程序
 
 <figure><img src="../../images/useapp.png" alt=""></figure>
 
-🎉 Now you can use your App in the chat interface!
+🎉 现在您可以在聊天界面中使用您的应用程序了！
 
-**You can try this app [here](https://rebyte.ai/copilot/b1518cc7d7d76055f4b3/session/2d1a606382)**
+**您可以在[这里](https://rebyte.ai/copilot/b1518cc7d7d76055f4b3/session/2d1a606382)试用此应用程序**

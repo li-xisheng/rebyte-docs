@@ -1,43 +1,43 @@
-# Welcome to ReByte
+# 欢迎来到 ReByte
 
 <figure><img src=".gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
 
-## What is ReByte?
+## 什么是 ReByte？
 
-ReByte is your team assistant that helps you to create your own AI-powered applications without needing too much coding skills. On ReByte, you can create various types of applications and publish them for your own personal use, or for the team to use.
+ReByte 是您的团队助手，可以帮助您创建自己的 AI 驱动应用程序，而无需太多编码技能。在 ReByte 上，您可以创建各种类型的应用程序，并将其发布供自己个人使用或供团队使用。
 
-ReByte is a platform that allows everyone to quickly develop their AI-powered applications without needing too much coding skill. On ReByte, anyone with or without programming experiences, can create various types of applications and publish them for their own personal use, or for the team to use.
+ReByte 是一个平台，允许所有人快速开发他们的 AI 驱动应用程序，而无需太多编码技能。在 ReByte 上，无论是否有编程经验，任何人都可以创建各种类型的应用程序，并将其发布供自己个人使用或供团队使用。
 
-## Rationale behind ReByte
+## ReByte 背后的理念
 
-Previously, software development is a process that requires a lot of coding skills. But with the rise of **Language Models** \(LMs\), we are able to build software tools that can understand human intentions and generate code automatically. This is a huge step forward in software development, because it allows us to build software tools without needing to write too much code.
+以前，软件开发是一个需要大量编码技能的过程。但随着**语言模型**（LMs）的兴起，我们能够构建能够理解人类意图并自动生成代码的软件工具。这是软件开发的一大进步，因为它允许我们在不需要编写太多代码的情况下构建软件工具。
 
-This will open the hood of software development to a much larger group of people. Everyone can use their personal computers to create their **personal** software tools. Every company can use their private data to create their **personal** software tools for internal or external uses.
+这将使软件开发的引擎盖向更大范围的人群开放。每个人都可以使用他们的个人计算机创建他们的**个人**软件工具。每个公司都可以使用他们的私人数据创建他们的**个人**软件工具，以供内部或外部使用。
 
-**ReByte** is built with one mission: to give everyone the ability to create their own software tools without needing too much coding skills.
+**ReByte** 的创建使命是：赋予每个人在不需要太多编码技能的情况下创建自己软件工具的能力。
 
-In terms of functionality, **ReByte** has some core components:
+在功能方面，**ReByte** 有一些核心组件：
 
-* Language Model Tool: A serverless function that can be executed on cloud. Those functions usually use LLMs to perform some tasks, but it's not required.
-* Knowledge: Private data ingestion pipeline that feed data to ReByte system, later can be used by LLM tools.
-* App Builder: User interface builder that allows developers to wire up LLM tools and knowledge to create their own tools.
+* 语言模型工具：可以在云端执行的无服务器函数。这些函数通常使用 LLM 执行某些任务，但这不是必须的。
+* 知识：将私有数据摄取到 ReByte 系统的管道，之后可以被 LLM 工具使用。
+* 应用构建器：用户界面构建器，允许开发人员连接 LLM 工具和知识以创建自己的工具。
 
-Also, **ReByte** is built to solve the following problems in LLM application development:
+此外，**ReByte** 还旨在解决 LLM 应用开发中的以下问题：
 
-1. **Predicable LLM application**: It works on the principle of treating each LLM interaction as a single step or functional transformation on working memory, offering a predictable and manageable way to guide the thought process of a LLM. This approach results in consistent, easier-to-follow interaction flows.
-2. **Iterative Nature of LLM Development**: Creating tools on top of modern LLM models can be quite challenging, due to the nature of LLMs. LLMs' output are not deterministic, and their performance can vary from time to time. We want ReByte's LLM agent builder to make this process as easy as possible.
-   * We provide a unified interface for users to build, test and deploy their LLM application.
-   * We also keep logs of the application, so that users can easily fix the bugs when things go wrong.
-3. **Painless Private Data integration**: Today's LLM tools heavily rely on private data. Frameworks such as Langchain and LlamaIndex, together with various vector databases, provide the necessary pieces for private data embedding and search. But even for someone experiences in coding and engineering, it's hard to get the system running the first time, and usually takes hours to debug. That's why we want to make this data integration process as easy and painless as possible.
-   * We provide a hosted solution for users to import data from popular data sources, such as Notion, Google, GitHub, etc., as well as from user's local computers.
-   * We handle data source synchronization automatically, so users don't need to worry about data consistency.
-4. **Production Serving Ready**: Provide a robust runtime ready for immediate deployment and scalable growth.
-   * It's rather hard to scale LLM applications, because of its unpredictable and asynchronous nature.
-   * Being inspired by serverless functions, we provide a scalable runtime for users to scale their LLM applications without having to know the details of the underlying infrastructure.
-5. **Deliver Tool instead of Prompt**: LLM applications are meant to be ready-to-use tools, not just prompts. We make sure that users can deliver their LLM applications as actual tools, instead of prompts.
+1. **可预测的 LLM 应用**：它的工作原理是将每次 LLM 交互视为对工作内存的单步或功能转换，提供一种可预测和可管理的方式来引导 LLM 的思维过程。这种方法产生了一致的、更易于遵循的交互流程。
+2. **LLM 开发的迭代性质**：基于现代 LLM 模型创建工具可能非常具有挑战性，因为 LLM 的输出不是确定性的，其性能可能会有所不同。我们希望 ReByte 的 LLM 代理构建器使这个过程尽可能简单。
+   * 我们为用户提供了统一的界面来构建、测试和部署他们的 LLM 应用程序。
+   * 我们还保留了应用程序的日志，以便在出现问题时用户可以轻松修复错误。
+3. **无痛的私有数据集成**：当今的 LLM 工具严重依赖私有数据。Langchain 和 LlamaIndex 等框架以及各种向量数据库提供了嵌入和搜索私有数据所需的部分。但即使对于有编码和工程经验的人来说，第一次让系统运行起来也很困难，通常需要几个小时来调试。这就是为什么我们希望使数据集成过程尽可能简单和无痛。
+   * 我们为用户提供了托管解决方案，以从流行的数据源（如 Notion、Google、GitHub 等）以及用户的本地计算机中导入数据。
+   * 我们自动处理数据源同步，因此用户不需要担心数据一致性。
+4. **生产环境准备**：提供一个健壮的运行时，随时准备部署和可扩展增长。
+   * 由于 LLM 应用的不可预测性和异步性，很难扩展 LLM 应用。
+   * 受无服务器函数的启发，我们为用户提供了一个可扩展的运行时，使他们无需了解底层基础设施的详细信息即可扩展 LLM 应用。
+5. **交付工具而不是提示**：LLM 应用程序应该是可直接使用的工具，而不仅仅是提示。我们确保用户可以将他们的 LLM 应用程序作为实际工具交付，而不仅仅是提示。
 
-At its core, ReByte defines an **Tool DSL** as an intermediate representation of any LLM application, and provides a hosted runtime for users to execute their LLM applications. Introduction to Tool DSL has obvious benefits:
+ReByte 的核心是定义了一种**工具 DSL** 作为任何 LLM 应用程序的中间表示，并为用户提供托管运行时来执行他们的 LLM 应用程序。引入工具 DSL 有明显的好处：
 
-* can be used to build a GUI builder for users to create their own LLM application.
-* can be generated by fine-tuned models
-* can be edited by human
+* 可用于构建 GUI 构建器，供用户创建自己的 LLM 应用程序。
+* 可以由微调模型生成。
+* 可以由人类编辑。

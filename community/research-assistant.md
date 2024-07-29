@@ -1,41 +1,41 @@
-# Building an AI-Powered Research Assistant with an AI Platform
+# 构建一个基于 AI 的研究助手
 
-In today's digital age, leveraging artificial intelligence to streamline complex tasks has become increasingly popular. One such application is the development of an AI-powered research assistant. 
+在当今数字时代，利用人工智能来简化复杂任务变得越来越流行。其中一个应用是开发一个基于 AI 的研究助手。
 
 ![RS app](https://png.cm/app/del.php?hash=NjJNdDJmVy9wcEVpdXNWcnhvZS95d1ZackxNNWdmY0c0UT09)
 
-## How to build
+## 如何构建
 
-### Steps
+### 步骤
 
-1. **Splitting the Query into Related Sub-Queries:** The first step involves dissecting the main query into smaller, related sub-queries. This breakdown is crucial as it allows the assistant to tackle the query in a more focused and detailed manner, ensuring that all aspects of the main question are adequately addressed. We use a "model chat" action to do this.
+1. **将查询分解为相关子查询：** 第一步是将主查询分解为较小的相关子查询。这一步骤至关重要，因为它使助手能够更集中和详细地处理查询，确保充分解决主问题的各个方面。我们使用 "model chat" 动作来完成此操作。
 
 ![RS app](https://res.cloudinary.com/dfjwtidnh/image/upload/v1709795279/ra-1_aognpa.png)
 
-2. **Using a "Google Search" Action:** Once the query is segmented, the assistant employs a "Google Search" action. This function enables the AI to scour the internet for web pages related to each of the sub-queries. It's akin to conducting a manual search on Google, but here, the AI performs this task, saving time and effort.
+2. **使用 "Google 搜索" 动作：** 查询分解后，助手使用 "Google 搜索" 动作。此功能使 AI 能够在互联网上搜索与每个子查询相关的网页。这类似于在 Google 上手动搜索，但在这里，AI 执行此任务，节省时间和精力。
 
-3. **Crawling Web Page Content:** After identifying relevant web pages, the assistant proceeds to crawl these pages. We use another assistant agent to do this for us. Crawling refers to the process of systematically browsing the web to gather information from various web pages. Through this method, the assistant extracts crucial data and content linked to the sub-queries.
+3. **抓取网页内容：** 在识别出相关网页后，助手会继续抓取这些页面。我们使用另一个助手代理来完成此任务。抓取是指系统地浏览网页以从各种网页中收集信息。通过这种方法，助手提取与子查询相关的重要数据和内容。
 
 ![RS app](https://res.cloudinary.com/dfjwtidnh/image/upload/v1709795279/ra-3_mblb45.png)
 
-4. **Summarizing and Answering:** With the data from crawled web pages at hand, the assistant utilizes another model-chat action to synthesize and summarize the information. Here,we use GPT-3.5, which is known for its advanced language processing capabilities, analyzes the content, extracts key points, and generates a concise summary that addresses the original query.
+4. **总结和回答：** 拥有抓取的网页数据后，助手使用另一个 model-chat 动作来综合和总结信息。这里我们使用 GPT-3.5，它以其先进的语言处理能力著称，分析内容，提取关键点，并生成一个简明的总结，以回答原始查询。
 
 ![RS app](https://res.cloudinary.com/dfjwtidnh/image/upload/v1709795300/ra-5_dhab7k.png)
 
-5. **Delivering Comprehensive Responses:** The culmination of this process is a comprehensive response that encapsulates the essence of the gathered information. The assistant, through GPT-3.5, not only provides a summary but also answers the original question, and provide source of information for you.
+5. **提供全面的回答：** 这一过程的最终结果是一个全面的回答，概括了所收集信息的精华。助手通过 GPT-3.5，不仅提供摘要，还回答原始问题，并为您提供信息来源。
 
-### Conclusion
+### 结论
 
-The beauty of using an AI platform for this task lies in its simplicity and efficiency. It eliminates the need for intricate coding and leverages the power of AI actions like "Google Search" and advanced language models like GPT-3.5. This approach significantly reduces the workload and time required for research, making it an invaluable tool for students, researchers, and professionals seeking quick and thorough answers to complex queries.
+使用 AI 平台执行此任务的优点在于其简单性和效率。它消除了复杂编码的需要，利用了诸如 "Google 搜索" 和高级语言模型如 GPT-3.5 等 AI 动作的强大功能。这种方法显著减少了研究所需的工作量和时间，使其成为学生、研究人员和专业人士寻找快速和全面回答复杂问题的宝贵工具。
 
-In summary, an AI-powered research assistant developed on ReByte represents a significant leap in automating and enhancing research tasks. It combines the simplicity of using pre-built AI actions with the sophistication of state-of-the-art language models to deliver accurate, detailed, and relevant information, revolutionizing the way we conduct research in the digital era.
+总之，在 ReByte 上开发的基于 AI 的研究助手在自动化和增强研究任务方面代表了一大飞跃。它结合了使用预构建 AI 动作的简便性和最先进语言模型的复杂性，提供准确、详细和相关的信息，彻底改变了我们在数字时代进行研究的方式。
 
-## Demos
+## 演示
 
-Here, we've already built the app and tools. For more details, click the below links!
+在这里，我们已经构建了应用程序和工具。有关更多详细信息，请点击以下链接！
 
-[Research assistant app](https://rebyte.ai/copilot/1167e1b4f904deb2d5a8/session/5c300017f8)
+[研究助手应用](https://rebyte.ai/copilot/1167e1b4f904deb2d5a8/session/5c300017f8)
 
-[Research assistant agent](https://rebyte.ai/p/21b2295005587a5375d8/callable/2928590849debbe78f55/editor)
+[研究助手代理](https://rebyte.ai/p/21b2295005587a5375d8/callable/2928590849debbe78f55/editor)
 
-[Research assistant helper agent:crawl page content](https://rebyte.ai/p/21b2295005587a5375d8/callable/deee1561301aadcfb6fb/editor)
+[研究助手帮助代理：抓取页面内容](https://rebyte.ai/p/21b2295005587a5375d8/callable/deee1561301aadcfb6fb/editor)

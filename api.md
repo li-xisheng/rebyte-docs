@@ -1,59 +1,56 @@
-ReByte provides a set of APIs to make it easy to integrate ReByte into your own applications.
-There are three main APIs: File API, Tool API, and Thread API. 
+ReByte 提供了一组 API，使得将 ReByte 集成到您自己的应用程序中变得容易。
+主要有三个 API：文件 API、工具 API 和线程 API。
 
-* Tool API
+* 工具 API
 
-Tool API allows you to call the tool you created on ReByte. It supports:
+工具 API 允许您调用在 ReByte 上创建的工具。它支持：
 
-    * blocking and non-blocking calls
-    * streaming
-    * specifying a tool version
-    * specify config of action within the tool 
+    * 阻塞和非阻塞调用
+    * 流式处理
+    * 指定工具版本
+    * 指定工具内动作的配置
 
 
-* Thread API
+* 线程 API
 
-Thread API allows you to create a conversation thread and add messages to the thread.
+线程 API 允许您创建一个对话线程并向线程添加消息。
 
-Combined with the Tool API, you can create a tool with memory without having your own backend.
+结合工具 API，您可以创建一个具有记忆功能的工具，而无需拥有自己的后端。
 
-* File API 
- 
-Allows you to upload files to ReByte. Uploaded files can be used in the agent's actions, such as `File Loader` action.
+* 文件 API 
 
+允许您将文件上传到 ReByte。上传的文件可以在代理的动作中使用，例如 `File Loader` 动作。
 
 ---
 
-# Tool API
+# 工具 API
 
-The Tool API allows you to call customized tools from your own applications. It provides a set of APIs to interact with the tool, such as sending messages, uploading files, and creating threads.
+工具 API 允许您从自己的应用程序调用自定义工具。它提供了一组与工具交互的 API，例如发送消息、上传文件和创建线程。
 
-## Overview
+## 概述
 
-A typical integration of the Tool API has the following flow:
+工具 API 的典型集成流程如下：
 
-1. Create a Tool on rebyte tool editor by defining its custom actions, such as `Model`, `Data`, `Utilities`, `Control Flow`, etc. Pick the model and parameters that you want to use.
+1. 在 ReByte 工具编辑器中创建一个工具，定义其自定义动作，例如 `Model`、`Data`、`Utilities`、`Control Flow` 等。选择您要使用的模型和参数。
 
-2. Create a Thread when a user starts a conversation.
+2. 在用户开始对话时创建一个线程。
 
-3. Add Messages to the Thread as the user asks questions.
+3. 在用户提问时向线程添加消息。
 
-4. Run the Tool on the Thread to generate a response.
+4. 在线程上运行工具以生成响应。
 
-## Step by step
+## 步骤详解
 
-1. Create a Tool.
+1. 创建一个工具。
 
-Here, we'll just use this ["Chat with GPT3.5 tool"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor) as an example. Remember to test your tool first and make sure it works as expected. Also, click "Deploy" to make it available for the API.
+在这里，我们将使用此 ["Chat with GPT3.5 工具"](https://rebyte.ai/p/21b2295005587a5375d8/callable/f4222f209267e5b24cda/editor) 作为示例。请务必先测试您的工具并确保其按预期工作。另外，点击“Deploy”使其可用于 API。
 
-2. Create a thread
+2. 创建一个线程
 
-Before using the API, get your API key from the API console on the sidebar. You should use this key to authenticate your requests.
+在使用 API 之前，从侧栏的 API 控制台获取您的 API 密钥。您应该使用此密钥来验证您的请求。
 
-
-When creating a thread, you can append the messages to the thread when creating it.
-You can also attach metadata to the thread. This can be useful for storing additional information about the object in a structured format.
-
+创建线程时，您可以在创建时将消息附加到线程中。
+您还可以将元数据附加到线程中。这对于以结构化格式存储有关对象的附加信息非常有用。
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads' \
@@ -70,16 +67,16 @@ curl 'https://rebyte.ai/api/sdk/threads' \
             "content":"Hi, how are you?"
         },
         {
-            "role":"asistant",
+            "role":"assistant",
             "content":"Hi, I am good. What about you? Is there anything I can help?"
         }
     ]
 }'
 ```
 
-In the response, you will find the thread id. You can use this thread id to add messages to the thread and run the tool on the thread.
+在响应中，您将找到线程 ID。您可以使用此线程 ID 向线程添加消息并在线程上运行工具。
 
-* Example Response
+* 示例响应
 
 ```shell
 {
@@ -88,7 +85,7 @@ In the response, you will find the thread id. You can use this thread id to add 
 }
 ```
 
-3. Add messages to the thread
+3. 向线程添加消息
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
@@ -100,9 +97,9 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages' \
     }'
 ```
 
-In the response, you can see the message information.
+在响应中，您可以看到消息信息。
 
-* Example Response
+* 示例响应
 
 ```shell
 {
@@ -114,9 +111,9 @@ In the response, you can see the message information.
 }
 ```
 
-4. Run the tool on the thread
+4. 在线程上运行工具
 
-In order to run the tool on the thread, you should get the url from deploying your tool and make a request to this url.
+要在线程上运行工具，您应该从部署您的工具中获取 URL 并向该 URL 发出请求。
 
 ```shell
 curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/r \
@@ -140,12 +137,11 @@ curl -L https://rebyte.ai/api/sdk/p/21b2295005587a5375d8/a/f4222f209267e5b24cda/
     }'
 ```
 
-* When calling the tool, you should specify the thread id, and you will be able to get all the messages and metadata from the thread.
+* 调用工具时，您应指定线程 ID，这样您就可以获取线程中的所有消息和元数据。
 
-* You can also use "contentOnly:true" to get only the content of the messages.
+* 您还可以使用 "contentOnly:true" 仅获取消息的内容。
 
-
-5. Get the messages from the thread
+5. 从线程获取消息
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages'     \
@@ -153,9 +149,9 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}/messages'     \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-In the response, you will get the list of all messages on the thread.
+在响应中，您将获得线程上所有消息的列表。
 
-* Example Response
+* 示例响应
 
 ```shell
 {
@@ -202,28 +198,29 @@ In the response, you will get the list of all messages on the thread.
 }
 ```
 
-### Blocking and Non-blocking calls
-Add 'blocking' parameter to the request body to specify whether the call should be blocking or non-blocking. If 'blocking' is set to true, the call will wait for the response from the tool. If 'blocking' is set to false, the call will return immediately with a run_id, which can be used to check the status of the call later.
+### 阻塞和非阻塞调用
 
-### Streaming
-Add 'stream' parameter to the request body to specify whether the call should be streaming or not. If 'stream' is set to true, the call will return a stream of messages from the tool as they are generated. If 'stream' is set to false, the call will return the final response from the tool.
+在请求体中添加 'blocking' 参数以指定调用是阻塞还是非阻塞。如果 'blocking' 设置为 true，则调用将等待工具的响应。如果 'blocking' 设置为 false，则调用将立即返回一个 run_id，稍后可以使用该 run_id 检查调用状态。
 
+### 流式处理
+
+在请求体中添加 'stream' 参数以指定调用是否为流式处理。如果 'stream' 设置为 true，则调用将返回工具生成的消息流。如果 'stream' 设置为 false，则调用将返回工具的最终响应。
 
 ---
 
-# Thread API
+# 线程 API
 
-## Create thread
+## 创建线程
 
 `POST https://rebyte.ai/api/sdk/threads`
 
-Create a new thread.
+创建一个新线程。
 
-**Request body**
-* messages: An array of messages to start the thread with.
-* metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
+**请求体**
+* messages：用于启动线程的消息数组。
+* metadata：可以附加到对象上的 16 对键值对。对于以结构化格式存储有关对象的附加信息非常有用。键的最大长度为 64 个字符，值的最大长度为 512 个字符。
 
-**Example Request**
+**示例请求**
 
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads' \
@@ -237,11 +234,12 @@ curl 'https://rebyte.ai/api/sdk/threads' \
 }'
 ```
 
-**Return**
+**返回**
 
-A thread object.
+一个线程对象。
 
-**Example**
+**示例**
+
 ```json
 {
     "id": "2hWVPNfrHv1IiVN7ia-4P",
@@ -252,22 +250,20 @@ A thread object.
 }
 ```
 
-
-### List threads
+### 列出线程
 
 `GET https://rebyte.ai/api/sdk/threads`
 
-Get list of threads.
+获取线程列表。
 
-**Query parameters**
-* limit: An integer, with the maximum number of threads to return. Default is 20.
-* order: A string, with the order to return the threads. Default is desc.
-* before: A string, used as a cursor for use in pagination. after is an object ID that defines your place in the list.
-* after: A string, used as a cursor for use in pagination. before is an object ID that defines your place in the list.
+**查询参数**
+* limit：一个整数，返回的最大线程数。默认值为 20。
+* order：一个字符串，返回线程的顺序。默认值为 desc。
+* before：一个字符串，用作分页中的游标。before 是定义您在列表中位置的对象 ID。
+* after：一个字符串，用作分页中的游标。after 是定义您在列表中位置的对象 ID。
 
+**示例请求**
 
-
-**Example Request**
 ```shell
 curl  'https://rebyte.ai/api/sdk/threads?limit=10&order=desc' \
 -H 'Content-Type: application/json' \
@@ -275,12 +271,12 @@ curl  'https://rebyte.ai/api/sdk/threads?limit=10&order=desc' \
 -H 'Cookie: NEXT_LOCALE=en'
 ```
 
-**Return**
+**返回**
 
-A list of thread objects.
+一个线程对象的列表。
 
+**示例**
 
-**Example**
 ```json
 {
     "list": [
@@ -305,16 +301,18 @@ A list of thread objects.
     ]
 }
 ```
-### **Get thread**
+
+### 获取线程
 
 `GET https://rebyte.ai/api/sdk/threads/{thread_id}`
 
-Get a thread by id.
+通过 ID 获取线程。
 
-**Path parameters**
-* thread_id(required): A string, with the ID of the thread to retrieve.
+**路径参数**
+* thread_id（必填）：一个字符串，要检索的线程的 ID。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Content-Type: application/json' \
@@ -322,10 +320,11 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Cookie: NEXT_LOCALE=en'
 ```
 
-**Returns**
-The thread object matching the specified ID.
+**返回**
+与指定 ID 匹配的线程对象。
 
-**Example**
+**示例**
+
 ```json
 {
     "id": "cB1-_3wh5ZWtUPJU4xIuU",
@@ -337,19 +336,20 @@ The thread object matching the specified ID.
 }
 ```
 
-### **Update thread**
+### 更新线程
 
 `POST https://rebyte.ai/api/sdk/threads/{thread_id}`
 
-Update a thread.
+更新线程。
 
-**Path parameters**
-* thread_id(required): A string, with the ID of the thread to retrieve.
+**路径参数**
+* thread_id（必填）：一个字符串，要检索的线程的 ID。
 
-**Request body**
-* metadata: Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
+**请求体**
+* metadata：可以附加到对象上的 16 对键值对。对于以结构化格式存储有关对象的附加信息非常有用。键的最大长度为 64 个字符，值的最大长度为 512 个字符。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
 -H 'Content-Type: application/json' \
@@ -364,10 +364,11 @@ curl 'https://rebyte.ai/api/sdk/threads/{thread_id}' \
  }'
 ```
 
-**Returns**
-The modified thread object matching the specified ID.
+**返回**
+与指定 ID 匹配的修改后的线程对象。
 
-**Example**
+**示例**
+
 ```json
 {
     "id": "cB1-_3wh5ZWtUPJU4xIuU",
@@ -380,30 +381,32 @@ The modified thread object matching the specified ID.
 ```
 ---
 
-# File API
+# 文件 API
 
-## Upload file
+## 上传文件
 
 `POST https://rebyte.ai/api/sdk/files`
 
-Upload a file that can be used across various endpoints.
+上传可在各种端点中使用的文件。
 
-**Request Body**
+**请求体**
 
-* file(required): File object to be uploaded.
+* file（必填）：要上传的文件对象。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/files' \
   -H "Authorization: Bearer $REBYTE_KEY" \
   -F file="@mydata.jsonl"
 ```
 
-**Return**
+**返回**
 
-Returns an object with message, fileId and path.
+返回包含消息、fileId 和路径的对象。
 
-**Response**
+**响应**
+
 ```json
 {
     "message": "upload file success",
@@ -412,23 +415,25 @@ Returns an object with message, fileId and path.
 }
 ```
 
-## List files
+## 列出文件
 
 `GET https://rebyte.ai/api/sdk/files`
 
-Get list of files.
+获取文件列表。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/files' \
   -H "Authorization: Bearer $REBYTE_KEY"
 ```
 
-**Return**
+**返回**
 
-Returns a list of files.
+返回文件列表。
 
-**Response**
+**响应**
+
 ```json
 {
     "files": [
@@ -447,28 +452,30 @@ Returns a list of files.
             "size": 1589,
             "projectId": 160,
             "createdAt": "2023-12-28T07:17:24.733Z"
-        },
+        }
     ]
 }
 ```
 
-## Retrieve file
+## 检索文件
 
 `GET https://rebyte.ai/api/sdk/files/{fileId}`
 
-Retrieve file by fileId.
+通过 fileId 检索文件。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/files/{fileId}' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-**Return**
+**返回**
 
-Returns a file object.
+返回文件对象。
 
-**Response**
+**响应**
+
 ```json
 {
     "file": {
@@ -482,44 +489,48 @@ Returns a file object.
 }
 ```
 
-## Retrieve file content
+## 检索文件内容
 
 `GET https://rebyte.ai/api/sdk/files/{fileId}/content`
 
-Retrieve file content by fileId.
+通过 fileId 检索文件内容。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl 'https://rebyte.ai/api/sdk/files/{fileId}/content' \
   -H "Authorization: Bearer $REBYTE_KEY" \
 ```
 
-**Return**
+**返回**
 
-Returns the content of the file.
+返回文件内容。
 
-**Response**
+**响应**
+
 ```json
-content of the file...
+文件内容...
 ```
 
-## Delete file
+## 删除文件
 
 `DELETE https://rebyte.ai/api/sdk/files/{fileId}`
 
-Delete file by fileId.
+通过 fileId 删除文件。
 
-**Example Request**
+**示例请求**
+
 ```shell
 curl --location --request DELETE 'https://rebyte.ai/api/sdk/files/{file_id}' \
 --H 'Authorization: Bearer $REBYTE_KEY'
 ```
 
-**Return**
+**返回**
 
-Returns a message object.
+返回消息对象。
 
-**Response**
+**响应**
+
 ```json
 {
     "message": "deleted",

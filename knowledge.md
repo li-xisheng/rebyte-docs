@@ -1,32 +1,31 @@
-## What is Knowledge?
+## 什么是知识？
 
-> Handle unstructured data for your assistant.
+> 处理助手的非结构化数据。
 
-ReByte can auto sync your knowledge from various sources, such as Notion, Google Drive, GitHub, etc. For each knowledge, we chunk the document into many chunks, each chunk will be sent to LLM embedding service to get the embedding vector. 
+ReByte 可以自动同步您来自各种来源的知识，例如 Notion、Google Drive、GitHub 等。对于每个知识，我们将文档分块，每个块将被发送到 LLM 嵌入服务以获取嵌入向量。
 
-In **ReByte Tool**, you can use the knowledge action to do search over the knowledge base.
+在 **ReByte 工具** 中，您可以使用知识动作在知识库中进行搜索。
 
-## How does Knowledge Work?
+## 知识如何工作？
 
-### Document
+### 文档
 
-Each knowledge contains a list of documents, each document is identified by a unique document id within the knowledge.
+每个知识包含一个文档列表，每个文档通过知识内唯一的文档 ID 标识。
 
-### Chunk
+### 分块
 
-The Document will be chunked into many chunks, each chunk identified by a unique chunk id within the document. Chunks will be sent to LLM embedding service to get the embedding vector.
-When creating knowledge, user can specify the chunk size, which will determine how many chunks a document will have. Typically, chunk size ranges from a hundred to a few thousand tokens.
+文档将被分割成多个块，每个块通过文档内唯一的块 ID 标识。块将被发送到 LLM 嵌入服务以获取嵌入向量。创建知识时，用户可以指定块大小，这将决定文档将有多少块。通常，块大小范围从几百到几千个标记。
 
-### Filter
+### 过滤器
 
-Semantic search provides a way to search for similar content over the knowledge base. In additional to that, Filter provides a way to filter the search result by exact match. 
+语义搜索提供了一种在知识库中搜索相似内容的方法。除此之外，过滤器提供了一种通过精确匹配来过滤搜索结果的方法。
 
-You can attach multiple tags to each document, for example, you can tag a document with "finance" and "report". When you do a search, you can filter the search result by "finance" and "report".
+您可以为每个文档附加多个标签，例如，您可以将文档标记为“财务”和“报告”。进行搜索时，您可以通过“财务”和“报告”来过滤搜索结果。
 
-### Knowledge Data Connectors
+### 知识数据连接器
 
-* **File**: we support most of the file types, such as doc, docx, img, epub, jpeg, jpg, png, xls, xlsx, ppt, pptx, md, txt, rtf, rst, pdf, json, html.
-* **Notion**: we support Notion API, you can sync your Notion pages to ReByte.
-* **Twitter**: we support Twitter API, you can sync specific Twitter accounts to ReByte.
-* **Web Page**: you can sync web pages to ReByte.
-* More connectors are coming.
+* **文件**：我们支持大多数文件类型，例如 doc、docx、img、epub、jpeg、jpg、png、xls、xlsx、ppt、pptx、md、txt、rtf、rst、pdf、json、html。
+* **Notion**：我们支持 Notion API，您可以将 Notion 页面同步到 ReByte。
+* **Twitter**：我们支持 Twitter API，您可以将特定的 Twitter 账户同步到 ReByte。
+* **网页**：您可以将网页同步到 ReByte。
+* 更多连接器即将推出。

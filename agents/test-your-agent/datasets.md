@@ -1,40 +1,38 @@
-# Datasets
+# 数据集
 
-After designing your agent, you can test it with datasets.
+设计完代理后，您可以使用数据集对其进行测试。
 
-You can run the dataset with the "Run Testcases" and observe the agent's response and maybe troubleshoot issues based on it.
+您可以使用“运行测试用例”来运行数据集，并观察代理的响应，可能会根据需要进行故障排除。
 
+## 数据集创建
 
-## Dataset Creation
+* 导航到顶部的 `Datasets` 标签。
 
-* Navigate to the `Datasets` tab on the top.
+* 点击 `Create Dataset`。
 
-* Click `Create Dataset`.
-
-* Use "Add Column" to add a new field to your dataset. "Add Row" to add a new dataset item.
+* 使用“Add Column”添加新字段到数据集中。使用“Add Row”添加新的数据集项。
 
 <figure><img src="../../images/datasets.png" alt=""><figcaption></figcaption></figure>
 
+## 支持的数据类型
 
-## Data types supported
-
-We support the following data types:
+我们支持以下数据类型：
 
 * String
 * Number
 * Boolean
 * JSON Object
 
-## Usage
+## 用法
 
-Datasets can be used in two ways:
+数据集可以通过两种方式使用：
 
-#### 1.Load data for subsequent actions
+#### 1.加载数据以供后续操作使用
 
-The loaded dataset can be used by subsequent actions.
+加载的数据集可以被后续操作使用。
 
-This is very useful when the dataset contains example data for few shots prompting.
+当数据集中包含用于 few-shots 提示的示例数据时，这非常有用。
 
-#### 2.Determine the input shape of the agent
+#### 2.确定代理的输入形状
 
-The the dataset of the `Input` action determines the shape of the input of the whole agent.
+`Input` 操作的数据集确定整个代理的输入形状。

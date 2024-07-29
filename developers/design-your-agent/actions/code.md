@@ -1,27 +1,26 @@
-# Code 
+# 代码
 
-The  `Code` action is a very frequently
- used action. It allows you to write Javascript code to process the data from previous actions in any way you want.
+`Code` 动作是一个非常常用的动作。它允许您编写 Javascript 代码，以任何您想要的方式处理来自先前动作的数据。
 
-## Usage
+## 用法
 
-**General Usage**
+**一般用法**
 
-* To use the `Code` action, first add a `Code` action to your agent.
+* 要使用 `Code` 动作，首先将 `Code` 动作添加到您的代理中。
 
-* Write any Javascript code here to process the data from previous actions and to send data to the next actions.
+* 在这里编写任何 Javascript 代码，以处理来自先前动作的数据并将数据发送到下一个动作。
 
-**Cache**
+**缓存**
 
-* There's a `cache` button on the top right of the `Code` action. If you turn it on, the results will be cached. If the input of `Code` action and the code are the same, the results will be returned directly from the cache. This can greatly improve the performance of your agent.
+* 在 `Code` 动作的右上角有一个 `cache` 按钮。如果打开它，结果将被缓存。如果 `Code` 动作的输入和代码相同，结果将直接从缓存中返回。这可以大大提高代理的性能。
 
-## Example 
+## 示例
 
 <figure><img src="../../../images/code-1.png"></figure>
 
-* For example, if the `MODEL_CALL` action returned a message containing a JSON string like this:`"{"location":"New York","weather":"parly couldy","temperatuee":"43"}"`.
+* 例如，如果 `MODEL_CALL` 动作返回的消息包含如下的 JSON 字符串：`"{"location":"New York","weather":"parly cloudy","temperature":"43"}"`。
 
-* And you want to get the "weather" field from this JSON. You can add a `Code` action(named "CODE_1") and write the following code:
+* 并且您想从这个 JSON 中获取 "weather" 字段。您可以添加一个 `Code` 动作（命名为 "CODE_1"）并编写以下代码：
 
 ```javascript
 const _fun = (env) => {
@@ -34,14 +33,12 @@ const _fun = (env) => {
 
 <figure><img src="../../../images/code-2.png"></figure>
 
-* Now you can use {{CODE_1}} or env.state.CODE_1 to get the value of the "weather" field.
+* 现在您可以使用 {{CODE_1}} 或 env.state.CODE_1 来获取 "weather" 字段的值。
 
 <figure><img src="../../../images/code-3.png"></figure>
 
-  
+## 示例工具
 
-## Example Tool
+您可以在以下代理中找到上述示例中显示的代码。
 
-You can find the code shown in the example above in the following agent.
-
-[Code Action](https://rebyte.ai/p/21b2295005587a5375d8/callable/4929456b3b6bfcee316d/editor)
+[代码动作](https://rebyte.ai/p/21b2295005587a5375d8/callable/4929456b3b6bfcee316d/editor)

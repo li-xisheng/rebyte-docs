@@ -1,21 +1,19 @@
-# Thread Messages Loader
+# 线程消息加载器
 
-This action allows you to configure the number of historical messages to be memorized by the "thread" and sent to the large language model when using this agent.
+此动作允许您配置由“线程”记忆的历史消息数量，并在使用此代理时发送给大型语言模型。
 
-Everytime a new message is received by the agent, the "thread" will be updated with the new message and add the corresponding number of historical messages as content and send it to the large language model.
+每次代理接收到新消息时，“线程”都会更新新消息，并将相应数量的历史消息作为内容发送给大型语言模型。
 
-## Usage
+## 用法
 
-* Add a "Thread Messages Loader" action to your agent.
+* 将“线程消息加载器”动作添加到您的代理中。
 
 <figure><img src="../../../../images/thread-1.png"></figure>
   
-* Specify the number of messages to be memorized by the "thread".
+* 指定由“线程”记忆的消息数量。
 
 <figure><img src="../../../../images/thread-2.png"></figure>
 
-* The number of messages to be memorized by the "thread" can affect the performance of the large language model. 
+* 由“线程”记忆的消息数量会影响大型语言模型的性能。
   
-* The **more messages** to be memorized, the **more context** the large language model can get, but this will also increase the response time of the large language model.
-  
-
+* 记忆的消息**越多**，大型语言模型能获得的**上下文**越多，但这也会增加大型语言模型的响应时间。
