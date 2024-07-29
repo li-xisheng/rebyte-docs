@@ -1,11 +1,11 @@
 ## What is ReByte?
 
-> ReByte is an AI assistant for every member of your team. 
+> ReByte is an AI assistant for every member of your team.  
 
 ReByte has two primary goals:
 
 * **Instant Use**: There are lots of fancy AI technologies every week, even every day, some of them focus on developers, some of them just try to demonstrate the power of AI, most of them are lack of end user usability. ReByte tries to provide an AI assistant that can be instantly used by every member of your team, with very minimal setup.
-* **Customization** Enterprise use cases are very different, customization is a **MUST** for enterprise AI assistant, there's no one-size-fits-all AI assistant for all companies. ReByte integrates a low-code platform for building AI tools to capture your proprietary workflow, which workflow can be seamlessly integrated into your team assistant.
+* **Customization** There's no one-size-fits-all AI assistant for all companies. We are developing full-stack AI platform that quickly learn to increase productivity by automating time-consuming and monotonous workflows. For instance, we allow you to quickly analyze a csv file with millions of rows in a super flexible way.
 
 Besides, ReByte has the following features:
 
